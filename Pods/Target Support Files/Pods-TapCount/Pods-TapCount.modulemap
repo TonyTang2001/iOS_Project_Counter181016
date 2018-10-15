@@ -1,0 +1,6 @@
+framework module Pods_TapCount {
+  umbrella header "Pods-TapCount-umbrella.h"
+
+  export *
+  module * { export * }
+}
