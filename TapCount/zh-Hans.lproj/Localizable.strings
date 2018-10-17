@@ -1,0 +1,11 @@
+/* 
+  Localization.strings
+  TapCount
+
+  Created by 唐子轩 on 2018/10/17.
+  Copyright © 2018 TonyTang. All rights reserved.
+*/
+"Delete All Record" = "清空记录";
+"All history record will be Deleted. \n This is irreversible, are you sure to Delete?" = "将要删除所有历史记录。\n 此操作不可逆，确认删除？";
+"Yes" = "是";
+"Cancel" = "取消";

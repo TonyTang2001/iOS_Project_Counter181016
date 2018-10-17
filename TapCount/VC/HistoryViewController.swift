@@ -129,8 +129,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func ClearAllBtnPressed(_ sender: UIButton) {
-        let addAlert = UIAlertController(title: "Delete All Record", message: "All history record will be Deleted. \n This is irreversible, are you sure to Delete?", preferredStyle: .alert)
-        addAlert.addAction(UIKit.UIAlertAction(title: "Yes", style: .destructive, handler: { (action) in
+        let addAlert = UIAlertController(title: NSLocalizedString("Delete All Record", comment: ""), message: NSLocalizedString("All history record will be Deleted. \n This is irreversible, are you sure to Delete?", comment: ""), preferredStyle: .alert)
+        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .destructive, handler: { (action) in
             self.deleteAllRecords()
             self.loadData()
             UIView.transition(with: self.HistoryTableView,
@@ -142,7 +142,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             let time: TimeInterval = 0.3
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) { self.dismiss(animated: true, completion: nil) }
         }))
-        addAlert.addAction(UIKit.UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
         self.present(addAlert, animated: true, completion: nil)
     }
     

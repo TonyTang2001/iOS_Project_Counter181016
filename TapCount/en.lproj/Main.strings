@@ -1,0 +1,27 @@
+
+/* Class = "UILabel"; text = "NumberLb"; ObjectID = "5Wa-sk-wSD"; */
+"5Wa-sk-wSD.text" = "NumberLb";
+
+/* Class = "UILabel"; text = "88:88"; ObjectID = "77j-4M-YQJ"; */
+"77j-4M-YQJ.text" = "88:88";
+
+/* Class = "UIButton"; normalTitle = "Refresh"; ObjectID = "LK2-8n-ySM"; */
+"LK2-8n-ySM.normalTitle" = "Refresh";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "NEX-K7-ubw"; */
+"NEX-K7-ubw.normalTitle" = "Back";
+
+/* Class = "UIButton"; normalTitle = "+ 1"; ObjectID = "NEu-Qx-Ucf"; */
+"NEu-Qx-Ucf.normalTitle" = "+ 1";
+
+/* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
+"kdb-AB-3zG.text" = "CountNum";
+
+/* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */
+"nOI-P7-ZVy.normalTitle" = "History";
+
+/* Class = "UIButton"; normalTitle = "- 1"; ObjectID = "sqm-8h-hO4"; */
+"sqm-8h-hO4.normalTitle" = "- 1";
+
+/* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "xBW-3f-sIt"; */
+"xBW-3f-sIt.normalTitle" = "Clear All";

@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  TapCount
+
+  Created by 唐子轩 on 2018/10/17.
+  Copyright © 2018 TonyTang. All rights reserved.
+*/
+CFBundleDisplayName = "Counter";
+
