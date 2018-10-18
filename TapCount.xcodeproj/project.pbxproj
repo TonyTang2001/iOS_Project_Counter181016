@@ -38,6 +38,7 @@
 		EA3888E221776CEC004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EA3888E521776D67004E3EA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EA3888EA21778ED8004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EA5C5B642177A6A600383501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EEBF9ED38318EA1A08EA5894 /* Pods-TapCount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapCount/Pods-TapCount.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -262,6 +263,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EA3888E221776CEC004E3EA5 /* zh-Hans */,
+				EA5C5B642177A6A600383501 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

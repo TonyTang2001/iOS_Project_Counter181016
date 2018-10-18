@@ -6,7 +6,7 @@
 "77j-4M-YQJ.text" = "88:88";
 
 /* Class = "UIButton"; normalTitle = "Refresh"; ObjectID = "LK2-8n-ySM"; */
-"LK2-8n-ySM.normalTitle" = "Refresh";
+"LK2-8n-ySM.normalTitle" = "Restart";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "NEX-K7-ubw"; */
 "NEX-K7-ubw.normalTitle" = "Back";
@@ -14,7 +14,7 @@
 /* Class = "UIButton"; normalTitle = "+ 1"; ObjectID = "NEu-Qx-Ucf"; */
 "NEu-Qx-Ucf.normalTitle" = "+ 1";
 
-/* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
+/* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */s
 "kdb-AB-3zG.text" = "CountNum";
 
 /* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */

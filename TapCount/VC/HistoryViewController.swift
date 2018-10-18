@@ -52,7 +52,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     //MARK: - Swipe Actions on Cell
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+        let delete = UITableViewRowAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (action, indexPath) in
             self.context.delete(self.counts[indexPath.row])
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
             self.counts.remove(at: indexPath.row)
