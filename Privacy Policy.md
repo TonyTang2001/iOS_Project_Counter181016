@@ -1,6 +1,6 @@
 # Privacy Policy #
 
-**This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service. **
+**This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.**
 
 TonyTang built the Count Now app as a **Free** and **Open Source** app. This SERVICE is provided by TonyTang at no cost and is intended for use as is. Tony Tang, or TonyTang2001 on GitHub, genuinely advocates the privacy for users in this digital age. Therefore, neither TonyTang2001 nor Count Now collects any personal data from the app's users. 
 
