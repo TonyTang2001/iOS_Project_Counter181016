@@ -28,9 +28,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var NumberLB: SpringLabel!
     @IBOutlet weak var AntiCountBtn: UIButton!
     
-    var countNumber = 0
-//    var recordNumber: Int?
-    
     //MARK: - Setup Appearance
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -39,44 +36,30 @@ class ViewController: UIViewController {
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        refreshCountBtnDisplay()
+//        print(Variables.countNum)
+        refreshNumberLBDisplay()
         RefreshBtn.setTitleColor(UIColor.orange.withAlphaComponent(0.2),for: .highlighted)
-        
-//        countNumber = recordNumber ?? 0
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshNumberLBDisplay()
     }
     
     //MARK: - Functions
-    func refreshCountBtnDisplay() {
-        NumberLB.text = String(countNumber)
+    func refreshNumberLBDisplay() {
+        print(Variables.countNum)
+        NumberLB.text = String(Variables.countNum)
     }
     
-    //MARK: - IBActions
-    @IBAction func CountBtnTapped(_ sender: UIButton) {
-        hapticImpactLight.impactOccurred()
-        countNumber = countNumber + 1
-        refreshCountBtnDisplay()
-        
+    func receiveRecord(recordRow: Int) {
+        print(recordRow)
     }
     
-    @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
-        hapticImpactLight.impactOccurred()
-        if countNumber > 0 {
-            countNumber = countNumber - 1
-        } else {
-            hapticNotification.notificationOccurred(.error)
-            NumberLB.animation = "shake"
-            NumberLB.animate()
-        }
-        
-        refreshCountBtnDisplay()
-    }
-    
-    @IBAction func RefreshBtnPressed(_ sender: UIButton) {
-        hapticImpactLight.impactOccurred()
-        if countNumber != 0 {
+    func saveCountRecord() {
+        if Variables.countNum != 0 {
             let countSave = CountHistory(context: context)
             countSave.countDate = Date()
-            countSave.countNum = Int32(countNumber)
+            countSave.countNum = Int32(Variables.countNum)
             countSave.countType = "normal"
             countSave.multiMode = 1
             countSave.note = ""
@@ -84,14 +67,40 @@ class ViewController: UIViewController {
         } else {
             //Do Nothing
         }
-        countNumber = 0
+    }
+    
+    //MARK: - IBActions
+    @IBAction func CountBtnTapped(_ sender: UIButton) {
+        hapticImpactLight.impactOccurred()
+        print(Variables.countNum)
+        Variables.countNum = Variables.countNum + 1
+        refreshNumberLBDisplay()
+    }
+    
+    @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
+        hapticImpactLight.impactOccurred()
+        if Variables.countNum > 0 {
+            Variables.countNum = Variables.countNum - 1
+        } else {
+            hapticNotification.notificationOccurred(.error)
+            NumberLB.animation = "shake"
+            NumberLB.animate()
+        }
+        
+        refreshNumberLBDisplay()
+    }
+    
+    @IBAction func RefreshBtnPressed(_ sender: UIButton) {
+        hapticImpactLight.impactOccurred()
+        saveCountRecord()
+        Variables.countNum = 0
         NumberLB.text = "0"
 //        print(applicationDirectoryPath())
     }
     
-    func applicationDirectoryPath() -> String {
-        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String
-    }
+//    func applicationDirectoryPath() -> String {
+//        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String
+//    }
     
 }
 

@@ -8,13 +8,20 @@
 
 import UIKit
 import CoreData
+import StoreKit
 
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var countRecord = 0
-    //Setup Core Data
+    
+    //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var counts : [CountHistory] = []
+    
+    //MARK: Setup Haptic Feedback
+    let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
+    let hapticSelection = UISelectionFeedbackGenerator()
+    let hapticNotification = UINotificationFeedbackGenerator()
     
     @IBOutlet weak var BackBtn: UIButton!
     @IBOutlet weak var ClearAllBtn: UIButton!
@@ -50,6 +57,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        dismiss(animated: true, completion: nil)
+        Variables.countNum = Int(counts[indexPath.row].countNum)
+    }
+    
     //MARK: - Swipe Actions on Cell
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (action, indexPath) in
@@ -62,21 +74,23 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return [delete]
     }
     
-    
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        
-//        countRecord = Int(counts[indexPath.row].countNum)
-//        
-//        performSegue(withIdentifier: "HistoryToCountVCSegue", sender: countRecord)
-//        
-//    }
-    
-    
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         HistoryTableView.separatorColor = .clear
         loadData()
+        let askedForReviewOrNot : Bool = UserDefaults.standard.bool(forKey: "AskedForReview")
+        print(askedForReviewOrNot)
+        if counts.count > 15 && !askedForReviewOrNot {
+            let time: TimeInterval = 0.6
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+                SKStoreReviewController.requestReview()
+                let setTrue = true
+                let setFalse = false
+                UserDefaults.standard.set(setTrue, forKey: "AskedForReview")
+            }
+            
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -95,7 +109,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func getDataFromCoreData() {
-        //        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         do {
             counts = try context.fetch(CountHistory.fetchRequest())
         } catch {
@@ -114,14 +127,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         self.HistoryTableView.reloadData()
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "HistoryToCountVCSegue" {
-//            let destVC = segue.destination as! ViewController
-//            destVC.recordNumber = sender as! Int
-//        }
-//    }
-    
     
     //MARK: - IBActions
     @IBAction func BackBtnPressed(_ sender: UIButton) {
