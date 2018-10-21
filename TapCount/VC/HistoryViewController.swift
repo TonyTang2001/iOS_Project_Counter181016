@@ -59,7 +59,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true, completion: nil)
-        Variables.countNum = Int(counts[indexPath.row].countNum)
+            Variables.countNum = Int(counts[indexPath.row].countNum)
     }
     
     //MARK: - Swipe Actions on Cell
@@ -86,7 +86,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
                 SKStoreReviewController.requestReview()
                 let setTrue = true
-                let setFalse = false
+//                let setFalse = false
                 UserDefaults.standard.set(setTrue, forKey: "AskedForReview")
             }
             

@@ -7,4 +7,5 @@
 //
 struct Variables {
     static var countNum = 0
+    static var multiMode = 1
 }

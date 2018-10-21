@@ -48,13 +48,21 @@ If you have any suggestions and thoughts you'd like to share, please contact me 
 谢谢！
 
 # 1.0.6 Update #
-- Support Previous Versions of iOS
+- Support Previous Versions of iOS [iOS 11]
 - Ask for app Review
 - Tap on History Record to continue counting
+- Added Settings Button & VC
+
+# 1.1 Update #
+- Multiple count mode +1/3/5/10
+
+
+# 1.1 Update #
+
 
 
 # Todos #
-- Multiple count mode +1/3/5/10...
+- 3D touch Quick Action
 - 3D touch/ Long Press to input
 - More Styles & Themes & Colors
 - Parallax Effect according to Style & Theme

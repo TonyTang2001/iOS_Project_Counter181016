@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 import Spring
 
 class ViewController: UIViewController {
@@ -22,21 +21,44 @@ class ViewController: UIViewController {
     let hapticNotification = UINotificationFeedbackGenerator()
     
     @IBOutlet weak var HistoryBtn: UIButton!
+    @IBOutlet weak var MultiModeBtn: VKExpandableButton!
     @IBOutlet weak var RefreshBtn: UIButton!
     
-    @IBOutlet weak var CountBtn: UIButton!
     @IBOutlet weak var NumberLB: SpringLabel!
     @IBOutlet weak var AntiCountBtn: UIButton!
+    @IBOutlet weak var CountBtn: UIButton!
     
     //MARK: - Setup Appearance
+    //StatusBar Style
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    
+    //MultiMode Selection List
+    func setupMultiModeBtn() {
+        MultiModeBtn.direction = .Down
+        MultiModeBtn.options = ["1x","3x","5x","10x"]
+        let MutiIndex = [1,3,5,10]
+        MultiModeBtn.currentValue = MultiModeBtn.options[0]
+        MultiModeBtn.clipsToBounds = true
+        MultiModeBtn.cornerRadius = MultiModeBtn.frame.size.height / 2
+        MultiModeBtn.textColor = UIColor.black
+        MultiModeBtn.expandedTextColor = UIColor.black
+        MultiModeBtn.buttonBackgroundColor = UIColor.orange
+        MultiModeBtn.expandedButtonBackgroundColor = UIColor.orange
+        MultiModeBtn.selectionColor = UIColor.white.withAlphaComponent(0.3)
+        MultiModeBtn.optionSelectionBlock = {
+            index in
+            print(MutiIndex[index])
+            self.setMultiMode(Multi: MutiIndex[index])
+        }
     }
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print(Variables.countNum)
+        setMultiMode(Multi: 1)
+        setupMultiModeBtn()
         refreshNumberLBDisplay()
         RefreshBtn.setTitleColor(UIColor.orange.withAlphaComponent(0.2),for: .highlighted)
     }
@@ -46,13 +68,16 @@ class ViewController: UIViewController {
     }
     
     //MARK: - Functions
+    func setMultiMode(Multi: Int) {
+        Variables.multiMode = Multi
+        let MultiStr = String(Multi)
+        AntiCountBtn.setTitle("-" + MultiStr, for: .normal)
+        CountBtn.setTitle("+" + MultiStr, for: .normal)
+    }
+    
     func refreshNumberLBDisplay() {
         print(Variables.countNum)
         NumberLB.text = String(Variables.countNum)
-    }
-    
-    func receiveRecord(recordRow: Int) {
-        print(recordRow)
     }
     
     func saveCountRecord() {
@@ -61,7 +86,7 @@ class ViewController: UIViewController {
             countSave.countDate = Date()
             countSave.countNum = Int32(Variables.countNum)
             countSave.countType = "normal"
-            countSave.multiMode = 1
+            countSave.multiMode = Int32(Variables.multiMode)
             countSave.note = ""
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
@@ -73,14 +98,14 @@ class ViewController: UIViewController {
     @IBAction func CountBtnTapped(_ sender: UIButton) {
         hapticImpactLight.impactOccurred()
         print(Variables.countNum)
-        Variables.countNum = Variables.countNum + 1
+        Variables.countNum = Variables.countNum + Variables.multiMode
         refreshNumberLBDisplay()
     }
     
     @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
         hapticImpactLight.impactOccurred()
-        if Variables.countNum > 0 {
-            Variables.countNum = Variables.countNum - 1
+        if Variables.countNum >= Variables.multiMode {
+            Variables.countNum = Variables.countNum - Variables.multiMode
         } else {
             hapticNotification.notificationOccurred(.error)
             NumberLB.animation = "shake"
@@ -89,6 +114,7 @@ class ViewController: UIViewController {
         
         refreshNumberLBDisplay()
     }
+    
     
     @IBAction func RefreshBtnPressed(_ sender: UIButton) {
         hapticImpactLight.impactOccurred()

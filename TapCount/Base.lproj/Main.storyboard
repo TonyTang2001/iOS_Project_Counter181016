@@ -41,7 +41,7 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="uTv-L3-v60"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <state key="normal" title="+ 1">
+                                <state key="normal" title="+Btn">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="width" constant="120" id="mFc-Bg-NjP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Restart">
+                                <state key="normal" title="Clear">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -69,7 +69,7 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="6Iw-TR-Dxg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
-                                <state key="normal" title="- 1">
+                                <state key="normal" title="-Btn">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -88,13 +88,22 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="shake"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ky-ox-JKT" userLabel="MultiMode Btn" customClass="VKExpandableButton" customModule="TapCount" customModuleProvider="target">
+                                <rect key="frame" x="150" y="44" width="75" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="VbK-l1-sDi"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5Wa-sk-wSD" firstAttribute="top" relation="lessThanOrEqual" secondItem="nOI-P7-ZVy" secondAttribute="top" constant="135" id="3dS-ii-p7M"/>
+                            <constraint firstItem="2ky-ox-JKT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3q8-a9-B9B"/>
                             <constraint firstItem="nOI-P7-ZVy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3x2-e0-F6O"/>
                             <constraint firstItem="5Wa-sk-wSD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="8gs-aS-Ge8"/>
                             <constraint firstItem="LK2-8n-ySM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9w3-gR-h1l"/>
+                            <constraint firstItem="2ky-ox-JKT" firstAttribute="centerX" secondItem="5Wa-sk-wSD" secondAttribute="centerX" id="BFd-rs-byc"/>
                             <constraint firstItem="NEu-Qx-Ucf" firstAttribute="top" secondItem="sqm-8h-hO4" secondAttribute="bottom" id="D5d-RP-e0k"/>
                             <constraint firstItem="NEu-Qx-Ucf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hzs-eJ-cyP"/>
                             <constraint firstItem="sqm-8h-hO4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QOT-SW-kr3"/>
@@ -102,6 +111,7 @@
                             <constraint firstItem="sqm-8h-hO4" firstAttribute="bottom" secondItem="5Wa-sk-wSD" secondAttribute="bottom" priority="100" constant="135" id="VBW-hc-dLd"/>
                             <constraint firstItem="sqm-8h-hO4" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="5Wa-sk-wSD" secondAttribute="bottom" priority="99" constant="30" id="Xkf-12-bvL"/>
                             <constraint firstAttribute="bottom" secondItem="NEu-Qx-Ucf" secondAttribute="bottom" id="eFb-KG-JKH"/>
+                            <constraint firstItem="2ky-ox-JKT" firstAttribute="height" secondItem="LK2-8n-ySM" secondAttribute="height" id="hJe-tR-hPl"/>
                             <constraint firstItem="nOI-P7-ZVy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lsh-ff-QKj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sqm-8h-hO4" secondAttribute="trailing" constant="175" id="o3S-1h-n3K"/>
                             <constraint firstItem="5Wa-sk-wSD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nOI-P7-ZVy" secondAttribute="top" constant="50" id="ruj-es-Ung"/>
@@ -114,13 +124,14 @@
                         <outlet property="AntiCountBtn" destination="sqm-8h-hO4" id="pM7-gv-iox"/>
                         <outlet property="CountBtn" destination="NEu-Qx-Ucf" id="AIg-cx-Fwi"/>
                         <outlet property="HistoryBtn" destination="nOI-P7-ZVy" id="4v8-bf-Nhp"/>
+                        <outlet property="MultiModeBtn" destination="2ky-ox-JKT" id="2cy-Gr-f0O"/>
                         <outlet property="NumberLB" destination="5Wa-sk-wSD" id="McU-3e-fII"/>
                         <outlet property="RefreshBtn" destination="LK2-8n-ySM" id="rkw-LF-2oF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="350" y="98"/>
+            <point key="canvasLocation" x="349.60000000000002" y="97.536945812807886"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="7AD-Pc-jUw">
@@ -149,7 +160,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountNum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-AB-3zG">
-                                                    <rect key="frame" x="239" y="20" width="121" height="30"/>
+                                                    <rect key="frame" x="184" y="20" width="121" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -270,7 +281,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5W-bq-hIA">
-                                <rect key="frame" x="163" y="153" width="49" height="30"/>
+                                <rect key="frame" x="87" y="123" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Review"/>

@@ -19,6 +19,7 @@
 		EA3888E121776CEC004E3EA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3888E321776CEC004E3EA5 /* InfoPlist.strings */; };
 		EA3888E921778ED8004E3EA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3888EB21778ED8004E3EA5 /* Localizable.strings */; };
 		EA3D4351217B885500753BEA /* UniversalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D4350217B885500753BEA /* UniversalVar.swift */; };
+		EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */; };
 		EAD247F1217B3BBC008DD72D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		EA3888E521776D67004E3EA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EA3888EA21778ED8004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EA3D4350217B885500753BEA /* UniversalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UniversalVar.swift; path = TapCount/UniversalVar.swift; sourceTree = SOURCE_ROOT; };
+		EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKExpandableButton.swift; sourceTree = "<group>"; };
 		EA5C5B642177A6A600383501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = VC/SettingsViewController.swift; sourceTree = "<group>"; };
 		EEBF9ED38318EA1A08EA5894 /* Pods-TapCount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapCount/Pods-TapCount.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,7 +74,7 @@
 			children = (
 				EA3107F721706C8B003823AE /* ViewController.swift */,
 				EA2F70882173985400F06966 /* HistoryViewController.swift */,
-				EA3D4350217B885500753BEA /* UniversalVar.swift */,
+				EA3D4354217BA3B100753BEA /* Opensource */,
 				EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */,
 			);
 			path = VC;
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3107F521706C8B003823AE /* AppDelegate.swift */,
+				EA3D4350217B885500753BEA /* UniversalVar.swift */,
 				EA2F708A2173985D00F06966 /* VC */,
 				EA3107F921706C8B003823AE /* Main.storyboard */,
 				EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */,
@@ -111,6 +114,14 @@
 				EA3888EB21778ED8004E3EA5 /* Localizable.strings */,
 			);
 			path = TapCount;
+			sourceTree = "<group>";
+		};
+		EA3D4354217BA3B100753BEA /* Opensource */ = {
+			isa = PBXGroup;
+			children = (
+				EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */,
+			);
+			path = Opensource;
 			sourceTree = "<group>";
 		};
 		EB50CCBC1B296405CEF846F2 /* Frameworks */ = {
@@ -239,6 +250,7 @@
 				EA3107F821706C8B003823AE /* ViewController.swift in Sources */,
 				EA3D4351217B885500753BEA /* UniversalVar.swift in Sources */,
 				EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */,
+				EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */,
 				EA3107F621706C8B003823AE /* AppDelegate.swift in Sources */,
 				EA2F708F21739CFF00F06966 /* HistoryTableViewCell.swift in Sources */,
 				EAD247F1217B3BBC008DD72D /* SettingsViewController.swift in Sources */,

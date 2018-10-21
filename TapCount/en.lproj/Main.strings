@@ -6,7 +6,7 @@
 "77j-4M-YQJ.text" = "88:88";
 
 /* Class = "UIButton"; normalTitle = "Refresh"; ObjectID = "LK2-8n-ySM"; */
-"LK2-8n-ySM.normalTitle" = "Restart";
+"LK2-8n-ySM.normalTitle" = "Clear";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "NEX-K7-ubw"; */
 "NEX-K7-ubw.normalTitle" = "Back";
