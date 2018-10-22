@@ -5,23 +5,29 @@
 /* Class = "UILabel"; text = "88:88"; ObjectID = "77j-4M-YQJ"; */
 "77j-4M-YQJ.text" = "88:88";
 
-/* Class = "UIButton"; normalTitle = "Refresh"; ObjectID = "LK2-8n-ySM"; */
-"LK2-8n-ySM.normalTitle" = "归零";
+/* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "LK2-8n-ySM"; */
+"LK2-8n-ySM.normalTitle" = "Clear";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "NEX-K7-ubw"; */
-"NEX-K7-ubw.normalTitle" = "返回";
+"NEX-K7-ubw.normalTitle" = "Back";
 
-/* Class = "UIButton"; normalTitle = "+ 1"; ObjectID = "NEu-Qx-Ucf"; */
-"NEu-Qx-Ucf.normalTitle" = "+ 1";
+/* Class = "UIButton"; normalTitle = "+Btn"; ObjectID = "NEu-Qx-Ucf"; */
+"NEu-Qx-Ucf.normalTitle" = "+Btn";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "VDP-z2-dVJ"; */
+"VDP-z2-dVJ.normalTitle" = "Back";
 
 /* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
 "kdb-AB-3zG.text" = "CountNum";
 
 /* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */
-"nOI-P7-ZVy.normalTitle" = "历史记录";
+"nOI-P7-ZVy.normalTitle" = "History";
 
-/* Class = "UIButton"; normalTitle = "- 1"; ObjectID = "sqm-8h-hO4"; */
-"sqm-8h-hO4.normalTitle" = "- 1";
+/* Class = "UIButton"; normalTitle = "Review"; ObjectID = "r5W-bq-hIA"; */
+"r5W-bq-hIA.normalTitle" = "Review";
+
+/* Class = "UIButton"; normalTitle = "-Btn"; ObjectID = "sqm-8h-hO4"; */
+"sqm-8h-hO4.normalTitle" = "-Btn";
 
 /* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "xBW-3f-sIt"; */
-"xBW-3f-sIt.normalTitle" = "清空记录";
+"xBW-3f-sIt.normalTitle" = "Clear All";

@@ -4,10 +4,9 @@
         <attribute name="countDate" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="countNum" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="countType" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="multiMode" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="note" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CountHistory" positionX="-63" positionY="-18" width="128" height="120"/>
+        <element name="CountHistory" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

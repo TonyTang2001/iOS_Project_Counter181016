@@ -54,14 +54,18 @@ If you have any suggestions and thoughts you'd like to share, please contact me 
 - Added Settings Button & VC
 
 # 1.1 Update #
+- Support iOS 10.3
 - Multiple count mode +1/3/5/10
+- Fixed Bug: Invisible Status Bar in Settings VC
+- New Settings VC.
 
-
-# 1.1 Update #
+# 1. Update #
 
 
 
 # Todos #
+- Interactive Date Record in History VC
+- Sound Feedback
 - 3D touch Quick Action
 - 3D touch/ Long Press to input
 - More Styles & Themes & Colors
@@ -71,3 +75,4 @@ If you have any suggestions and thoughts you'd like to share, please contact me 
 - Redesigned Icon
 - Submit Preview Videos
 - Localized ScreenShots
+- Apple Watch Support

@@ -36,15 +36,15 @@
 		EA3107FC21706C8E003823AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA3107FF21706C8E003823AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA31080121706C8E003823AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA3888DD21776C8A004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		EA3888DE21776C8A004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		EA3888E221776CEC004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EA3888E521776D67004E3EA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EA3888EA21778ED8004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EA3D4350217B885500753BEA /* UniversalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UniversalVar.swift; path = TapCount/UniversalVar.swift; sourceTree = SOURCE_ROOT; };
 		EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKExpandableButton.swift; sourceTree = "<group>"; };
+		EA3D4356217CB19800753BEA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		EA5C5B642177A6A600383501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = VC/SettingsViewController.swift; sourceTree = "<group>"; };
+		EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EEBF9ED38318EA1A08EA5894 /* Pods-TapCount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapCount/Pods-TapCount.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +74,7 @@
 			children = (
 				EA3107F721706C8B003823AE /* ViewController.swift */,
 				EA2F70882173985400F06966 /* HistoryViewController.swift */,
+				EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */,
 				EA3D4354217BA3B100753BEA /* Opensource */,
 				EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */,
 			);
@@ -105,7 +106,6 @@
 				EA3D4350217B885500753BEA /* UniversalVar.swift */,
 				EA2F708A2173985D00F06966 /* VC */,
 				EA3107F921706C8B003823AE /* Main.storyboard */,
-				EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */,
 				EA2F708B2173993200F06966 /* History.xcdatamodeld */,
 				EA3107FC21706C8E003823AE /* Assets.xcassets */,
 				EA3107FE21706C8E003823AE /* LaunchScreen.storyboard */,
@@ -264,8 +264,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				EA3107FA21706C8B003823AE /* Base */,
-				EA3888DD21776C8A004E3EA5 /* zh-Hans */,
 				EA3888E521776D67004E3EA5 /* en */,
+				EA3D4356217CB19800753BEA /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -407,7 +407,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

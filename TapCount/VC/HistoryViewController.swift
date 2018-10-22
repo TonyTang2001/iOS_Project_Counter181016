@@ -59,7 +59,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true, completion: nil)
-            Variables.countNum = Int(counts[indexPath.row].countNum)
+        Variables.countNum = Int(counts[indexPath.row].countNum)
+//        Variables.multiMode = Int(counts[indexPath.row].multiMode)
     }
     
     //MARK: - Swipe Actions on Cell
@@ -74,27 +75,27 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         return [delete]
     }
     
+    //MARK: - Setup Appearance
+    //StatusBar Style
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         HistoryTableView.separatorColor = .clear
         loadData()
         let askedForReviewOrNot : Bool = UserDefaults.standard.bool(forKey: "AskedForReview")
-        print(askedForReviewOrNot)
         if counts.count > 15 && !askedForReviewOrNot {
             let time: TimeInterval = 0.6
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
                 SKStoreReviewController.requestReview()
                 let setTrue = true
-//                let setFalse = false
                 UserDefaults.standard.set(setTrue, forKey: "AskedForReview")
             }
             
         }
-    }
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
     
     //MARK: - Functions

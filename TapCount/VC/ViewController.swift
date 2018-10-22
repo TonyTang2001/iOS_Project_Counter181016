@@ -13,7 +13,6 @@ class ViewController: UIViewController {
 
     //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//    var counts : [CountHistory] = []
     
     //MARK: Setup Haptic Feedback
     let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
@@ -22,7 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var HistoryBtn: UIButton!
     @IBOutlet weak var MultiModeBtn: VKExpandableButton!
-    @IBOutlet weak var RefreshBtn: UIButton!
+    @IBOutlet weak var ClearBtn: UIButton!
     
     @IBOutlet weak var NumberLB: SpringLabel!
     @IBOutlet weak var AntiCountBtn: UIButton!
@@ -36,9 +35,9 @@ class ViewController: UIViewController {
     
     //MultiMode Selection List
     func setupMultiModeBtn() {
+        let MutiIndex = [1,3,5,10,100]
+        MultiModeBtn.options = ["1x","3x","5x","10x","100x"]
         MultiModeBtn.direction = .Down
-        MultiModeBtn.options = ["1x","3x","5x","10x"]
-        let MutiIndex = [1,3,5,10]
         MultiModeBtn.currentValue = MultiModeBtn.options[0]
         MultiModeBtn.clipsToBounds = true
         MultiModeBtn.cornerRadius = MultiModeBtn.frame.size.height / 2
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
         refreshNumberLBDisplay()
-        RefreshBtn.setTitleColor(UIColor.orange.withAlphaComponent(0.2),for: .highlighted)
+        ClearBtn.setTitleColor(UIColor.orange.withAlphaComponent(0.2),for: .highlighted)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,12 +70,11 @@ class ViewController: UIViewController {
     func setMultiMode(Multi: Int) {
         Variables.multiMode = Multi
         let MultiStr = String(Multi)
-        AntiCountBtn.setTitle("-" + MultiStr, for: .normal)
-        CountBtn.setTitle("+" + MultiStr, for: .normal)
+        AntiCountBtn.setTitle("- " + MultiStr, for: .normal)
+        CountBtn.setTitle("+ " + MultiStr, for: .normal)
     }
     
     func refreshNumberLBDisplay() {
-        print(Variables.countNum)
         NumberLB.text = String(Variables.countNum)
     }
     
@@ -86,7 +84,7 @@ class ViewController: UIViewController {
             countSave.countDate = Date()
             countSave.countNum = Int32(Variables.countNum)
             countSave.countType = "normal"
-            countSave.multiMode = Int32(Variables.multiMode)
+//            countSave.multiMode = Int32(Variables.multiMode)
             countSave.note = ""
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
@@ -97,16 +95,28 @@ class ViewController: UIViewController {
     //MARK: - IBActions
     @IBAction func CountBtnTapped(_ sender: UIButton) {
         hapticImpactLight.impactOccurred()
-        print(Variables.countNum)
         Variables.countNum = Variables.countNum + Variables.multiMode
         refreshNumberLBDisplay()
+//        UIView.animate(withDuration: 0.1, animations: {
+//            self.NumberLB.transform = self.NumberLB.transform.scaledBy(x: 1.01, y: 1.05)
+//        }) { (success) in
+//            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: {
+//                self.NumberLB.transform = CGAffineTransform.identity
+//            }, completion: nil)
+//        }
     }
     
     @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
         hapticImpactLight.impactOccurred()
+        if Variables.countNum == 0 {
+            hapticNotification.notificationOccurred(.error)
+            NumberLB.animation = "shake"
+            NumberLB.animate()
+        }
         if Variables.countNum >= Variables.multiMode {
             Variables.countNum = Variables.countNum - Variables.multiMode
         } else {
+            Variables.countNum = 0
             hapticNotification.notificationOccurred(.error)
             NumberLB.animation = "shake"
             NumberLB.animate()
@@ -116,7 +126,7 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func RefreshBtnPressed(_ sender: UIButton) {
+    @IBAction func ClearBtnPressed(_ sender: UIButton) {
         hapticImpactLight.impactOccurred()
         saveCountRecord()
         Variables.countNum = 0
