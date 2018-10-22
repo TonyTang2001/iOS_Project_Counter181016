@@ -31,8 +31,8 @@ class SettingsViewController: UIViewController {
     @IBAction func ReviewBtnPressed(_ sender: UIButton) {
         SKStoreReviewController.requestReview()
         
-        let addAlert = UIAlertController(title: "Thank you!", message: "Thank you so much for your patient Review", preferredStyle: .alert)
-        addAlert.addAction(UIKit.UIAlertAction(title: "OK, I know.", style: .cancel, handler: nil))
+        let addAlert = UIAlertController(title: NSLocalizedString("Thank you!", comment: ""), message: NSLocalizedString("Thank you for your patient Review.", comment: ""), preferredStyle: .alert)
+        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK, I know.👌", comment: ""), style: .cancel, handler: nil))
         self.present(addAlert, animated: true, completion: nil)
     }
     

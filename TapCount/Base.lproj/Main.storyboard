@@ -224,7 +224,7 @@
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="MFi-jx-o58" kind="popoverPresentation" popoverAnchorView="xy9-lh-QnJ" id="OQ7-WK-8Gi">
+                                    <segue destination="IzW-D4-ALQ" kind="popoverPresentation" popoverAnchorView="xy9-lh-QnJ" id="PUo-KP-9b6">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
                                 </connections>
@@ -280,10 +280,12 @@
                                     <action selector="BackBtnPressed:" destination="Hvb-YM-0mK" eventType="touchUpInside" id="h3c-2L-hD2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5W-bq-hIA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5W-bq-hIA">
                                 <rect key="frame" x="16" y="116" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cJw-7x-x4O"/>
+                                </constraints>
                                 <state key="normal" title="Review this App">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -291,15 +293,11 @@
                                     <action selector="ReviewBtnPressed:" destination="IzW-D4-ALQ" eventType="touchUpInside" id="bCC-XO-8XI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kSr-pe-fNj">
-                                <rect key="frame" x="16" y="224" width="343" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Thanks to "/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2018 TonyTangⓇ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Vd-SyO">
-                                <rect key="frame" x="122" y="757" width="130" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018 TonyTangⓇ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Vd-SyO">
+                                <rect key="frame" x="122.66666666666669" y="747" width="130" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="ohi-VZ-dfA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -307,8 +305,14 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nm2-Qc-xRX" firstAttribute="trailing" secondItem="r5W-bq-hIA" secondAttribute="trailing" constant="16" id="0Fk-Li-dne"/>
+                            <constraint firstItem="Zbd-Vd-SyO" firstAttribute="bottom" secondItem="nm2-Qc-xRX" secondAttribute="bottom" constant="-10" id="9S3-Zt-Kez"/>
+                            <constraint firstItem="r5W-bq-hIA" firstAttribute="top" secondItem="VDP-z2-dVJ" secondAttribute="bottom" constant="36" id="Feh-rF-Jet"/>
                             <constraint firstItem="VDP-z2-dVJ" firstAttribute="leading" secondItem="2Ly-9Q-pCg" secondAttribute="leadingMargin" id="MoY-6B-UFa"/>
+                            <constraint firstItem="Zbd-Vd-SyO" firstAttribute="centerX" secondItem="2Ly-9Q-pCg" secondAttribute="centerX" id="NO6-2U-hcN"/>
                             <constraint firstItem="VDP-z2-dVJ" firstAttribute="top" secondItem="nm2-Qc-xRX" secondAttribute="top" id="Po8-5Q-OXP"/>
+                            <constraint firstItem="r5W-bq-hIA" firstAttribute="leading" secondItem="nm2-Qc-xRX" secondAttribute="leading" constant="16" id="WVL-ry-CmI"/>
+                            <constraint firstItem="Zbd-Vd-SyO" firstAttribute="centerX" secondItem="r5W-bq-hIA" secondAttribute="centerX" id="lv1-7p-AC2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nm2-Qc-xRX"/>
                     </view>
@@ -318,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVT-Er-hDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="98"/>
+            <point key="canvasLocation" x="1812" y="98"/>
         </scene>
         <!--  -->
         <scene sceneID="v3c-qf-TUu">
@@ -383,7 +387,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1852" y="98"/>
+            <point key="canvasLocation" x="1852" y="365"/>
         </scene>
     </scenes>
     <resources>

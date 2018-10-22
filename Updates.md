@@ -1,16 +1,16 @@
 # 1.0 #
-- This is a simple & easy-to-use counter app.
+Count Now  is a simple & easy-to-use counter app.
 
-∗∗∗∗∗∗Highlights∗∗∗∗∗∗
+∗∗∗∗∗∗ Highlights ∗∗∗∗∗∗
 ∙ Use Tapic Engine to provide clear tactile feedback.
 ∙ History Record let you quick review your counts in the past.
 ∙ Light-weight, Flat UI helps with use.
 
-∗∗∗∗∗∗Promise∗∗∗∗∗∗
+∗∗∗∗∗∗ Promise ∗∗∗∗∗∗
 ∙ For your experience, This app will never embed ads.
 ∙ Long-term update will be provided by its developer.
 
-∗∗∗∗∗∗Contact & Feedback∗∗∗∗∗∗
+∗∗∗∗∗∗ Contact & Feedback ∗∗∗∗∗∗
 Your Feedbacks are important！
 We are eager for your Feedbacks!
 If you have any suggestions and thoughts you'd like to share, please contact me by : 
@@ -25,18 +25,18 @@ If you have any suggestions and thoughts you'd like to share, please contact me 
 谢谢！Thanks!
 
 # 1.0_zh_cn #
-这是一个简洁易用的计数器。
+计数+ 是一个简洁易用的计数器。
 
-∗∗∗∗∗∗亮点∗∗∗∗∗∗
+∗∗∗∗∗∗ 亮点 ∗∗∗∗∗∗
 ∙ 使用Tapic Engine为你提供清晰明了的触感反馈；
 ∙ 历史记录功能让你能快速回顾上次记录的数目；
 ∙ 轻量、扁平化的界面元素赏心悦目，便于你的使用。
 
-∗∗∗∗∗∗承诺∗∗∗∗∗∗
+∗∗∗∗∗∗ 承诺 ∗∗∗∗∗∗
 ∙ 永远不会植入任何形式的广告，只为了让你享受纯正体验、不受干扰；
 ∙ 长期提供技术支持及更新迭代，一点点地做到最好。
 
-∗∗∗∗∗∗联系及反馈∗∗∗∗∗∗
+∗∗∗∗∗∗ 联系及反馈 ∗∗∗∗∗∗
 你的反馈非常重要！
 开发者期待你的意见及建议！
 
