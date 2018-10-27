@@ -13,7 +13,7 @@ import StoreKit
 class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var countRecord = 0
-    
+    let mainVC = ViewController()
     //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var counts : [CountHistory] = []
@@ -42,11 +42,21 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let count = counts[indexPath.row]
         
         //Setup Label Display
-            //Transform Date! to String named timeString
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy.MM.dd  HH:mm"
-            let countDateString = dateFormatter.string(from: count.countDate!)
-        cell.TimeLb.text = countDateString
+        //Transform Date! to String named timeString
+        let dateFormatterForDate = DateFormatter()
+        dateFormatterForDate.dateFormat = "yyyy.MM.dd "
+        let dateFormatterForTime = DateFormatter()
+        dateFormatterForTime.dateFormat = " HH:mm"
+        let recordDateStr = dateFormatterForDate.string(from: count.countDate!)
+        let recordTimeStr = dateFormatterForTime.string(from: count.countDate!)
+        let dateToday = dateFormatterForDate.string(from: Date())
+        
+        if  recordDateStr == dateToday {
+            cell.TimeLb.text = NSLocalizedString("Today ", comment: "") + recordTimeStr
+        } else {
+            cell.TimeLb.text = recordDateStr + recordTimeStr
+        }
+//        cell.TimeLb.text = recordDateStr
         cell.CountNumLb.text = String(count.countNum)
         
         //Setup Selecteed Color
@@ -59,7 +69,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         dismiss(animated: true, completion: nil)
+        if Variables.countNum != Variables.fromRecord {
+            mainVC.saveCountRecord()
+        }
         Variables.countNum = Int(counts[indexPath.row].countNum)
+        Variables.fromRecord = Variables.countNum
 //        Variables.multiMode = Int(counts[indexPath.row].multiMode)
     }
     

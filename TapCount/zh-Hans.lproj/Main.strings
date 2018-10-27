@@ -5,9 +5,6 @@
 /* Class = "UILabel"; text = "88:88"; ObjectID = "77j-4M-YQJ"; */
 "77j-4M-YQJ.text" = "88:88";
 
-/* Class = "UILabel"; text = "hhhh"; ObjectID = "7rO-uc-isM"; */
-"7rO-uc-isM.text" = "hhhh";
-
 /* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "LK2-8n-ySM"; */
 "LK2-8n-ySM.normalTitle" = "清零";
 
@@ -22,9 +19,6 @@
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "VDP-z2-dVJ"; */
 "VDP-z2-dVJ.normalTitle" = "返回";
-
-/* Class = "UITableViewSection"; headerTitle = "Section-1"; ObjectID = "Wl6-Df-Ps1"; */
-"Wl6-Df-Ps1.headerTitle" = "一";
 
 /* Class = "UILabel"; text = "2018 TonyTangⓇ"; ObjectID = "Zbd-Vd-SyO"; */
 "Zbd-Vd-SyO.text" = "2018 TonyTangⓇ";
