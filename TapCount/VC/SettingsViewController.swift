@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import StoreKit
 
 class SettingsViewController: UIViewController {
 
@@ -22,19 +21,10 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
     
     @IBAction func BackBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion:  nil)
     }
-    @IBAction func ReviewBtnPressed(_ sender: UIButton) {
-        SKStoreReviewController.requestReview()
-        
-        let addAlert = UIAlertController(title: NSLocalizedString("Thank you!", comment: ""), message: NSLocalizedString("Thank you for your patient Review.", comment: ""), preferredStyle: .alert)
-        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK, I know.👌", comment: ""), style: .cancel, handler: nil))
-        self.present(addAlert, animated: true, completion: nil)
-    }
     
-
 }

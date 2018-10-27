@@ -8,9 +8,20 @@
 
 import UIKit
 import Spring
+//import AVFoundation
+//import MediaPlayer
 
 class ViewController: UIViewController {
 
+    private var audioLevel : Float = 0.0
+    
+    //MARK: - Preset
+    let userDefeults = UserDefaults.standard
+    let soundEffect = "soundEffect"
+    let keepScreenOn = "keepScreenOn"
+//    let useVolBtn = "useVolBtn"
+    let shakeToClear = "shakeToClear"
+    
     //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -41,10 +52,10 @@ class ViewController: UIViewController {
         MultiModeBtn.currentValue = MultiModeBtn.options[0]
         MultiModeBtn.clipsToBounds = true
         MultiModeBtn.cornerRadius = MultiModeBtn.frame.size.height / 2
-        MultiModeBtn.textColor = UIColor.black
-        MultiModeBtn.expandedTextColor = UIColor.black
-        MultiModeBtn.buttonBackgroundColor = UIColor.orange
-        MultiModeBtn.expandedButtonBackgroundColor = UIColor.orange
+        MultiModeBtn.textColor = UIColor.InterfaceColor.black
+        MultiModeBtn.expandedTextColor = UIColor.InterfaceColor.black
+        MultiModeBtn.buttonBackgroundColor = UIColor.InterfaceColor.orange
+        MultiModeBtn.expandedButtonBackgroundColor = UIColor.InterfaceColor.orange
         MultiModeBtn.selectionColor = UIColor.white.withAlphaComponent(0.3)
         MultiModeBtn.optionSelectionBlock = {
             index in
@@ -56,17 +67,97 @@ class ViewController: UIViewController {
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.becomeFirstResponder()
+        firstLaunch()
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
         refreshNumberLBDisplay()
-        ClearBtn.setTitleColor(UIColor.orange.withAlphaComponent(0.2),for: .highlighted)
+//        listenVolumeButton()
+        ClearBtn.setTitleColor(UIColor.InterfaceColor.orange.withAlphaComponent(0.2),for: .highlighted)
+        setupUserSettings()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         refreshNumberLBDisplay()
+        setupUserSettings()
     }
     
     //MARK: - Functions
+    func firstLaunch() {
+        let launchedBefore = userDefeults.bool(forKey: "launchedBefore")
+        if launchedBefore  {
+            print("Not first launch.")
+        } else {
+            print("First launch, setting UserDefault.")
+            userDefeults.set(true, forKey: "launchedBefore")
+            userDefeults.set(true, forKey: soundEffect)
+            userDefeults.set(true, forKey: keepScreenOn)
+            userDefeults.set(true, forKey: shakeToClear)
+        }
+    }
+//    func listenVolumeButton(){
+//        let audioSession = AVAudioSession.sharedInstance()
+//        do {
+//            try audioSession.setActive(true, options: [])
+//            audioSession.addObserver(self, forKeyPath: "outputVolume",
+//                                     options: NSKeyValueObservingOptions.new, context: nil)
+//            audioLevel = audioSession.outputVolume
+//        } catch {
+//            print("Error")
+//        }
+//    }
+//
+//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+//        if keyPath == "outputVolume"{
+//            let audioSession = AVAudioSession.sharedInstance()
+//            if audioSession.outputVolume > audioLevel {
+////                CountBtnTapped()
+//                audioLevel = audioSession.outputVolume
+//            }
+//            if audioSession.outputVolume < audioLevel {
+//                print("GoodBye")
+//                audioLevel = audioSession.outputVolume
+//            }
+//            if audioSession.outputVolume > 0.999 {
+//                (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.9375, animated: false)
+//                audioLevel = 0.9375
+//            }
+//
+//            if audioSession.outputVolume < 0.001 {
+//                (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.0625, animated: false)
+//                audioLevel = 0.0625
+//            }
+//        }
+//    }
+    
+    func setupUserSettings() {
+        if userDefeults.bool(forKey: soundEffect) {
+            
+        }
+        
+        if userDefeults.bool(forKey: keepScreenOn) {
+            UIApplication.shared.isIdleTimerDisabled = true
+        }
+        
+//        if userDefeults.bool(forKey: useVolBtn) { }
+        
+        //Already Sat in motionEnded
+//        if userDefeults.bool(forKey: shakeToClear) { }
+    }
+    
+    //For Shake Motion
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    // Enable detection of shake motion
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake && userDefeults.bool(forKey: shakeToClear) {
+            refreshCount()
+        }
+    }
+    
     func setMultiMode(Multi: Int) {
         Variables.multiMode = Multi
         let MultiStr = String(Multi)
@@ -84,7 +175,6 @@ class ViewController: UIViewController {
             countSave.countDate = Date()
             countSave.countNum = Int32(Variables.countNum)
             countSave.countType = "normal"
-//            countSave.multiMode = Int32(Variables.multiMode)
             countSave.note = ""
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
         } else {
@@ -92,45 +182,57 @@ class ViewController: UIViewController {
         }
     }
     
-    //MARK: - IBActions
-    @IBAction func CountBtnTapped(_ sender: UIButton) {
+    func countUp() {
         hapticImpactLight.impactOccurred()
         Variables.countNum = Variables.countNum + Variables.multiMode
         refreshNumberLBDisplay()
-//        UIView.animate(withDuration: 0.1, animations: {
-//            self.NumberLB.transform = self.NumberLB.transform.scaledBy(x: 1.01, y: 1.05)
-//        }) { (success) in
-//            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: {
-//                self.NumberLB.transform = CGAffineTransform.identity
-//            }, completion: nil)
-//        }
+        //        UIView.animate(withDuration: 0.1, animations: {
+        //            self.NumberLB.transform = self.NumberLB.transform.scaledBy(x: 1.01, y: 1.05)
+        //        }) { (success) in
+        //            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: {
+        //                self.NumberLB.transform = CGAffineTransform.identity
+        //            }, completion: nil)
+        //        }
     }
     
-    @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
+    func countDown() {
         hapticImpactLight.impactOccurred()
         if Variables.countNum == 0 {
-            hapticNotification.notificationOccurred(.error)
-            NumberLB.animation = "shake"
-            NumberLB.animate()
+            antiCountError()
         }
         if Variables.countNum >= Variables.multiMode {
             Variables.countNum = Variables.countNum - Variables.multiMode
         } else {
             Variables.countNum = 0
-            hapticNotification.notificationOccurred(.error)
-            NumberLB.animation = "shake"
-            NumberLB.animate()
+            antiCountError()
         }
-        
         refreshNumberLBDisplay()
     }
     
-    
-    @IBAction func ClearBtnPressed(_ sender: UIButton) {
+    func refreshCount() {
         hapticImpactLight.impactOccurred()
         saveCountRecord()
         Variables.countNum = 0
         NumberLB.text = "0"
+    }
+    
+    func antiCountError() {
+        hapticNotification.notificationOccurred(.error)
+        NumberLB.animation = "shake"
+        NumberLB.animate()
+    }
+    
+    //MARK: - IBActions
+    @IBAction func CountBtnTapped(_ sender: UIButton) {
+        countUp()
+    }
+    
+    @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
+        countDown()
+    }
+    
+    @IBAction func ClearBtnPressed(_ sender: UIButton) {
+        refreshCount()
 //        print(applicationDirectoryPath())
     }
     

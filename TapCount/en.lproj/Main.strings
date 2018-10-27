@@ -2,8 +2,20 @@
 /* Class = "UILabel"; text = "NumberLb"; ObjectID = "5Wa-sk-wSD"; */
 "5Wa-sk-wSD.text" = "NumberLb";
 
+/* Class = "UILabel"; text = "Keep screen on"; ObjectID = "6Nn-qt-azT"; */
+"6Nn-qt-azT.text" = "Keep screen on";
+
 /* Class = "UILabel"; text = "88:88"; ObjectID = "77j-4M-YQJ"; */
 "77j-4M-YQJ.text" = "88:88";
+
+/* Class = "UILabel"; text = "Colors & Styles"; ObjectID = "7rO-uc-isM"; */
+"7rO-uc-isM.text" = "Colors & Styles";
+
+/* Class = "UITableViewSection"; headerTitle = "Functions"; ObjectID = "9sA-2y-byW"; */
+"9sA-2y-byW.headerTitle" = "Functions";
+
+/* Class = "UILabel"; text = "Count Now ∙ vX.X.X"; ObjectID = "IT0-BT-2SC"; */
+"IT0-BT-2SC.text" = "Count Now ∙ vX.X.X";
 
 /* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "LK2-8n-ySM"; */
 "LK2-8n-ySM.normalTitle" = "Clear";
@@ -14,26 +26,35 @@
 /* Class = "UIButton"; normalTitle = "+Btn"; ObjectID = "NEu-Qx-Ucf"; */
 "NEu-Qx-Ucf.normalTitle" = "+Btn";
 
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "U8C-w2-QQt"; */
-"U8C-w2-QQt.normalTitle" = "Back";
+/* Class = "UILabel"; text = "Sound Effect"; ObjectID = "Rbt-fm-k9L"; */
+"Rbt-fm-k9L.text" = "Sound Effect";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "VDP-z2-dVJ"; */
 "VDP-z2-dVJ.normalTitle" = "Back";
 
+/* Class = "UITableViewSection"; headerTitle = "Preference"; ObjectID = "Wl6-Df-Ps1"; */
+"Wl6-Df-Ps1.headerTitle" = "Preference";
+
+/* Class = "UILabel"; text = "Shake to clear"; ObjectID = "YvS-Zo-n4v"; */
+"YvS-Zo-n4v.text" = "Shake to clear";
+
 /* Class = "UILabel"; text = "2018 TonyTangⓇ"; ObjectID = "Zbd-Vd-SyO"; */
 "Zbd-Vd-SyO.text" = "2018 TonyTangⓇ";
+
+/* Class = "UILabel"; text = "Contact Developer"; ObjectID = "h8J-Hb-Iye"; */
+"h8J-Hb-Iye.text" = "Contact Developer";
+
+/* Class = "UITableViewSection"; headerTitle = "About"; ObjectID = "j72-0I-QSN"; */
+"j72-0I-QSN.headerTitle" = "About";
+
+/* Class = "UILabel"; text = "Rate \"Count Now\""; ObjectID = "jW3-8H-xvH"; */
+"jW3-8H-xvH.text" = "Rate \"Count Now\"";
 
 /* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
 "kdb-AB-3zG.text" = "CountNum";
 
 /* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */
 "nOI-P7-ZVy.normalTitle" = "History";
-
-/* Class = "UIButton"; normalTitle = "Review this App"; ObjectID = "r5W-bq-hIA"; */
-"r5W-bq-hIA.normalTitle" = "Review this App";
-
-/* Class = "UINavigationItem"; title = "  "; ObjectID = "sgc-0h-xiT"; */
-"sgc-0h-xiT.title" = "  ";
 
 /* Class = "UIButton"; normalTitle = "-Btn"; ObjectID = "sqm-8h-hO4"; */
 "sqm-8h-hO4.normalTitle" = "-Btn";

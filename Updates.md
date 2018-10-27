@@ -73,21 +73,22 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 
 # 1.1.2 Update #
 - AutoSave when Tap on Record & won't save if unchanged from Record
-- 
+- Interactive Date Record in History VC
 
+# 2.0 Update #
+- Redesigned Icon
+- Always-On
+- Settings VC Finished
+- Shake to Clear
 
 # Todos #
-- Interactive Date Record in History VC
-- Sound Feedback
-- Use Volume Button to Count
-- Always-On
+- Sound Feedback *
+- More Styles & Themes & Colors *
 - 3D touch Quick Action
-- 3D touch/ Long Press to input
-- More Styles & Themes & Colors
 - Parallax Effect according to Style & Theme
 - Auto-Save when terminated
 - Launch Screen Styles
-- Redesigned Icon
 - Submit Preview Videos
 - Localized ScreenShots
 - Apple Watch Support
+- Use Volume Button to Count [X]

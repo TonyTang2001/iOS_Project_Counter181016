@@ -56,12 +56,12 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         } else {
             cell.TimeLb.text = recordDateStr + recordTimeStr
         }
-//        cell.TimeLb.text = recordDateStr
+        
         cell.CountNumLb.text = String(count.countNum)
         
         //Setup Selecteed Color
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.gray.withAlphaComponent(0.3)
+        backgroundView.backgroundColor = UIColor.InterfaceColor.darkGray.withAlphaComponent(0.3)
         cell.selectedBackgroundView = backgroundView
         
         return cell
@@ -74,7 +74,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         Variables.countNum = Int(counts[indexPath.row].countNum)
         Variables.fromRecord = Variables.countNum
-//        Variables.multiMode = Int(counts[indexPath.row].multiMode)
     }
     
     //MARK: - Swipe Actions on Cell
@@ -85,7 +84,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.counts.remove(at: indexPath.row)
             self.HistoryTableView.deleteRows(at: [indexPath], with: .bottom)
         }
-        delete.backgroundColor = UIColor.red
+        delete.backgroundColor = UIColor.InterfaceColor.red
         return [delete]
     }
     
