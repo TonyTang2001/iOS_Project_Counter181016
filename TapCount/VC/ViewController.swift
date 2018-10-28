@@ -236,6 +236,12 @@ class ViewController: UIViewController {
 //        print(applicationDirectoryPath())
     }
     
+    @IBAction func HistoryBtnPressed(_ sender: UIButton) {
+//        resignFirstResponder()
+    }
+    
+    
+    //MARK: - Locate CoreData data files for Debugging
 //    func applicationDirectoryPath() -> String {
 //        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String
 //    }

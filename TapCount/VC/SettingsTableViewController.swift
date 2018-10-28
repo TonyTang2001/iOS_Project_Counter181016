@@ -36,44 +36,49 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             //Select Colors & Styles
+            let colorSelectionAlert = UIAlertController(title: NSLocalizedString("Colors & Styles", comment: ""), message: NSLocalizedString("Currently Unavailable \n Will be released in next version", comment: ""), preferredStyle: .alert)
+            let ok = UIAlertAction(title: NSLocalizedString("OK, I know.👌", comment: ""), style: .cancel, handler: nil)
+            colorSelectionAlert.addAction(ok)
+            present(colorSelectionAlert, animated: true, completion: nil)
+            
         } else if indexPath.section == 2 && indexPath.row == 0 {
             //Contact
-            let contactAlert = UIAlertController(title: "Contact Developer", message: "You may contact TonyTang by the following ways.", preferredStyle: .alert)
+            let contactAlert = UIAlertController(title: NSLocalizedString("Contact Developer", comment: ""), message: NSLocalizedString("You may contact TonyTang by the following ways.", comment: ""), preferredStyle: .alert)
             
-            let weChat = UIAlertAction(title: "WeChat", style: .default) { (action) in
+            let weChat = UIAlertAction(title: NSLocalizedString("WeChat", comment: ""), style: .default) { (action) in
                 UIPasteboard.general.string = "Tony-398102832"
-                let wechatAlert = UIAlertController(title: "WeChat ID Copied", message: "Paste in WeChat to search.", preferredStyle: .alert)
-                let go = UIAlertAction(title: "Go to WeChat", style: .default, handler: { (action) in
+                let wechatAlert = UIAlertController(title: NSLocalizedString("WeChat ID Copied", comment: ""), message: NSLocalizedString("Paste in WeChat to search.", comment: ""), preferredStyle: .alert)
+                let go = UIAlertAction(title: NSLocalizedString("Go to WeChat", comment: ""), style: .default, handler: { (action) in
                     guard let url = URL(string: "wechat://") else {return}
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 })
-                let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+                let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
                 wechatAlert.addAction(go)
                 wechatAlert.addAction(cancel)
                 self.present(wechatAlert, animated: true, completion: nil)
             }
             
-            let weibo = UIAlertAction(title: "Weibo", style: .default) { (action) in
+            let weibo = UIAlertAction(title: NSLocalizedString("Weibo", comment: ""), style: .default) { (action) in
                 guard let url = URL(string: "sinaweibo://userinfo?uid=2608542673") else {return}
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
-            let facebook = UIAlertAction(title: "Facebook", style: .default) { (action) in
+            let facebook = UIAlertAction(title: NSLocalizedString("Facebook", comment: ""), style: .default) { (action) in
                 guard let url = URL(string: "fb://profiles/100012964713869") else {return}
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
-            let email = UIAlertAction(title: "Email", style: .default) { (action) in
+            let email = UIAlertAction(title: NSLocalizedString("Email", comment: ""), style: .default) { (action) in
                 guard let url = URL(string: "mailto://tonytangdev17@hotmail.com") else {return}
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
-            let gitHub = UIAlertAction(title: "GitHub", style: .default) { (action) in
+            let gitHub = UIAlertAction(title: NSLocalizedString("GitHub", comment: ""), style: .default) { (action) in
                 guard let url = URL(string: "https://github.com/TonyTang2001") else {return}
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+            let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
             contactAlert.addAction(weChat)
             contactAlert.addAction(weibo)
             contactAlert.addAction(facebook)

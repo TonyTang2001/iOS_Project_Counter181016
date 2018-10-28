@@ -28,6 +28,7 @@
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="HistoryBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="emK-Jr-YXz"/>
                                     <segue destination="Hvb-YM-0mK" kind="popoverPresentation" popoverAnchorView="nOI-P7-ZVy" id="Esa-Kj-3LK">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>

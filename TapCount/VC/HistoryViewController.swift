@@ -97,6 +97,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.becomeFirstResponder()
         HistoryTableView.separatorColor = .clear
         loadData()
         let askedForReviewOrNot : Bool = UserDefaults.standard.bool(forKey: "AskedForReview")
