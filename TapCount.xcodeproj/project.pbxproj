@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		401BA66FFCA12FA43461F46F /* Pods_TapCount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9395668832E612F12B1F90D /* Pods_TapCount.framework */; };
+		EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1921895444002D9765 /* PopUpEffect.swift */; };
+		EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */; };
 		EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F70882173985400F06966 /* HistoryViewController.swift */; };
 		EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708B2173993200F06966 /* History.xcdatamodeld */; };
 		EA2F708F21739CFF00F06966 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */; };
@@ -22,12 +24,18 @@
 		EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */; };
 		EA4DAC2321849609007E1632 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */; };
 		EA4DAC25218499A8007E1632 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC24218499A8007E1632 /* Color.swift */; };
+		EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */; };
+		EA7AF2C1218A04FB00D62CAB /* Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7AF2BE218A04FB00D62CAB /* Orange.png */; };
+		EA7AF2C2218A04FB00D62CAB /* Red.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7AF2BF218A04FB00D62CAB /* Red.png */; };
+		EA7AF2C3218A04FB00D62CAB /* Navi.png in Resources */ = {isa = PBXBuildFile; fileRef = EA7AF2C0218A04FB00D62CAB /* Navi.png */; };
 		EAD247F1217B3BBC008DD72D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3B8ED2D3926A9BD49F20DE0F /* Pods-TapCount.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCount.release.xcconfig"; path = "Pods/Target Support Files/Pods-TapCount/Pods-TapCount.release.xcconfig"; sourceTree = "<group>"; };
 		D9395668832E612F12B1F90D /* Pods_TapCount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapCount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1ECD1921895444002D9765 /* PopUpEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpEffect.swift; sourceTree = "<group>"; };
+		EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionViewController.swift; sourceTree = "<group>"; };
 		EA2F70882173985400F06966 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EA2F708C2173993200F06966 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -48,6 +56,10 @@
 		EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EA4DAC24218499A8007E1632 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		EA5C5B642177A6A600383501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
+		EA7AF2BE218A04FB00D62CAB /* Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Orange.png; sourceTree = "<group>"; };
+		EA7AF2BF218A04FB00D62CAB /* Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Red.png; sourceTree = "<group>"; };
+		EA7AF2C0218A04FB00D62CAB /* Navi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Navi.png; sourceTree = "<group>"; };
 		EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EEBF9ED38318EA1A08EA5894 /* Pods-TapCount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapCount/Pods-TapCount.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,6 +93,8 @@
 				EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */,
 				EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */,
 				EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */,
+				EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */,
+				EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */,
 				EA3D4354217BA3B100753BEA /* Opensource */,
 			);
 			path = VC;
@@ -110,6 +124,7 @@
 				EA3107F521706C8B003823AE /* AppDelegate.swift */,
 				EA3D4350217B885500753BEA /* UniversalVar.swift */,
 				EA4DAC24218499A8007E1632 /* Color.swift */,
+				EA7AF2BD218A04FB00D62CAB /* ThemeColorPads */,
 				EA2F708A2173985D00F06966 /* VC */,
 				EA3107F921706C8B003823AE /* Main.storyboard */,
 				EA2F708B2173993200F06966 /* History.xcdatamodeld */,
@@ -125,10 +140,22 @@
 		EA3D4354217BA3B100753BEA /* Opensource */ = {
 			isa = PBXGroup;
 			children = (
+				EA1ECD1921895444002D9765 /* PopUpEffect.swift */,
 				EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */,
 			);
 			path = Opensource;
 			sourceTree = "<group>";
+		};
+		EA7AF2BD218A04FB00D62CAB /* ThemeColorPads */ = {
+			isa = PBXGroup;
+			children = (
+				EA7AF2BE218A04FB00D62CAB /* Orange.png */,
+				EA7AF2BF218A04FB00D62CAB /* Red.png */,
+				EA7AF2C0218A04FB00D62CAB /* Navi.png */,
+			);
+			name = ThemeColorPads;
+			path = "App Resources/Design/ThemeColorPads";
+			sourceTree = SOURCE_ROOT;
 		};
 		EB50CCBC1B296405CEF846F2 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -199,10 +226,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA31080021706C8E003823AE /* LaunchScreen.storyboard in Resources */,
+				EA7AF2C3218A04FB00D62CAB /* Navi.png in Resources */,
 				EA3888E121776CEC004E3EA5 /* InfoPlist.strings in Resources */,
 				EA3888E921778ED8004E3EA5 /* Localizable.strings in Resources */,
 				EA3107FD21706C8E003823AE /* Assets.xcassets in Resources */,
 				EA3107FB21706C8B003823AE /* Main.storyboard in Resources */,
+				EA7AF2C1218A04FB00D62CAB /* Orange.png in Resources */,
+				EA7AF2C2218A04FB00D62CAB /* Red.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */,
 				EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */,
+				EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */,
 				EA3107F821706C8B003823AE /* ViewController.swift in Sources */,
 				EA3D4351217B885500753BEA /* UniversalVar.swift in Sources */,
 				EA4DAC25218499A8007E1632 /* Color.swift in Sources */,
+				EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */,
 				EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */,
 				EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */,
 				EA3107F621706C8B003823AE /* AppDelegate.swift in Sources */,

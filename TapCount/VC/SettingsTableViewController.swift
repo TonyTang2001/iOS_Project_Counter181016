@@ -9,7 +9,21 @@
 import UIKit
 import StoreKit
 
-class SettingsTableViewController: UITableViewController {
+class SettingsTableViewController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let array:[String] = ["Orange","Navi","Red","Orange","Navi","Red"]
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return array.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ColorSelectionCollectionViewCell
+        
+        cell.colorPadImgV.image = UIImage(named: array[indexPath.row] + ".png")
+        
+        return cell
+    }
+    
 
     //MARK: - Preset
     let userDefeults = UserDefaults.standard
@@ -29,6 +43,8 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var shakeToClearCell: UITableViewCell!
     @IBOutlet weak var contactDevCell: UITableViewCell!
     @IBOutlet weak var rateCell: UITableViewCell!
+    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
+    @IBOutlet weak var acknowledgementCell: UITableViewCell!
     
     @IBOutlet weak var nameAndVersion: UILabel!
     
@@ -36,10 +52,9 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             //Select Colors & Styles
-            let colorSelectionAlert = UIAlertController(title: NSLocalizedString("Colors & Styles", comment: ""), message: NSLocalizedString("Currently Unavailable \n Will be released in next version", comment: ""), preferredStyle: .alert)
-            let ok = UIAlertAction(title: NSLocalizedString("OK, I know.👌", comment: ""), style: .cancel, handler: nil)
-            colorSelectionAlert.addAction(ok)
-            present(colorSelectionAlert, animated: true, completion: nil)
+            let popup = ColorSelectionViewController.create()
+            let sbPopup = SBCardPopupViewController(contentViewController: popup)
+            sbPopup.show(onViewController: self)
             
         } else if indexPath.section == 2 && indexPath.row == 0 {
             //Contact
@@ -92,6 +107,12 @@ class SettingsTableViewController: UITableViewController {
 //            let addAlert = UIAlertController(title: NSLocalizedString("Thank you!", comment: ""), message: NSLocalizedString("Thank you for your patient Review.", comment: ""), preferredStyle: .alert)
 //            addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK, I know.👌", comment: ""), style: .cancel, handler: nil))
 //            self.present(addAlert, animated: true, completion: nil)
+        } else if indexPath.section == 2 && indexPath.row == 2 {
+            guard let url = URL(string: NSLocalizedString("https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md", comment: "")) else {return}
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else if indexPath.section == 2 && indexPath.row == 3 {
+            guard let url = URL(string: "https://github.com/TonyTang2001") else {return}
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
         
     }
@@ -112,6 +133,8 @@ class SettingsTableViewController: UITableViewController {
         colorsAndStylesCell.selectedBackgroundView = selectionColor
         contactDevCell.selectedBackgroundView = selectionColor
         rateCell.selectedBackgroundView = selectionColor
+        privacyPolicyCell.selectedBackgroundView = selectionColor
+        acknowledgementCell.selectedBackgroundView = selectionColor
         
         soundEffectCell.selectionStyle = .none
         keepScreenOnCell.selectionStyle = .none
