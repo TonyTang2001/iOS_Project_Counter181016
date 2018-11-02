@@ -8,14 +8,16 @@
 
 import UIKit
 import Spring
-//import AVFoundation
+//import AudioToolbox
+import AVFoundation
 //import MediaPlayer
 
 class ViewController: UIViewController {
-
-    private var audioLevel : Float = 0.0
     
     //MARK: - Preset
+    var player = AVAudioPlayer()
+    var soundEnabled: Bool = true
+//    private var audioLevel: Float = 0.0
     let userDefeults = UserDefaults.standard
     let soundEffect = "soundEffect"
     let keepScreenOn = "keepScreenOn"
@@ -27,6 +29,7 @@ class ViewController: UIViewController {
     
     //MARK: Setup Haptic Feedback
     let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
+    let hapticImpactMedium = UIImpactFeedbackGenerator(style: .medium)
     let hapticSelection = UISelectionFeedbackGenerator()
     let hapticNotification = UINotificationFeedbackGenerator()
     
@@ -132,7 +135,9 @@ class ViewController: UIViewController {
     
     func setupUserSettings() {
         if userDefeults.bool(forKey: soundEffect) {
-            
+            soundEnabled = true
+        } else if userDefeults.bool(forKey: soundEffect) == false {
+            soundEnabled = false
         }
         
         if userDefeults.bool(forKey: keepScreenOn) {
@@ -183,9 +188,20 @@ class ViewController: UIViewController {
     }
     
     func countUp() {
-        hapticImpactLight.impactOccurred()
         Variables.countNum = Variables.countNum + Variables.multiMode
+        //SoundEffect
+        if userDefeults.bool(forKey: soundEffect) {
+            let path = Bundle.main.path(forResource: "108336__qat__click-01-fast", ofType: "wav")!
+            let url = URL(fileURLWithPath: path)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player.play()
+            } catch { print ("SoundError:\(error)") }
+        }
+        
         refreshNumberLBDisplay()
+        
+        //Animation for NumberLb
         //        UIView.animate(withDuration: 0.1, animations: {
         //            self.NumberLB.transform = self.NumberLB.transform.scaledBy(x: 1.01, y: 1.05)
         //        }) { (success) in
@@ -196,7 +212,6 @@ class ViewController: UIViewController {
     }
     
     func countDown() {
-        hapticImpactLight.impactOccurred()
         if Variables.countNum == 0 {
             antiCountError()
         }
@@ -205,6 +220,15 @@ class ViewController: UIViewController {
         } else {
             Variables.countNum = 0
             antiCountError()
+        }
+        //SoundEffect
+        if userDefeults.bool(forKey: soundEffect) {
+            let path = Bundle.main.path(forResource: "108336__qat__click-01-fast", ofType: "wav")!
+            let url = URL(fileURLWithPath: path)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player.play()
+            } catch { print ("SoundError:\(error)") }
         }
         refreshNumberLBDisplay()
     }
@@ -223,8 +247,14 @@ class ViewController: UIViewController {
     }
     
     //MARK: - IBActions
+    @IBAction func CountBtnTouchDown(_ sender: UIButton) {
+        hapticImpactMedium.impactOccurred()
+    }
     @IBAction func CountBtnTapped(_ sender: UIButton) {
         countUp()
+    }
+    @IBAction func AntiCountBtnTouchDown(_ sender: UIButton) {
+        hapticImpactLight.impactOccurred()
     }
     
     @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
@@ -239,7 +269,6 @@ class ViewController: UIViewController {
     @IBAction func HistoryBtnPressed(_ sender: UIButton) {
 //        resignFirstResponder()
     }
-    
     
     //MARK: - Locate CoreData data files for Debugging
 //    func applicationDirectoryPath() -> String {

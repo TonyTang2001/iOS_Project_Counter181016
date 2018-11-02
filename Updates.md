@@ -80,6 +80,7 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 - Always-On
 - Settings VC Finished
 - Shake to Clear
+- Settings Entrance Changed
 
 # Todos #
 - Sound Feedback *

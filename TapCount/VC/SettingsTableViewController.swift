@@ -38,6 +38,7 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
     @IBOutlet weak var shakeToClearSwt: UISwitch!
     
     @IBOutlet weak var colorsAndStylesCell: UITableViewCell!
+    @IBOutlet weak var colorsSelectionCell: UITableViewCell!
     @IBOutlet weak var soundEffectCell: UITableViewCell!
     @IBOutlet weak var keepScreenOnCell: UITableViewCell!
     @IBOutlet weak var shakeToClearCell: UITableViewCell!
@@ -46,6 +47,7 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
     @IBOutlet weak var privacyPolicyCell: UITableViewCell!
     @IBOutlet weak var acknowledgementCell: UITableViewCell!
     
+    @IBOutlet weak var colorsCollectionView: UICollectionView!
     @IBOutlet weak var nameAndVersion: UILabel!
     
     //MARK: - Selection Delegate
@@ -100,6 +102,7 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
             contactAlert.addAction(email)
             contactAlert.addAction(gitHub)
             contactAlert.addAction(cancel)
+            
             present(contactAlert, animated: true, completion: nil)
         } else if indexPath.section == 2 && indexPath.row == 1 {
             //Rate
@@ -136,6 +139,7 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
         privacyPolicyCell.selectedBackgroundView = selectionColor
         acknowledgementCell.selectedBackgroundView = selectionColor
         
+        colorsSelectionCell.selectionStyle = .none
         soundEffectCell.selectionStyle = .none
         keepScreenOnCell.selectionStyle = .none
 //        useVolBtnCell.selectionStyle = .none

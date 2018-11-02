@@ -10,6 +10,8 @@
 		401BA66FFCA12FA43461F46F /* Pods_TapCount.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9395668832E612F12B1F90D /* Pods_TapCount.framework */; };
 		EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1921895444002D9765 /* PopUpEffect.swift */; };
 		EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */; };
+		EA2BEFDF218B737E0030ACDF /* CountBtn_Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA2BEFDE218B737E0030ACDF /* CountBtn_Default.wav */; };
+		EA2BEFE1218B795C0030ACDF /* 108336__qat__click-01-fast.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA2BEFE0218B795C0030ACDF /* 108336__qat__click-01-fast.wav */; };
 		EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F70882173985400F06966 /* HistoryViewController.swift */; };
 		EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708B2173993200F06966 /* History.xcdatamodeld */; };
 		EA2F708F21739CFF00F06966 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */; };
@@ -36,6 +38,8 @@
 		D9395668832E612F12B1F90D /* Pods_TapCount.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TapCount.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA1ECD1921895444002D9765 /* PopUpEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpEffect.swift; sourceTree = "<group>"; };
 		EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionViewController.swift; sourceTree = "<group>"; };
+		EA2BEFDE218B737E0030ACDF /* CountBtn_Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = CountBtn_Default.wav; path = "App Resources/SoundEffects/Default1/CountBtn_Default.wav"; sourceTree = SOURCE_ROOT; };
+		EA2BEFE0218B795C0030ACDF /* 108336__qat__click-01-fast.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "108336__qat__click-01-fast.wav"; path = "App Resources/SoundEffects/Taptic/108336__qat__click-01-fast.wav"; sourceTree = SOURCE_ROOT; };
 		EA2F70882173985400F06966 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EA2F708C2173993200F06966 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -85,6 +89,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EA2BEFDD218B6ED60030ACDF /* SoundAssets */ = {
+			isa = PBXGroup;
+			children = (
+				EA2BEFDE218B737E0030ACDF /* CountBtn_Default.wav */,
+				EA2BEFE0218B795C0030ACDF /* 108336__qat__click-01-fast.wav */,
+			);
+			path = SoundAssets;
+			sourceTree = "<group>";
+		};
 		EA2F708A2173985D00F06966 /* VC */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +142,7 @@
 				EA3107F921706C8B003823AE /* Main.storyboard */,
 				EA2F708B2173993200F06966 /* History.xcdatamodeld */,
 				EA3107FC21706C8E003823AE /* Assets.xcassets */,
+				EA2BEFDD218B6ED60030ACDF /* SoundAssets */,
 				EA3107FE21706C8E003823AE /* LaunchScreen.storyboard */,
 				EA31080121706C8E003823AE /* Info.plist */,
 				EA3888E321776CEC004E3EA5 /* InfoPlist.strings */,
@@ -228,8 +242,10 @@
 				EA31080021706C8E003823AE /* LaunchScreen.storyboard in Resources */,
 				EA7AF2C3218A04FB00D62CAB /* Navi.png in Resources */,
 				EA3888E121776CEC004E3EA5 /* InfoPlist.strings in Resources */,
+				EA2BEFDF218B737E0030ACDF /* CountBtn_Default.wav in Resources */,
 				EA3888E921778ED8004E3EA5 /* Localizable.strings in Resources */,
 				EA3107FD21706C8E003823AE /* Assets.xcassets in Resources */,
+				EA2BEFE1218B795C0030ACDF /* 108336__qat__click-01-fast.wav in Resources */,
 				EA3107FB21706C8B003823AE /* Main.storyboard in Resources */,
 				EA7AF2C1218A04FB00D62CAB /* Orange.png in Resources */,
 				EA7AF2C2218A04FB00D62CAB /* Red.png in Resources */,
