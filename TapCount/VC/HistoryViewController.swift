@@ -76,6 +76,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         Variables.fromRecord = Variables.countNum
     }
     
+    
+    
     //MARK: - Swipe Actions on Cell
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let delete = UITableViewRowAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (action, indexPath) in

@@ -81,9 +81,10 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 - Settings VC Finished
 - Shake to Clear
 - Settings Entrance Changed
+- Sound Feedback 
 
 # Todos #
-- Sound Feedback *
+
 - More Styles & Themes & Colors *
 - 3D touch Quick Action
 - Parallax Effect according to Style & Theme

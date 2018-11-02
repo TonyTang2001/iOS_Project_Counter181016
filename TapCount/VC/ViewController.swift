@@ -175,7 +175,7 @@ class ViewController: UIViewController {
     }
     
     func saveCountRecord() {
-        if Variables.countNum != 0 {
+        if Variables.countNum != 0 && Variables.countNum != Variables.fromRecord {
             let countSave = CountHistory(context: context)
             countSave.countDate = Date()
             countSave.countNum = Int32(Variables.countNum)
@@ -189,16 +189,6 @@ class ViewController: UIViewController {
     
     func countUp() {
         Variables.countNum = Variables.countNum + Variables.multiMode
-        //SoundEffect
-        if userDefeults.bool(forKey: soundEffect) {
-            let path = Bundle.main.path(forResource: "108336__qat__click-01-fast", ofType: "wav")!
-            let url = URL(fileURLWithPath: path)
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-                player.play()
-            } catch { print ("SoundError:\(error)") }
-        }
-        
         refreshNumberLBDisplay()
         
         //Animation for NumberLb
@@ -221,15 +211,7 @@ class ViewController: UIViewController {
             Variables.countNum = 0
             antiCountError()
         }
-        //SoundEffect
-        if userDefeults.bool(forKey: soundEffect) {
-            let path = Bundle.main.path(forResource: "108336__qat__click-01-fast", ofType: "wav")!
-            let url = URL(fileURLWithPath: path)
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-                player.play()
-            } catch { print ("SoundError:\(error)") }
-        }
+        
         refreshNumberLBDisplay()
     }
     
@@ -248,12 +230,32 @@ class ViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func CountBtnTouchDown(_ sender: UIButton) {
+        //SoundEffect
+        if userDefeults.bool(forKey: soundEffect) {
+            let path = Bundle.main.path(forResource: "CountBtn_Default", ofType: "wav")!
+            let url = URL(fileURLWithPath: path)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player.play()
+            } catch { print ("SoundError:\(error)") }
+        }
         hapticImpactMedium.impactOccurred()
     }
+    
     @IBAction func CountBtnTapped(_ sender: UIButton) {
         countUp()
     }
+    
     @IBAction func AntiCountBtnTouchDown(_ sender: UIButton) {
+        //SoundEffect
+        if userDefeults.bool(forKey: soundEffect) {
+            let path = Bundle.main.path(forResource: "AntiCountBtn_Default", ofType: "wav")!
+            let url = URL(fileURLWithPath: path)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player.play()
+            } catch { print ("SoundError:\(error)") }
+        }
         hapticImpactLight.impactOccurred()
     }
     
