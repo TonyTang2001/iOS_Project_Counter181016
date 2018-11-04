@@ -84,7 +84,6 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 - Sound Feedback 
 
 # Todos #
-
 - More Styles & Themes & Colors *
 - 3D touch Quick Action
 - Parallax Effect according to Style & Theme

@@ -12,7 +12,7 @@ import Spring
 import AVFoundation
 //import MediaPlayer
 
-class ViewController: UIViewController {
+class ViewController: SuperViewController {
     
     //MARK: - Preset
     var player = AVAudioPlayer()
@@ -240,10 +240,11 @@ class ViewController: UIViewController {
             } catch { print ("SoundError:\(error)") }
         }
         hapticImpactMedium.impactOccurred()
+        countUp()
     }
     
     @IBAction func CountBtnTapped(_ sender: UIButton) {
-        countUp()
+//        countUp()
     }
     
     @IBAction func AntiCountBtnTouchDown(_ sender: UIButton) {
@@ -257,10 +258,11 @@ class ViewController: UIViewController {
             } catch { print ("SoundError:\(error)") }
         }
         hapticImpactLight.impactOccurred()
+        countDown()
     }
     
     @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
-        countDown()
+//        countDown()
     }
     
     @IBAction func ClearBtnPressed(_ sender: UIButton) {

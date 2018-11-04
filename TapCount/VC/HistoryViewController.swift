@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import StoreKit
 
-class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HistoryViewController: SuperViewController, UITableViewDelegate, UITableViewDataSource {
     
     var countRecord = 0
     let mainVC = ViewController()

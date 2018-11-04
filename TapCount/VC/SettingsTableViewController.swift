@@ -9,7 +9,24 @@
 import UIKit
 import StoreKit
 
-class SettingsTableViewController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func changeTheme() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handelNotification(notification:)), name: ThemeNotifacationName, object: nil)
+        ThemeManager.themeUpdate()
+    }
+    
+    @objc func handelNotification(notification: NSNotification) {
+        guard let theme = notification.object as? ThemeProtocol else {
+            return
+        }
+        self.view.backgroundColor = theme.backgroundColor
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     
     let array:[String] = ["Orange","Navi","Red","Orange","Navi","Red"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -23,6 +40,8 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
         
         return cell
     }
+    
+    
     
 
     //MARK: - Preset
@@ -118,11 +137,13 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
         
+        self.tableView.reloadData()
     }
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.changeTheme()
         setupCells()
         setupSwts()
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
@@ -168,6 +189,3 @@ class SettingsTableViewController: UITableViewController, UICollectionViewDelega
     
     
 }
-
-
-

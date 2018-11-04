@@ -43,5 +43,8 @@ extension UIColor {
         static let yellow: UIColor   = .init(hex: 0xffcc00)
         static let tealBlue: UIColor = .init(hex: 0x5ac8fa)
         static let pink: UIColor     = .init(hex: 0xff2d55)
+        static let white: UIColor    = .init(hex: 0xffffff)
+        
+        static let naviBlue: UIColor = .init(hex: 0x02407c)
     }
 }

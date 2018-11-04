@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ColorSelectionViewController: UIViewController, SBCardPopupContent
+class ColorSelectionViewController: SuperViewController, SBCardPopupContent
 {
     //Setup Popup View
     var popupViewController: SBCardPopupViewController?
