@@ -75,13 +75,16 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 - AutoSave when Tap on Record & won't save if unchanged from Record
 - Interactive Date Record in History VC
 
-# 2.0 Update #
+# 1.9.9 Update #
 - Redesigned Icon
 - Always-On
 - Settings VC Finished
 - Shake to Clear
 - Settings Entrance Changed
 - Sound Feedback 
+
+# 2.0.0 Update #
+
 
 # Todos #
 - More Styles & Themes & Colors *
