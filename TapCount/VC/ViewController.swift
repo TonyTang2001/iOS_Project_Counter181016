@@ -38,8 +38,8 @@ class ViewController: SuperViewController {
     @IBOutlet weak var ClearBtn: UIButton!
     
     @IBOutlet weak var NumberLB: SpringLabel!
-    @IBOutlet weak var AntiCountBtn: UIButton!
-    @IBOutlet weak var CountBtn: UIButton!
+    @IBOutlet weak var AntiCountBtn: CountBtn!
+    @IBOutlet weak var CountBtn: CountBtn!
     
     //MARK: - Setup Appearance
     //StatusBar Style
@@ -71,6 +71,7 @@ class ViewController: SuperViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
+        
         firstLaunch()
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
@@ -229,7 +230,7 @@ class ViewController: SuperViewController {
     }
     
     //MARK: - IBActions
-    @IBAction func CountBtnTouchDown(_ sender: UIButton) {
+    @IBAction func CountBtnTouchDown(_ sender: CountBtn) {
         //SoundEffect
         if userDefeults.bool(forKey: soundEffect) {
             let path = Bundle.main.path(forResource: "CountBtn_Default", ofType: "wav")!
@@ -243,7 +244,7 @@ class ViewController: SuperViewController {
         countUp()
     }
     
-    @IBAction func CountBtnTapped(_ sender: UIButton) {
+    @IBAction func CountBtnTapped(_ sender: CountBtn) {
 //        countUp()
     }
     

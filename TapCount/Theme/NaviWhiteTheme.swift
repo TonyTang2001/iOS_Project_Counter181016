@@ -22,7 +22,7 @@ class NaviWhiteTheme: ThemeProtocol {
     
     var countDisplayColor: UIColor {
         get {
-            return UIColor.InterfaceColor.white
+            return UIColor.InterfaceColor.black
         }
     }
     

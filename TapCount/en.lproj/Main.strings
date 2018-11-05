@@ -1,4 +1,7 @@
 
+/* Class = "UILabel"; text = "Privacy Policy"; ObjectID = "2Lj-61-YRK"; */
+"2Lj-61-YRK.text" = "Privacy Policy";
+
 /* Class = "UILabel"; text = "NumberLb"; ObjectID = "5Wa-sk-wSD"; */
 "5Wa-sk-wSD.text" = "NumberLb";
 
@@ -35,6 +38,9 @@
 /* Class = "UITableViewSection"; headerTitle = "Preference"; ObjectID = "Wl6-Df-Ps1"; */
 "Wl6-Df-Ps1.headerTitle" = "Preference";
 
+/* Class = "UIViewController"; title = "Color"; ObjectID = "YIl-1Z-UCX"; */
+"YIl-1Z-UCX.title" = "Color";
+
 /* Class = "UILabel"; text = "Shake to clear"; ObjectID = "YvS-Zo-n4v"; */
 "YvS-Zo-n4v.text" = "Shake to clear";
 
@@ -53,11 +59,17 @@
 /* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
 "kdb-AB-3zG.text" = "CountNum";
 
+/* Class = "UILabel"; text = "Comming Soon..."; ObjectID = "mOe-sY-dmS"; */
+"mOe-sY-dmS.text" = "Comming Soon...";
+
 /* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */
 "nOI-P7-ZVy.normalTitle" = "History";
 
 /* Class = "UIButton"; normalTitle = "-Btn"; ObjectID = "sqm-8h-hO4"; */
 "sqm-8h-hO4.normalTitle" = "-Btn";
+
+/* Class = "UILabel"; text = "Acknowledgement"; ObjectID = "uvN-jy-H4n"; */
+"uvN-jy-H4n.text" = "Acknowledgement";
 
 /* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "xBW-3f-sIt"; */
 "xBW-3f-sIt.normalTitle" = "Clear All";
