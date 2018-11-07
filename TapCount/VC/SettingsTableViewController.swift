@@ -28,7 +28,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     }
     
     
-    let array:[String] = ["Orange","Navi","Red","Orange","Navi","Red"]
+    let array:[String] = ["orangeBlack","naviWhite","redBlack"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
@@ -125,18 +125,18 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             present(contactAlert, animated: true, completion: nil)
         } else if indexPath.section == 2 && indexPath.row == 1 {
             //Rate
-            SKStoreReviewController.requestReview()
-//            let addAlert = UIAlertController(title: NSLocalizedString("Thank you!", comment: ""), message: NSLocalizedString("Thank you for your patient Review.", comment: ""), preferredStyle: .alert)
-//            addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK, I know.👌", comment: ""), style: .cancel, handler: nil))
-//            self.present(addAlert, animated: true, completion: nil)
+            let askForRate = UIAlertController(title: NSLocalizedString("Like 'Count Now'?", comment: ""), message: NSLocalizedString("You may rate 'Count Now' here. \n We are eager for your encouragement and feedbacks!", comment: ""), preferredStyle: .alert)
+            askForRate.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Not now", comment: ""), style: .cancel, handler: nil))
+            askForRate.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Rate", comment: ""), style: .default) { (action) in  SKStoreReviewController.requestReview()  })
+            self.present(askForRate, animated: true, completion: nil)
+            
         } else if indexPath.section == 2 && indexPath.row == 2 {
             guard let url = URL(string: NSLocalizedString("https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md", comment: "")) else {return}
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         } else if indexPath.section == 2 && indexPath.row == 3 {
-            guard let url = URL(string: "https://github.com/TonyTang2001") else {return}
+            guard let url = URL(string: "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Acknowledgement.md") else {return}
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-        
         self.tableView.reloadData()
     }
     

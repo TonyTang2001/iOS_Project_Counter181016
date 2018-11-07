@@ -69,7 +69,7 @@
 "sqm-8h-hO4.normalTitle" = "-Btn";
 
 /* Class = "UILabel"; text = "Acknowledgement"; ObjectID = "uvN-jy-H4n"; */
-"uvN-jy-H4n.text" = "声明";
+"uvN-jy-H4n.text" = "致谢";
 
 /* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "xBW-3f-sIt"; */
 "xBW-3f-sIt.normalTitle" = "清空";

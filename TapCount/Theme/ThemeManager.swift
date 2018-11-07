@@ -12,7 +12,7 @@ let ThemeNotifacationName = NSNotification.Name("keyThemeNotifacation")
 
 class ThemeManager: NSObject {
     
-    var theme: ThemeProtocol = OrangeBlackTheme()   //Default
+    var theme: ThemeProtocol = NaviWhiteTheme()   //Default
     
     static var manager: ThemeManager? = nil
     static func shareInstance() -> ThemeManager {
