@@ -274,7 +274,7 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-Iq-p11">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="732"/>
                                 <connections>
                                     <segue destination="MFi-jx-o58" kind="embed" id="4cX-ae-txJ"/>
                                 </connections>
@@ -296,7 +296,7 @@
                             <constraint firstItem="VDP-z2-dVJ" firstAttribute="leading" secondItem="2Ly-9Q-pCg" secondAttribute="leadingMargin" id="MoY-6B-UFa"/>
                             <constraint firstItem="Zbd-Vd-SyO" firstAttribute="centerX" secondItem="2Ly-9Q-pCg" secondAttribute="centerX" id="NO6-2U-hcN"/>
                             <constraint firstItem="VDP-z2-dVJ" firstAttribute="top" secondItem="nm2-Qc-xRX" secondAttribute="top" id="Po8-5Q-OXP"/>
-                            <constraint firstItem="H3V-Iq-p11" firstAttribute="top" secondItem="VDP-z2-dVJ" secondAttribute="bottom" constant="8" id="f2p-P1-ch3"/>
+                            <constraint firstItem="H3V-Iq-p11" firstAttribute="top" secondItem="VDP-z2-dVJ" secondAttribute="bottom" id="f2p-P1-ch3"/>
                             <constraint firstAttribute="trailing" secondItem="H3V-Iq-p11" secondAttribute="trailing" id="sJZ-no-ELY"/>
                             <constraint firstItem="H3V-Iq-p11" firstAttribute="leading" secondItem="2Ly-9Q-pCg" secondAttribute="leading" id="zt6-4G-6Vw"/>
                         </constraints>
@@ -308,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVT-Er-hDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321" y="557"/>
+            <point key="canvasLocation" x="1185" y="496"/>
         </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="v3c-qf-TUu">
@@ -623,7 +623,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghF-lI-HMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="556"/>
+            <point key="canvasLocation" x="1942" y="529"/>
         </scene>
         <!--Color-->
         <scene sceneID="kv2-T8-n17">
@@ -656,7 +656,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tj8-TR-kyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="97"/>
+            <point key="canvasLocation" x="1941" y="98"/>
         </scene>
     </scenes>
     <resources>

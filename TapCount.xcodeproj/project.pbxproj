@@ -29,7 +29,7 @@
 		EA429430218F2A4800061DD5 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA42942F218F2A4800061DD5 /* ThemeManager.swift */; };
 		EA429432218F2CB000061DD5 /* ThemeManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA429431218F2CB000061DD5 /* ThemeManagerProtocol.swift */; };
 		EA429434218F2D6600061DD5 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA429433218F2D6600061DD5 /* SuperViewController.swift */; };
-		EA429436218FE88F00061DD5 /* CountBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA429435218FE88F00061DD5 /* CountBtn.swift */; };
+		EA429436218FE88F00061DD5 /* ThemeSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA429435218FE88F00061DD5 /* ThemeSet.swift */; };
 		EA42943E2190943000061DD5 /* AntiCountBtn_Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA42943C2190943000061DD5 /* AntiCountBtn_Default.wav */; };
 		EA42943F2190943000061DD5 /* CountBtn_Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA42943D2190943000061DD5 /* CountBtn_Default.wav */; };
 		EA4DAC2321849609007E1632 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */; };
@@ -67,7 +67,7 @@
 		EA42942F218F2A4800061DD5 /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
 		EA429431218F2CB000061DD5 /* ThemeManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManagerProtocol.swift; sourceTree = "<group>"; };
 		EA429433218F2D6600061DD5 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
-		EA429435218FE88F00061DD5 /* CountBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountBtn.swift; sourceTree = "<group>"; };
+		EA429435218FE88F00061DD5 /* ThemeSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSet.swift; sourceTree = "<group>"; };
 		EA42943C2190943000061DD5 /* AntiCountBtn_Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = AntiCountBtn_Default.wav; path = "App Resources/SoundEffects/Taptic/AntiCountBtn_Default.wav"; sourceTree = SOURCE_ROOT; };
 		EA42943D2190943000061DD5 /* CountBtn_Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = CountBtn_Default.wav; path = "App Resources/SoundEffects/Taptic/CountBtn_Default.wav"; sourceTree = SOURCE_ROOT; };
 		EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				EA429426218F224400061DD5 /* ThemeProtocol.swift */,
 				EA42942F218F2A4800061DD5 /* ThemeManager.swift */,
 				EA429431218F2CB000061DD5 /* ThemeManagerProtocol.swift */,
-				EA429435218FE88F00061DD5 /* CountBtn.swift */,
+				EA429435218FE88F00061DD5 /* ThemeSet.swift */,
 				EA429428218F248700061DD5 /* NaviWhiteTheme.swift */,
 				EA42942A218F249200061DD5 /* OrangeBlackTheme.swift */,
 				EA42942C218F249400061DD5 /* RedBlackTheme.swift */,
@@ -316,7 +316,7 @@
 				EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */,
 				EA42942D218F249500061DD5 /* RedBlackTheme.swift in Sources */,
 				EA429430218F2A4800061DD5 /* ThemeManager.swift in Sources */,
-				EA429436218FE88F00061DD5 /* CountBtn.swift in Sources */,
+				EA429436218FE88F00061DD5 /* ThemeSet.swift in Sources */,
 				EA429427218F224400061DD5 /* ThemeProtocol.swift in Sources */,
 				EA3107F821706C8B003823AE /* ViewController.swift in Sources */,
 				EA429429218F248700061DD5 /* NaviWhiteTheme.swift in Sources */,
