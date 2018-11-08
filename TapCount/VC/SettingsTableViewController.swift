@@ -165,6 +165,9 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         keepScreenOnCell.selectionStyle = .none
 //        useVolBtnCell.selectionStyle = .none
         shakeToClearCell.selectionStyle = .none
+        
+//        colorsAndStylesCell.heightAnchor
+        
     }
     
     func setupSwts() {

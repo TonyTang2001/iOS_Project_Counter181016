@@ -72,7 +72,6 @@ class ViewController: SuperViewController {
         super.viewDidLoad()
         self.becomeFirstResponder()
         
-        
         firstLaunch()
         setMultiMode(Multi: 1)
         setupMultiModeBtn()

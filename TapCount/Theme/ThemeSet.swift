@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CountBtn: UIButton, ThemeManagerProtocol {
+class SuperBtn: UIButton, ThemeManagerProtocol {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,11 +28,9 @@ class CountBtn: UIButton, ThemeManagerProtocol {
     }
     
     @objc func handelNotification(notification: NSNotification) {
-        guard let theme = notification.object as? ThemeProtocol else {
-            return
-        }
-        self.titleLabel?.textColor = self.themeTextColor(theme: theme)
-        self.backgroundColor = self.themebgColor(theme: theme)
+        guard let theme = notification.object as? ThemeProtocol else { return }
+        self.setTitleColor(self.themeTextColor(theme: theme), for: .normal)
+        self.backgroundColor = UIColor.red
     }
     
     func themeTextColor(theme:ThemeProtocol) -> UIColor {
@@ -49,6 +47,21 @@ class CountBtn: UIButton, ThemeManagerProtocol {
 
 }
 
+class CountBtn: SuperBtn {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+//        self.font = UIFont.boldSystemFont(ofSize: 15)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
+    
+    override func themeTextColor(theme:ThemeProtocol) -> UIColor {
+        return theme.backgroundColor
+    }
+}
 
 //
 //class antiCountBtn: UIButton, ThemeManagerProtocol {

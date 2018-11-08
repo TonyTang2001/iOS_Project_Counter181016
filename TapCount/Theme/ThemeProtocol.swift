@@ -9,10 +9,10 @@
 import UIKit
 
 protocol ThemeProtocol {
-    var mainColor: UIColor {get}
-    var backgroundColor: UIColor {get}
-    var countDisplayColor: UIColor {get}
-    var subLabelColor: UIColor {get}
+    var mainColor: UIColor { get }
+    var backgroundColor: UIColor { get }
+    var countDisplayColor: UIColor { get }
+    var subLabelColor: UIColor { get }
 }
 
 enum ThemeType {

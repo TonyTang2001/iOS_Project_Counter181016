@@ -8,6 +8,7 @@
 
 import UIKit
 class RedBlackTheme: ThemeProtocol {
+    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.red

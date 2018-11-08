@@ -8,6 +8,7 @@
 
 import UIKit
 class OrangeBlackTheme: ThemeProtocol {
+    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.orange

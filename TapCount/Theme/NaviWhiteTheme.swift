@@ -8,6 +8,7 @@
 
 import UIKit
 class NaviWhiteTheme: ThemeProtocol {
+    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.naviBlue
