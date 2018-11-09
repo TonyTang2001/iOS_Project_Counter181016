@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ColorSelectionViewController: SuperViewController, SBCardPopupContent
-{
+class ColorSelectionViewController: SuperViewController, SBCardPopupContent {
     //Setup Popup View
     var popupViewController: SBCardPopupViewController?
     var allowsTapToDismissPopupCard: Bool = true
@@ -19,6 +18,10 @@ class ColorSelectionViewController: SuperViewController, SBCardPopupContent
         return storyboard
     }
     
+    //StatusBar Style
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

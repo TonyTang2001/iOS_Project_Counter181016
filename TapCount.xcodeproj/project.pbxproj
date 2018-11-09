@@ -20,6 +20,7 @@
 		EA31080021706C8E003823AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3107FE21706C8E003823AE /* LaunchScreen.storyboard */; };
 		EA3888E121776CEC004E3EA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3888E321776CEC004E3EA5 /* InfoPlist.strings */; };
 		EA3888E921778ED8004E3EA5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3888EB21778ED8004E3EA5 /* Localizable.strings */; };
+		EA3A12002195DA4D001C23B0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3A11FF2195DA4D001C23B0 /* StoreKit.framework */; };
 		EA3D4351217B885500753BEA /* UniversalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D4350217B885500753BEA /* UniversalVar.swift */; };
 		EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */; };
 		EA429427218F224400061DD5 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA429426218F224400061DD5 /* ThemeProtocol.swift */; };
@@ -57,6 +58,7 @@
 		EA3888E221776CEC004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		EA3888E521776D67004E3EA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		EA3888EA21778ED8004E3EA5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		EA3A11FF2195DA4D001C23B0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		EA3D4350217B885500753BEA /* UniversalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UniversalVar.swift; path = TapCount/UniversalVar.swift; sourceTree = SOURCE_ROOT; };
 		EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VKExpandableButton.swift; sourceTree = "<group>"; };
 		EA3D4356217CB19800753BEA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				401BA66FFCA12FA43461F46F /* Pods_TapCount.framework in Frameworks */,
+				EA3A12002195DA4D001C23B0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +191,7 @@
 		EB50CCBC1B296405CEF846F2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EA3A11FF2195DA4D001C23B0 /* StoreKit.framework */,
 				D9395668832E612F12B1F90D /* Pods_TapCount.framework */,
 			);
 			name = Frameworks;
@@ -227,6 +231,11 @@
 				TargetAttributes = {
 					EA3107F121706C8B003823AE = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};

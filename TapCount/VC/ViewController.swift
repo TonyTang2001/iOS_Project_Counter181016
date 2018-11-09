@@ -72,6 +72,7 @@ class ViewController: SuperViewController {
         super.viewDidLoad()
         self.becomeFirstResponder()
         
+        self.CountBtn = CountBtn!
         firstLaunch()
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
@@ -157,6 +158,7 @@ class ViewController: SuperViewController {
             return true
         }
     }
+    
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake && userDefeults.bool(forKey: shakeToClear) {

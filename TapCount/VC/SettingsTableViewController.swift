@@ -41,9 +41,12 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let addAlert = UIAlertController(title: "Unavailable", message: "Currently Developing. \n Stay Tuned!", preferredStyle: .alert)
+        addAlert.addAction(UIKit.UIAlertAction(title: "OK, I know.", style: .cancel, handler: nil))
+        self.present(addAlert, animated: true, completion: nil)
+    }
     
-    
-
     //MARK: - Preset
     let userDefeults = UserDefaults.standard
     let soundEffect = "soundEffect"
@@ -73,9 +76,9 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             //Select Colors & Styles
-            let popup = ColorSelectionViewController.create()
-            let sbPopup = SBCardPopupViewController(contentViewController: popup)
-            sbPopup.show(onViewController: self)
+//            let popup = ColorSelectionViewController.create()
+//            let sbPopup = SBCardPopupViewController(contentViewController: popup)
+//            sbPopup.show(onViewController: self)
             
         } else if indexPath.section == 2 && indexPath.row == 0 {
             //Contact
