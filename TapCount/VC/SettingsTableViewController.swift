@@ -55,19 +55,19 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     let shakeToClear = "shakeToClear"
     
     //MARK: - Outlets
-    @IBOutlet weak var soundEffectSwt: UISwitch!
-    @IBOutlet weak var keepScreenOnSwt: UISwitch!
-    @IBOutlet weak var shakeToClearSwt: UISwitch!
+    @IBOutlet weak var soundEffectSwt: SuperSettingsSwt!
+    @IBOutlet weak var keepScreenOnSwt: SuperSettingsSwt!
+    @IBOutlet weak var shakeToClearSwt: SuperSettingsSwt!
     
-    @IBOutlet weak var colorsAndStylesCell: UITableViewCell!
-    @IBOutlet weak var colorsSelectionCell: UITableViewCell!
-    @IBOutlet weak var soundEffectCell: UITableViewCell!
-    @IBOutlet weak var keepScreenOnCell: UITableViewCell!
-    @IBOutlet weak var shakeToClearCell: UITableViewCell!
-    @IBOutlet weak var contactDevCell: UITableViewCell!
-    @IBOutlet weak var rateCell: UITableViewCell!
-    @IBOutlet weak var privacyPolicyCell: UITableViewCell!
-    @IBOutlet weak var acknowledgementCell: UITableViewCell!
+    @IBOutlet weak var colorsAndStylesCell: SuperSettingsCell!
+    @IBOutlet weak var colorsSelectionCell: SuperSettingsCell!
+    @IBOutlet weak var soundEffectCell: SuperSettingsCell!
+    @IBOutlet weak var keepScreenOnCell: SuperSettingsCell!
+    @IBOutlet weak var shakeToClearCell: SuperSettingsCell!
+    @IBOutlet weak var contactDevCell: SuperSettingsCell!
+    @IBOutlet weak var rateCell: SuperSettingsCell!
+    @IBOutlet weak var privacyPolicyCell: SuperSettingsCell!
+    @IBOutlet weak var acknowledgementCell: SuperSettingsCell!
     
     @IBOutlet weak var colorsCollectionView: UICollectionView!
     @IBOutlet weak var nameAndVersion: UILabel!
@@ -147,32 +147,12 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.changeTheme()
-        setupCells()
         setupSwts()
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-        nameAndVersion.text = NSLocalizedString("Count Now", comment: "") + " ∙ v" + appVersion
+        nameAndVersion.text = NSLocalizedString("Count Now", comment: "") + " ∙ v " + appVersion
     }
     
     //MARK: - Functions
-    func setupCells() {
-        let selectionColor = UIView()
-        selectionColor.backgroundColor = UIColor.InterfaceColor.darkBlack
-        colorsAndStylesCell.selectedBackgroundView = selectionColor
-        contactDevCell.selectedBackgroundView = selectionColor
-        rateCell.selectedBackgroundView = selectionColor
-        privacyPolicyCell.selectedBackgroundView = selectionColor
-        acknowledgementCell.selectedBackgroundView = selectionColor
-        
-        colorsSelectionCell.selectionStyle = .none
-        soundEffectCell.selectionStyle = .none
-        keepScreenOnCell.selectionStyle = .none
-//        useVolBtnCell.selectionStyle = .none
-        shakeToClearCell.selectionStyle = .none
-        
-//        colorsAndStylesCell.heightAnchor
-        
-    }
-    
     func setupSwts() {
         soundEffectSwt.isOn = userDefeults.bool(forKey: soundEffect)
         keepScreenOnSwt.isOn = userDefeults.bool(forKey: keepScreenOn)

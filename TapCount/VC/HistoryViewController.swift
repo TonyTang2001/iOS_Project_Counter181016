@@ -20,6 +20,7 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
     
     //MARK: Setup Haptic Feedback
     let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
+    let hapticImpactMedium = UIImpactFeedbackGenerator(style: .medium)
     let hapticSelection = UISelectionFeedbackGenerator()
     let hapticNotification = UINotificationFeedbackGenerator()
     
@@ -90,28 +91,13 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
         return [delete]
     }
     
-    //MARK: - Setup Appearance
-    //StatusBar Style
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
         HistoryTableView.separatorColor = .clear
         loadData()
-        let askedForReviewOrNot : Bool = UserDefaults.standard.bool(forKey: "AskedForReview")
-        if counts.count > 15 && !askedForReviewOrNot {
-            let time: TimeInterval = 0.6
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
-                SKStoreReviewController.requestReview()
-                let setTrue = true
-                UserDefaults.standard.set(setTrue, forKey: "AskedForReview")
-            }
-            
-        }
+        
     }
     
     //MARK: - Functions
@@ -149,8 +135,11 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
     @IBAction func BackBtnPressed(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
+    @IBAction func ClearAllBtnTouchDown(_ sender: NaviBtn) {
+        hapticImpactLight.impactOccurred()
+    }
     @IBAction func ClearAllBtnPressed(_ sender: UIButton) {
+        hapticImpactLight.impactOccurred()
         let addAlert = UIAlertController(title: NSLocalizedString("Delete All Record", comment: ""), message: NSLocalizedString("All history record will be Deleted. \n This is irreversible, are you sure to Delete?", comment: ""), preferredStyle: .alert)
         addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Yes", comment: ""), style: .destructive, handler: { (action) in
             self.deleteAllRecords()
@@ -161,12 +150,18 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
                               animations: { self.HistoryTableView.reloadData() })
 //            self.HistoryTableView.reloadData()
 //            self.HistoryTableView.isHidden = true
-            let time: TimeInterval = 0.3
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) { self.dismiss(animated: true, completion: nil) }
+            let time01: TimeInterval = 0.1
+            let time02: TimeInterval = 0.2
+            let time03: TimeInterval = 0.3
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time01) { self.hapticImpactLight.impactOccurred() }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time02) { self.hapticImpactLight.impactOccurred() }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time03) {
+                self.dismiss(animated: true, completion: nil)
+                self.hapticImpactMedium.impactOccurred()
+            }
         }))
         addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil))
         self.present(addAlert, animated: true, completion: nil)
     }
     
-
 }

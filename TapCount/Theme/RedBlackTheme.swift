@@ -29,7 +29,19 @@ class RedBlackTheme: ThemeProtocol {
     
     var subLabelColor: UIColor {
         get {
-            return UIColor.InterfaceColor.darkGray
+            return UIColor.InterfaceColor.lightGray
+        }
+    }
+    
+    var cellSelectionColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.darkBlack
+        }
+    }
+    
+    var statusBarStyle: String {
+        get {
+            return "White"
         }
     }
     

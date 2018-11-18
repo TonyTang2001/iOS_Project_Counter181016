@@ -8,7 +8,7 @@
 
 import UIKit
 class NaviWhiteTheme: ThemeProtocol {
-    
+
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.naviBlue
@@ -29,7 +29,19 @@ class NaviWhiteTheme: ThemeProtocol {
     
     var subLabelColor: UIColor {
         get {
+            return UIColor.InterfaceColor.darkGray
+        }
+    }
+    
+    var cellSelectionColor: UIColor {
+        get {
             return UIColor.InterfaceColor.lightGray
+        }
+    }
+    
+    var statusBarStyle: String {
+        get {
+            return "Dark"
         }
     }
     

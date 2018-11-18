@@ -33,19 +33,12 @@ class ViewController: SuperViewController {
     let hapticSelection = UISelectionFeedbackGenerator()
     let hapticNotification = UINotificationFeedbackGenerator()
     
-    @IBOutlet weak var HistoryBtn: UIButton!
-    @IBOutlet weak var MultiModeBtn: VKExpandableButton!
-    @IBOutlet weak var ClearBtn: UIButton!
-    
+    @IBOutlet weak var HistoryBtn: NaviBtn!
+    @IBOutlet weak var MultiModeBtn: MultiModeBtn!
+    @IBOutlet weak var ClearBtn: NaviBtn!
     @IBOutlet weak var NumberLB: SpringLabel!
-    @IBOutlet weak var AntiCountBtn: CountBtn!
+    @IBOutlet weak var AntiCountBtn: AntiCountBtn!
     @IBOutlet weak var CountBtn: CountBtn!
-    
-    //MARK: - Setup Appearance
-    //StatusBar Style
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     
     //MultiMode Selection List
     func setupMultiModeBtn() {
@@ -55,11 +48,7 @@ class ViewController: SuperViewController {
         MultiModeBtn.currentValue = MultiModeBtn.options[0]
         MultiModeBtn.clipsToBounds = true
         MultiModeBtn.cornerRadius = MultiModeBtn.frame.size.height / 2
-        MultiModeBtn.textColor = UIColor.InterfaceColor.black
-        MultiModeBtn.expandedTextColor = UIColor.InterfaceColor.black
-        MultiModeBtn.buttonBackgroundColor = UIColor.InterfaceColor.orange
-        MultiModeBtn.expandedButtonBackgroundColor = UIColor.InterfaceColor.orange
-        MultiModeBtn.selectionColor = UIColor.white.withAlphaComponent(0.3)
+        
         MultiModeBtn.optionSelectionBlock = {
             index in
             print(MutiIndex[index])
@@ -78,7 +67,7 @@ class ViewController: SuperViewController {
         setupMultiModeBtn()
         refreshNumberLBDisplay()
 //        listenVolumeButton()
-        ClearBtn.setTitleColor(UIColor.InterfaceColor.orange.withAlphaComponent(0.2),for: .highlighted)
+//        ClearBtn.setTitleColor(UIColor.InterfaceColor.orange.withAlphaComponent(0.2),for: .highlighted)
         setupUserSettings()
     }
     
@@ -245,12 +234,11 @@ class ViewController: SuperViewController {
         hapticImpactMedium.impactOccurred()
         countUp()
     }
-    
     @IBAction func CountBtnTapped(_ sender: CountBtn) {
 //        countUp()
     }
     
-    @IBAction func AntiCountBtnTouchDown(_ sender: UIButton) {
+    @IBAction func AntiCountBtnTouchDown(_ sender: AntiCountBtn) {
         //SoundEffect
         if userDefeults.bool(forKey: soundEffect) {
             let path = Bundle.main.path(forResource: "AntiCountBtn_Default", ofType: "wav")!
@@ -263,24 +251,23 @@ class ViewController: SuperViewController {
         hapticImpactLight.impactOccurred()
         countDown()
     }
-    
-    @IBAction func AntiCountBtnTapped(_ sender: UIButton) {
+    @IBAction func AntiCountBtnTapped(_ sender: AntiCountBtn) {
 //        countDown()
     }
     
-    @IBAction func ClearBtnPressed(_ sender: UIButton) {
+    @IBAction func ClearBtnTouchDown(_ sender: NaviBtn) {
+        hapticImpactLight.impactOccurred()
+    }
+    @IBAction func ClearBtnPressed(_ sender: NaviBtn) {
         refreshCount()
 //        print(applicationDirectoryPath())
     }
-    
-    @IBAction func HistoryBtnPressed(_ sender: UIButton) {
+    @IBAction func HistoryBtnPressed(_ sender: NaviBtn) {
 //        resignFirstResponder()
     }
-    
     //MARK: - Locate CoreData data files for Debugging
 //    func applicationDirectoryPath() -> String {
 //        return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last! as String
 //    }
-    
 }
 

@@ -13,6 +13,8 @@ protocol ThemeProtocol {
     var backgroundColor: UIColor { get }
     var countDisplayColor: UIColor { get }
     var subLabelColor: UIColor { get }
+    var cellSelectionColor: UIColor { get }
+    var statusBarStyle: String { get }
 }
 
 enum ThemeType {

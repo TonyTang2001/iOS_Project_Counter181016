@@ -10,6 +10,7 @@ import UIKit
 
 class SuperViewController: UIViewController, ThemeManagerProtocol {
     
+    var statusBarStyle: String = "White"
     override func viewDidLoad() {
         super.viewDidLoad()
         self.changeTheme()
@@ -24,7 +25,18 @@ class SuperViewController: UIViewController, ThemeManagerProtocol {
         guard let theme = notification.object as? ThemeProtocol else {
             return
         }
+        
         self.view.backgroundColor = theme.backgroundColor
+        self.statusBarStyle = theme.statusBarStyle
+        
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if statusBarStyle == "White" {
+            return .lightContent
+        } else {
+            return .default
+        }
     }
     
     deinit {

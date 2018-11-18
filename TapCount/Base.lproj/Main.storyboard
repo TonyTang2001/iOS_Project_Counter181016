@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-P7-ZVy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-P7-ZVy" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="PK3-0p-VIy"/>
@@ -34,7 +34,7 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-Qx-Ucf" customClass="CountBtn" customModule="TapCount" customModuleProvider="target">
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-Qx-Ucf" customClass="CountBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="462" width="375" height="350"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -50,7 +50,7 @@
                                     <action selector="CountBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="DWq-pR-t9U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LK2-8n-ySM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LK2-8n-ySM" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="239" y="44" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="mFc-Bg-NjP"/>
@@ -61,9 +61,10 @@
                                 </state>
                                 <connections>
                                     <action selector="ClearBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gOp-U4-Srl"/>
+                                    <action selector="ClearBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="9WE-ge-h1i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-8h-hO4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-8h-hO4" customClass="AntiCountBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="372" width="200" height="90"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -79,7 +80,7 @@
                                     <action selector="AntiCountBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Ari-WF-ZRO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberLb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-sk-wSD" customClass="SpringLabel" customModule="Spring">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberLb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-sk-wSD" customClass="CountDisplay" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="30" y="179" width="315" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="oCT-Vi-uBn"/>
@@ -91,19 +92,20 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="shake"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ky-ox-JKT" userLabel="MultiMode Btn" customClass="VKExpandableButton" customModule="TapCount" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ky-ox-JKT" userLabel="MultiMode Btn" customClass="MultiModeBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="150" y="44" width="75" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="VbK-l1-sDi"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy9-lh-QnJ" userLabel="Settings">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy9-lh-QnJ" userLabel="Settings" customClass="SettingsBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="272.66666666666669" y="392" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xy9-lh-QnJ" secondAttribute="height" multiplier="1:1" id="DIk-S9-wtf"/>
                                     <constraint firstAttribute="width" constant="50" id="Pb2-1H-48Q"/>
                                 </constraints>
+                                <color key="tintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="Settings">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -173,13 +175,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountNum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-AB-3zG">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountNum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-AB-3zG" customClass="CountNumLb" customModule="TapCount" customModuleProvider="target">
                                                     <rect key="frame" x="239" y="20" width="121" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="88:88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77j-4M-YQJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="88:88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77j-4M-YQJ" customClass="TimeLb" customModule="TapCount" customModuleProvider="target">
                                                     <rect key="frame" x="15" y="23" width="180" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -208,7 +210,7 @@
                                     <outlet property="delegate" destination="Hvb-YM-0mK" id="Xd3-2D-SSg"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEX-K7-ubw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEX-K7-ubw" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Back">
@@ -218,7 +220,7 @@
                                     <action selector="BackBtnPressed:" destination="Hvb-YM-0mK" eventType="touchUpInside" id="IkZ-cj-bMs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBW-3f-sIt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBW-3f-sIt" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="284" y="44" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Clear All">
@@ -226,6 +228,7 @@
                                 </state>
                                 <connections>
                                     <action selector="ClearAllBtnPressed:" destination="Hvb-YM-0mK" eventType="touchUpInside" id="saQ-qy-TPS"/>
+                                    <action selector="ClearAllBtnTouchDown:" destination="Hvb-YM-0mK" eventType="touchDown" id="S4m-qe-8AG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -262,7 +265,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDP-z2-dVJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDP-z2-dVJ" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Back">
@@ -349,8 +352,8 @@
                         <sections>
                             <tableViewSection headerTitle="Preference" id="Wl6-Df-Ps1">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7rO-uc-isM" style="IBUITableViewCellStyleDefault" id="HAk-L0-ERf">
-                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7rO-uc-isM" style="IBUITableViewCellStyleDefault" id="HAk-L0-ERf" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HAk-L0-ERf" id="UMD-eH-bK0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
@@ -368,7 +371,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="70" id="0xc-wg-2pU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="70" id="0xc-wg-2pU" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="115.33333333333334" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xc-wg-2pU" id="l0V-7i-w8I">
@@ -422,36 +425,30 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qD3-Ao-L9b">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="xgh-pw-RZ5" style="IBUITableViewCellStyleDefault" id="qD3-Ao-L9b" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="185.33333333333334" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qD3-Ao-L9b" id="uUh-TE-5Mw">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-b6-Gi4">
-                                                    <rect key="frame" x="310" y="15" width="51" height="31"/>
-                                                    <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <connections>
-                                                        <action selector="soundEffectSwtPressed:" destination="MFi-jx-o58" eventType="valueChanged" id="ilG-Lg-l2P"/>
-                                                    </connections>
-                                                </switch>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sound Effect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbt-fm-k9L">
-                                                    <rect key="frame" x="16.000000000000007" y="8" width="112.66666666666669" height="44"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgh-pw-RZ5">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSp-6L-nLX" customClass="SuperSettingsSwt" customModule="TapCount" customModuleProvider="target">
+                                                    <rect key="frame" x="310" y="15" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="soundEffectSwtPressed:" destination="MFi-jx-o58" eventType="valueChanged" id="EfF-Ki-XEK"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Rbt-fm-k9L" secondAttribute="bottom" constant="7.6699999999999999" id="3CH-Yz-PbS"/>
-                                                <constraint firstItem="Rbt-fm-k9L" firstAttribute="leading" secondItem="uUh-TE-5Mw" secondAttribute="leading" constant="16" id="6ec-22-IXc"/>
-                                                <constraint firstItem="LxR-b6-Gi4" firstAttribute="trailing" secondItem="uUh-TE-5Mw" secondAttribute="trailingMargin" id="7a4-zX-Nf5"/>
-                                                <constraint firstItem="LxR-b6-Gi4" firstAttribute="top" secondItem="uUh-TE-5Mw" secondAttribute="topMargin" constant="4" id="XLV-y3-qrp"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="LxR-b6-Gi4" secondAttribute="bottom" constant="3" id="edS-1q-yDU"/>
-                                                <constraint firstItem="Rbt-fm-k9L" firstAttribute="top" secondItem="uUh-TE-5Mw" secondAttribute="top" constant="8" id="htl-bD-9jq"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
@@ -459,67 +456,55 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Functions" id="9sA-2y-byW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vGO-yW-dwV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="QK1-da-jxT" style="IBUITableViewCellStyleDefault" id="vGO-yW-dwV" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="301.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGO-yW-dwV" id="026-gb-Uxe">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Keep screen on" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="289" translatesAutoresizingMaskIntoConstraints="NO" id="6Nn-qt-azT">
-                                                    <rect key="frame" x="16" y="8" width="134" height="44"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Keep screen on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QK1-da-jxT">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vk7-WI-uRX">
-                                                    <rect key="frame" x="310" y="15" width="51" height="31"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="idD-wt-Y7L" customClass="SuperSettingsSwt" customModule="TapCount" customModuleProvider="target">
+                                                    <rect key="frame" x="310" y="15" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
-                                                        <action selector="keepScreenOnSwtPressed:" destination="MFi-jx-o58" eventType="valueChanged" id="sFG-Xn-YCd"/>
+                                                        <action selector="keepScreenOnSwtPressed:" destination="MFi-jx-o58" eventType="valueChanged" id="7mc-c8-zzG"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="6Nn-qt-azT" firstAttribute="top" secondItem="026-gb-Uxe" secondAttribute="top" constant="8" id="1GD-iO-dRF"/>
-                                                <constraint firstItem="vk7-WI-uRX" firstAttribute="top" secondItem="026-gb-Uxe" secondAttribute="topMargin" constant="4" id="4Od-GA-JvJ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="vk7-WI-uRX" secondAttribute="bottom" constant="3" id="BcY-OR-hfZ"/>
-                                                <constraint firstItem="6Nn-qt-azT" firstAttribute="leading" secondItem="026-gb-Uxe" secondAttribute="leading" constant="16" id="KFO-z6-QwG"/>
-                                                <constraint firstItem="vk7-WI-uRX" firstAttribute="trailing" secondItem="026-gb-Uxe" secondAttribute="trailingMargin" id="VPF-iv-zDT"/>
-                                                <constraint firstAttribute="bottom" secondItem="6Nn-qt-azT" secondAttribute="bottom" constant="7.6699999999999999" id="qdp-8L-TXX"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d6E-95-zTB">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="m9H-CU-pgX" style="IBUITableViewCellStyleDefault" id="d6E-95-zTB" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="361.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d6E-95-zTB" id="KSU-83-18B">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2XP-7T-y9N">
-                                                    <rect key="frame" x="310" y="15" width="51" height="31"/>
-                                                    <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <connections>
-                                                        <action selector="shakeToClearSwtPressed:" destination="MFi-jx-o58" eventType="valueChanged" id="AIx-fY-DWx"/>
-                                                    </connections>
-                                                </switch>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Shake to clear" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="323" translatesAutoresizingMaskIntoConstraints="NO" id="YvS-Zo-n4v">
-                                                    <rect key="frame" x="16.000000000000007" y="8" width="122.66666666666669" height="44"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Shake to clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9H-CU-pgX">
+                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxS-KS-xKR" customClass="SuperSettingsSwt" customModule="TapCount" customModuleProvider="target">
+                                                    <rect key="frame" x="310" y="15" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="shakeToClearSwtPressed:" destination="MFi-jx-o58" eventType="valueChanged" id="5or-Yo-wK5"/>
+                                                    </connections>
+                                                </switch>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2XP-7T-y9N" firstAttribute="top" secondItem="KSU-83-18B" secondAttribute="topMargin" constant="4" id="7gx-xE-PJD"/>
-                                                <constraint firstItem="YvS-Zo-n4v" firstAttribute="top" secondItem="KSU-83-18B" secondAttribute="top" constant="8" id="9l5-Ry-rYD"/>
-                                                <constraint firstItem="2XP-7T-y9N" firstAttribute="trailing" secondItem="KSU-83-18B" secondAttribute="trailingMargin" id="TMA-ul-Wfm"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="2XP-7T-y9N" secondAttribute="bottom" constant="3" id="Uvn-in-pza"/>
-                                                <constraint firstItem="YvS-Zo-n4v" firstAttribute="leading" secondItem="KSU-83-18B" secondAttribute="leading" constant="16" id="cK6-cL-9g7"/>
-                                                <constraint firstAttribute="bottom" secondItem="YvS-Zo-n4v" secondAttribute="bottom" constant="7.6699999999999999" id="iED-NK-Dkb"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
@@ -527,7 +512,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" id="j72-0I-QSN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h8J-Hb-Iye" style="IBUITableViewCellStyleDefault" id="ZwO-Lp-XGR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h8J-Hb-Iye" style="IBUITableViewCellStyleDefault" id="ZwO-Lp-XGR" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="477.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZwO-Lp-XGR" id="LSf-YF-f0c">
@@ -545,7 +530,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jW3-8H-xvH" style="IBUITableViewCellStyleDefault" id="cJ2-La-bmo">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jW3-8H-xvH" style="IBUITableViewCellStyleDefault" id="cJ2-La-bmo" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="537.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJ2-La-bmo" id="5uV-GR-FnV">
@@ -563,7 +548,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2Lj-61-YRK" style="IBUITableViewCellStyleDefault" id="9PV-yt-8Dy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2Lj-61-YRK" style="IBUITableViewCellStyleDefault" id="9PV-yt-8Dy" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="597.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9PV-yt-8Dy" id="ZpM-0i-tm3">
@@ -581,7 +566,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uvN-jy-H4n" style="IBUITableViewCellStyleDefault" id="ZG6-jt-zKT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uvN-jy-H4n" style="IBUITableViewCellStyleDefault" id="ZG6-jt-zKT" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="657.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZG6-jt-zKT" id="Zd5-oY-U4Z">
@@ -618,14 +603,14 @@
                         <outlet property="colorsSelectionCell" destination="0xc-wg-2pU" id="S0R-tD-l17"/>
                         <outlet property="contactDevCell" destination="ZwO-Lp-XGR" id="A0R-aW-tkd"/>
                         <outlet property="keepScreenOnCell" destination="vGO-yW-dwV" id="kzd-Dn-8Ge"/>
-                        <outlet property="keepScreenOnSwt" destination="vk7-WI-uRX" id="2LU-lV-8Aa"/>
+                        <outlet property="keepScreenOnSwt" destination="idD-wt-Y7L" id="VJ6-hM-MQh"/>
                         <outlet property="nameAndVersion" destination="IT0-BT-2SC" id="1nS-MS-8zE"/>
                         <outlet property="privacyPolicyCell" destination="9PV-yt-8Dy" id="8ld-xh-uqv"/>
                         <outlet property="rateCell" destination="cJ2-La-bmo" id="4Xo-Py-lTF"/>
                         <outlet property="shakeToClearCell" destination="d6E-95-zTB" id="YCu-F5-yHA"/>
-                        <outlet property="shakeToClearSwt" destination="2XP-7T-y9N" id="PU9-I6-OpU"/>
+                        <outlet property="shakeToClearSwt" destination="gxS-KS-xKR" id="0Hr-vQ-0ld"/>
                         <outlet property="soundEffectCell" destination="qD3-Ao-L9b" id="geg-a4-nSV"/>
-                        <outlet property="soundEffectSwt" destination="LxR-b6-Gi4" id="5wl-1M-YGY"/>
+                        <outlet property="soundEffectSwt" destination="uSp-6L-nLX" id="Ptu-LQ-TgR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghF-lI-HMW" userLabel="First Responder" sceneMemberID="firstResponder"/>

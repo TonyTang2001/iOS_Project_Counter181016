@@ -10,13 +10,7 @@ import UIKit
 
 class SettingsViewController: SuperViewController {
 
-    @IBOutlet weak var BackBtn: UIButton!
-    
-    //MARK: - Setup Appearance
-    //StatusBar Style
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
+    @IBOutlet weak var BackBtn: NaviBtn!
     
     override func viewDidLoad() {
         super.viewDidLoad()
