@@ -5,9 +5,6 @@
 /* Class = "UILabel"; text = "NumberLb"; ObjectID = "5Wa-sk-wSD"; */
 "5Wa-sk-wSD.text" = "NumberLb";
 
-/* Class = "UILabel"; text = "Keep screen on"; ObjectID = "6Nn-qt-azT"; */
-"6Nn-qt-azT.text" = "保持屏幕常亮";
-
 /* Class = "UILabel"; text = "88:88"; ObjectID = "77j-4M-YQJ"; */
 "77j-4M-YQJ.text" = "88:88";
 
@@ -17,8 +14,8 @@
 /* Class = "UITableViewSection"; headerTitle = "Functions"; ObjectID = "9sA-2y-byW"; */
 "9sA-2y-byW.headerTitle" = "实用功能";
 
-/* Class = "UILabel"; text = "Count Now ∙ vX.X.X"; ObjectID = "IT0-BT-2SC"; */
-"IT0-BT-2SC.text" = "计数+  ∙  vX.X.X";
+/* Class = "UILabel"; text = "Count Now ∙ v X.X.X"; ObjectID = "IT0-BT-2SC"; */
+"IT0-BT-2SC.text" = "计数+ ∙ v X.X.X";
 
 /* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "LK2-8n-ySM"; */
 "LK2-8n-ySM.normalTitle" = "归零";
@@ -29,8 +26,8 @@
 /* Class = "UIButton"; normalTitle = "+Btn"; ObjectID = "NEu-Qx-Ucf"; */
 "NEu-Qx-Ucf.normalTitle" = "+Btn";
 
-/* Class = "UILabel"; text = "Sound Effect"; ObjectID = "Rbt-fm-k9L"; */
-"Rbt-fm-k9L.text" = "音效";
+/* Class = "UILabel"; text = "Keep screen on"; ObjectID = "QK1-da-jxT"; */
+"QK1-da-jxT.text" = "保持屏幕常亮";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "VDP-z2-dVJ"; */
 "VDP-z2-dVJ.normalTitle" = "返回";
@@ -40,9 +37,6 @@
 
 /* Class = "UIViewController"; title = "Color"; ObjectID = "YIl-1Z-UCX"; */
 "YIl-1Z-UCX.title" = "颜色";
-
-/* Class = "UILabel"; text = "Shake to clear"; ObjectID = "YvS-Zo-n4v"; */
-"YvS-Zo-n4v.text" = "摇动设备以归零";
 
 /* Class = "UILabel"; text = "2018 TonyTangⓇ"; ObjectID = "Zbd-Vd-SyO"; */
 "Zbd-Vd-SyO.text" = "2018 TonyTangⓇ";
@@ -54,13 +48,16 @@
 "j72-0I-QSN.headerTitle" = "关于";
 
 /* Class = "UILabel"; text = "Rate \"Count Now\""; ObjectID = "jW3-8H-xvH"; */
-"jW3-8H-xvH.text" = "为 \"计数+\"评分";
+"jW3-8H-xvH.text" = "为 \"计数+\" 评分";
 
 /* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
 "kdb-AB-3zG.text" = "CountNum";
 
+/* Class = "UILabel"; text = "Shake to clear"; ObjectID = "m9H-CU-pgX"; */
+"m9H-CU-pgX.text" = "摇动以归零";
+
 /* Class = "UILabel"; text = "Comming Soon..."; ObjectID = "mOe-sY-dmS"; */
-"mOe-sY-dmS.text" = "敬请期待！";
+"mOe-sY-dmS.text" = "敬请期待……";
 
 /* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */
 "nOI-P7-ZVy.normalTitle" = "历史记录";
@@ -72,4 +69,7 @@
 "uvN-jy-H4n.text" = "致谢";
 
 /* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "xBW-3f-sIt"; */
-"xBW-3f-sIt.normalTitle" = "清空";
+"xBW-3f-sIt.normalTitle" = "清空记录";
+
+/* Class = "UILabel"; text = "Sound Effects"; ObjectID = "xgh-pw-RZ5"; */
+"xgh-pw-RZ5.text" = "音效";

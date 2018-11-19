@@ -42,9 +42,10 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let addAlert = UIAlertController(title: "Unavailable", message: "Currently Developing. \n Stay Tuned!", preferredStyle: .alert)
-        addAlert.addAction(UIKit.UIAlertAction(title: "OK, I know.", style: .cancel, handler: nil))
-        self.present(addAlert, animated: true, completion: nil)
+//        let addAlert = UIAlertController(title: "Unavailable", message: "Currently Developing. \n Stay Tuned!", preferredStyle: .alert)
+//        addAlert.addAction(UIKit.UIAlertAction(title: "OK, I know.", style: .cancel, handler: nil))
+//        self.present(addAlert, animated: true, completion: nil)
+        
     }
     
     //MARK: - Preset
@@ -59,15 +60,15 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     @IBOutlet weak var keepScreenOnSwt: SuperSettingsSwt!
     @IBOutlet weak var shakeToClearSwt: SuperSettingsSwt!
     
-    @IBOutlet weak var colorsAndStylesCell: SuperSettingsCell!
-    @IBOutlet weak var colorsSelectionCell: SuperSettingsCell!
+    @IBOutlet weak var colorsAndStylesCell: SettingsSelectableCell!
+    @IBOutlet weak var colorsSelectionCell: SettingsSelectableCell!
     @IBOutlet weak var soundEffectCell: SuperSettingsCell!
     @IBOutlet weak var keepScreenOnCell: SuperSettingsCell!
     @IBOutlet weak var shakeToClearCell: SuperSettingsCell!
-    @IBOutlet weak var contactDevCell: SuperSettingsCell!
-    @IBOutlet weak var rateCell: SuperSettingsCell!
-    @IBOutlet weak var privacyPolicyCell: SuperSettingsCell!
-    @IBOutlet weak var acknowledgementCell: SuperSettingsCell!
+    @IBOutlet weak var contactDevCell: SettingsSelectableCell!
+    @IBOutlet weak var rateCell: SettingsSelectableCell!
+    @IBOutlet weak var privacyPolicyCell: SettingsSelectableCell!
+    @IBOutlet weak var acknowledgementCell: SettingsSelectableCell!
     
     @IBOutlet weak var colorsCollectionView: UICollectionView!
     @IBOutlet weak var nameAndVersion: UILabel!
@@ -172,6 +173,5 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         userDefeults.set(shakeToClearSwt.isOn, forKey: shakeToClear)
 //        print(userDefeults.bool(forKey: shakeToClear))
     }
-    
     
 }

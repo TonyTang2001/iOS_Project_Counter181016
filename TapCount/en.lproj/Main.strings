@@ -5,9 +5,6 @@
 /* Class = "UILabel"; text = "NumberLb"; ObjectID = "5Wa-sk-wSD"; */
 "5Wa-sk-wSD.text" = "NumberLb";
 
-/* Class = "UILabel"; text = "Keep screen on"; ObjectID = "6Nn-qt-azT"; */
-"6Nn-qt-azT.text" = "Keep screen on";
-
 /* Class = "UILabel"; text = "88:88"; ObjectID = "77j-4M-YQJ"; */
 "77j-4M-YQJ.text" = "88:88";
 
@@ -17,8 +14,8 @@
 /* Class = "UITableViewSection"; headerTitle = "Functions"; ObjectID = "9sA-2y-byW"; */
 "9sA-2y-byW.headerTitle" = "Functions";
 
-/* Class = "UILabel"; text = "Count Now ∙ vX.X.X"; ObjectID = "IT0-BT-2SC"; */
-"IT0-BT-2SC.text" = "Count Now ∙ vX.X.X";
+/* Class = "UILabel"; text = "Count Now ∙ v X.X.X"; ObjectID = "IT0-BT-2SC"; */
+"IT0-BT-2SC.text" = "Count Now ∙ v X.X.X";
 
 /* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "LK2-8n-ySM"; */
 "LK2-8n-ySM.normalTitle" = "Clear";
@@ -29,8 +26,8 @@
 /* Class = "UIButton"; normalTitle = "+Btn"; ObjectID = "NEu-Qx-Ucf"; */
 "NEu-Qx-Ucf.normalTitle" = "+Btn";
 
-/* Class = "UILabel"; text = "Sound Effect"; ObjectID = "Rbt-fm-k9L"; */
-"Rbt-fm-k9L.text" = "Sound Effect";
+/* Class = "UILabel"; text = "Keep screen on"; ObjectID = "QK1-da-jxT"; */
+"QK1-da-jxT.text" = "Keep screen on";
 
 /* Class = "UIButton"; normalTitle = "Back"; ObjectID = "VDP-z2-dVJ"; */
 "VDP-z2-dVJ.normalTitle" = "Back";
@@ -40,9 +37,6 @@
 
 /* Class = "UIViewController"; title = "Color"; ObjectID = "YIl-1Z-UCX"; */
 "YIl-1Z-UCX.title" = "Color";
-
-/* Class = "UILabel"; text = "Shake to clear"; ObjectID = "YvS-Zo-n4v"; */
-"YvS-Zo-n4v.text" = "Shake to clear";
 
 /* Class = "UILabel"; text = "2018 TonyTangⓇ"; ObjectID = "Zbd-Vd-SyO"; */
 "Zbd-Vd-SyO.text" = "2018 TonyTangⓇ";
@@ -59,6 +53,9 @@
 /* Class = "UILabel"; text = "CountNum"; ObjectID = "kdb-AB-3zG"; */
 "kdb-AB-3zG.text" = "CountNum";
 
+/* Class = "UILabel"; text = "Shake to clear"; ObjectID = "m9H-CU-pgX"; */
+"m9H-CU-pgX.text" = "Shake to clear";
+
 /* Class = "UILabel"; text = "Comming Soon..."; ObjectID = "mOe-sY-dmS"; */
 "mOe-sY-dmS.text" = "Comming Soon...";
 
@@ -73,3 +70,6 @@
 
 /* Class = "UIButton"; normalTitle = "Clear All"; ObjectID = "xBW-3f-sIt"; */
 "xBW-3f-sIt.normalTitle" = "Clear All";
+
+/* Class = "UILabel"; text = "Sound Effects"; ObjectID = "xgh-pw-RZ5"; */
+"xgh-pw-RZ5.text" = "Sound Effects";

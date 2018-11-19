@@ -276,7 +276,13 @@
                                     <action selector="BackBtnPressed:" destination="Hvb-YM-0mK" eventType="touchUpInside" id="h3c-2L-hD2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018 TonyTangⓇ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Vd-SyO">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-Iq-p11">
+                                <rect key="frame" x="0.0" y="80" width="375" height="732"/>
+                                <connections>
+                                    <segue destination="MFi-jx-o58" kind="embed" id="4cX-ae-txJ"/>
+                                </connections>
+                            </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018 TonyTangⓇ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Vd-SyO" customClass="DevNameLb" customModule="TapCount" customModuleProvider="target">
                                 <rect key="frame" x="122.66666666666669" y="776" width="130" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="ohi-VZ-dfA"/>
@@ -285,12 +291,6 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-Iq-p11">
-                                <rect key="frame" x="0.0" y="80" width="375" height="732"/>
-                                <connections>
-                                    <segue destination="MFi-jx-o58" kind="embed" id="4cX-ae-txJ"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -323,7 +323,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="md3-Je-d80">
+                        <view key="tableFooterView" contentMode="scaleToFill" id="md3-Je-d80">
                             <rect key="frame" x="0.0" y="735.33333333333337" width="375" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -334,8 +334,8 @@
                                         <constraint firstAttribute="width" constant="35" id="M4d-Nx-7ph"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Now ∙ vX.X.X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT0-BT-2SC">
-                                    <rect key="frame" x="111" y="0.0" width="153" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Now ∙ v X.X.X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT0-BT-2SC" customClass="VersionDisplayLb" customModule="TapCount" customModuleProvider="target">
+                                    <rect key="frame" x="108.66666666666669" y="0.0" width="158" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -352,8 +352,8 @@
                         <sections>
                             <tableViewSection headerTitle="Preference" id="Wl6-Df-Ps1">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7rO-uc-isM" style="IBUITableViewCellStyleDefault" id="HAk-L0-ERf" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7rO-uc-isM" style="IBUITableViewCellStyleDefault" id="HAk-L0-ERf" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333336" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HAk-L0-ERf" id="UMD-eH-bK0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
@@ -371,7 +371,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="70" id="0xc-wg-2pU" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="70" id="0xc-wg-2pU" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="115.33333333333334" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xc-wg-2pU" id="l0V-7i-w8I">
@@ -512,7 +512,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" id="j72-0I-QSN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h8J-Hb-Iye" style="IBUITableViewCellStyleDefault" id="ZwO-Lp-XGR" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h8J-Hb-Iye" style="IBUITableViewCellStyleDefault" id="ZwO-Lp-XGR" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="477.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZwO-Lp-XGR" id="LSf-YF-f0c">
@@ -530,7 +530,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jW3-8H-xvH" style="IBUITableViewCellStyleDefault" id="cJ2-La-bmo" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jW3-8H-xvH" style="IBUITableViewCellStyleDefault" id="cJ2-La-bmo" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="537.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJ2-La-bmo" id="5uV-GR-FnV">
@@ -548,7 +548,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2Lj-61-YRK" style="IBUITableViewCellStyleDefault" id="9PV-yt-8Dy" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2Lj-61-YRK" style="IBUITableViewCellStyleDefault" id="9PV-yt-8Dy" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="597.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9PV-yt-8Dy" id="ZpM-0i-tm3">
@@ -566,7 +566,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uvN-jy-H4n" style="IBUITableViewCellStyleDefault" id="ZG6-jt-zKT" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uvN-jy-H4n" style="IBUITableViewCellStyleDefault" id="ZG6-jt-zKT" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="657.33333333333337" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZG6-jt-zKT" id="Zd5-oY-U4Z">

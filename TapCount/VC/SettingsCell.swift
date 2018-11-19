@@ -25,15 +25,25 @@ class SuperSettingsCell: UITableViewCell, ThemeManagerProtocol {
     @objc func handelNotification(notification: NSNotification) {
         guard let theme = notification.object as? ThemeProtocol else { return }
         self.textLabel?.textColor = theme.mainColor
-        let selectionColor = UIView()
-        selectionColor.backgroundColor = theme.cellSelectionColor
-        self.selectedBackgroundView = selectionColor
+        self.selectionStyle = .none
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
 }
+
+class SettingsSelectableCell: SuperSettingsCell {
+    override func handelNotification(notification: NSNotification) {
+        guard let theme = notification.object as? ThemeProtocol else { return }
+        self.textLabel?.textColor = theme.mainColor
+        
+        let selectionColor = UIView()
+        selectionColor.backgroundColor = theme.cellSelectionColor
+        self.selectedBackgroundView = selectionColor
+    }
+}
+
 
 class SuperSettingsSwt: UISwitch, ThemeManagerProtocol {
     //init

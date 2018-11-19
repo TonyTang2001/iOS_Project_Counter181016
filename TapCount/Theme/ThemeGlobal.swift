@@ -162,3 +162,57 @@ class SettingsBtn: UIButton, ThemeManagerProtocol {
         NotificationCenter.default.removeObserver(self)
     }
 }
+
+class VersionDisplayLb: UILabel, ThemeManagerProtocol {
+    //init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        self.changeTheme()
+    }
+    
+    func changeTheme() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handelNotification(notification:)),
+                                               name: ThemeNotifacationName,
+                                               object: nil)
+        ThemeManager.themeUpdate()
+    }
+    
+    @objc func handelNotification(notification: NSNotification) {
+        guard let theme = notification.object as? ThemeProtocol else { return }
+        self.textColor = theme.subLabelColor
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
+
+class DevNameLb: UILabel, ThemeManagerProtocol {
+    //init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+        self.changeTheme()
+    }
+    
+    func changeTheme() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handelNotification(notification:)),
+                                               name: ThemeNotifacationName,
+                                               object: nil)
+        ThemeManager.themeUpdate()
+    }
+    
+    @objc func handelNotification(notification: NSNotification) {
+        guard let theme = notification.object as? ThemeProtocol else { return }
+        self.textColor = theme.subLabelColor.withAlphaComponent(0.3)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+}
