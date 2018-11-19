@@ -11,7 +11,13 @@ import UIKit
 class SuperViewController: UIViewController, ThemeManagerProtocol {
     
     var statusBarStyle: String = "White"
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.changeTheme()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         super.viewDidLoad()
         self.changeTheme()
     }

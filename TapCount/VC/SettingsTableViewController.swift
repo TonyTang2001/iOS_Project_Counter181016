@@ -9,6 +9,23 @@
 import UIKit
 import StoreKit
 
+enum CellTitleType: Int {
+    case OrangeBlack, NaviWhite, RedBlack
+    var themeType : ThemeType {
+        get {
+            switch self {
+            case .OrangeBlack:
+                return .orangeBlackTheme
+            case .NaviWhite:
+                return .naviWhiteTheme
+            case .RedBlack:
+                return .redBlackTheme
+            }
+        }
+    }
+    
+}
+
 class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
     
     func changeTheme() {
@@ -41,11 +58,18 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         return cell
     }
     
+    func switcherTheme(type: CellTitleType) {
+        ThemeManager.switcherTheme(type: type.themeType)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let addAlert = UIAlertController(title: "Unavailable", message: "Currently Developing. \n Stay Tuned!", preferredStyle: .alert)
-//        addAlert.addAction(UIKit.UIAlertAction(title: "OK, I know.", style: .cancel, handler: nil))
-//        self.present(addAlert, animated: true, completion: nil)
+        //Switch Themes
+        guard let cellType: CellTitleType = CellTitleType(rawValue: indexPath.row) else { return }
+        self.switcherTheme(type: cellType)
         
+        let addAlert = UIAlertController(title: NSLocalizedString("Theme Changed", comment: ""), message: NSLocalizedString("Enjoy your new Theme.", comment: ""), preferredStyle: .alert)
+        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
+        self.present(addAlert, animated: true, completion: nil)
     }
     
     //MARK: - Preset
