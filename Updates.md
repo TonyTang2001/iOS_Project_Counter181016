@@ -138,6 +138,9 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 - More Styles & Themes & Colors *
 - Changed & Added Haptic Feedbacks
 
+# 3.0.3 Update #
+- Theme Change Available to users
+
 # Todos #
 - 3D touch Quick Action
 - Parallax Effect according to Style & Theme

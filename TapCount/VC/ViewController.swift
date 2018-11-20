@@ -18,11 +18,12 @@ class ViewController: SuperViewController {
     var player = AVAudioPlayer()
     var soundEnabled: Bool = true
 //    private var audioLevel: Float = 0.0
-    let userDefeults = UserDefaults.standard
+    let userDefaults = UserDefaults.standard
     let soundEffect = "soundEffect"
     let keepScreenOn = "keepScreenOn"
 //    let useVolBtn = "useVolBtn"
     let shakeToClear = "shakeToClear"
+    let themeName = "themeName"
     
     //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -78,15 +79,16 @@ class ViewController: SuperViewController {
     
     //MARK: - Functions
     func firstLaunch() {
-        let launchedBefore = userDefeults.bool(forKey: "launchedBefore")
+        let launchedBefore = userDefaults.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
         } else {
             print("First launch, setting UserDefault.")
-            userDefeults.set(true, forKey: "launchedBefore")
-            userDefeults.set(true, forKey: soundEffect)
-            userDefeults.set(true, forKey: keepScreenOn)
-            userDefeults.set(true, forKey: shakeToClear)
+            userDefaults.set(true, forKey: "launchedBefore")
+            userDefaults.set(true, forKey: soundEffect)
+            userDefaults.set(true, forKey: keepScreenOn)
+            userDefaults.set(true, forKey: shakeToClear)
+            userDefaults.set(NaviWhiteTheme(), forKey: themeName)
         }
     }
 //    func listenVolumeButton(){
@@ -125,13 +127,13 @@ class ViewController: SuperViewController {
 //    }
     
     func setupUserSettings() {
-        if userDefeults.bool(forKey: soundEffect) {
+        if userDefaults.bool(forKey: soundEffect) {
             soundEnabled = true
-        } else if userDefeults.bool(forKey: soundEffect) == false {
+        } else if userDefaults.bool(forKey: soundEffect) == false {
             soundEnabled = false
         }
         
-        if userDefeults.bool(forKey: keepScreenOn) {
+        if userDefaults.bool(forKey: keepScreenOn) {
             UIApplication.shared.isIdleTimerDisabled = true
         }
         
@@ -150,7 +152,7 @@ class ViewController: SuperViewController {
     
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        if motion == .motionShake && userDefeults.bool(forKey: shakeToClear) {
+        if motion == .motionShake && userDefaults.bool(forKey: shakeToClear) {
             refreshCount()
         }
     }
@@ -223,7 +225,7 @@ class ViewController: SuperViewController {
     //MARK: - IBActions
     @IBAction func CountBtnTouchDown(_ sender: CountBtn) {
         //SoundEffect
-        if userDefeults.bool(forKey: soundEffect) {
+        if userDefaults.bool(forKey: soundEffect) {
             let path = Bundle.main.path(forResource: "CountBtn_Default", ofType: "wav")!
             let url = URL(fileURLWithPath: path)
             do {
@@ -240,7 +242,7 @@ class ViewController: SuperViewController {
     
     @IBAction func AntiCountBtnTouchDown(_ sender: AntiCountBtn) {
         //SoundEffect
-        if userDefeults.bool(forKey: soundEffect) {
+        if userDefaults.bool(forKey: soundEffect) {
             let path = Bundle.main.path(forResource: "AntiCountBtn_Default", ofType: "wav")!
             let url = URL(fileURLWithPath: path)
             do {
