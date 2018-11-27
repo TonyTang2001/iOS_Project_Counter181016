@@ -67,6 +67,10 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         guard let cellType: CellTitleType = CellTitleType(rawValue: indexPath.row) else { return }
         self.switcherTheme(type: cellType)
         
+        print(cellType.themeType.theme)
+        Variables.theme = cellType.themeType.theme
+        print(Variables.theme)
+        
         let addAlert = UIAlertController(title: NSLocalizedString("Theme Changed", comment: ""), message: NSLocalizedString("Enjoy your new Theme.", comment: ""), preferredStyle: .alert)
         addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
         self.present(addAlert, animated: true, completion: nil)

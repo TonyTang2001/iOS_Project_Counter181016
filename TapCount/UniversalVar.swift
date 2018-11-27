@@ -9,4 +9,5 @@ struct Variables {
     static var countNum = 0
     static var multiMode = 1
     static var fromRecord = 0
+    static var theme : ThemeProtocol = OrangeBlackTheme()
 }

@@ -62,6 +62,8 @@ class ViewController: SuperViewController {
         super.viewDidLoad()
         self.becomeFirstResponder()
         
+        print(Variables.theme)
+        
         self.CountBtn = CountBtn!
         firstLaunch()
         setMultiMode(Multi: 1)
