@@ -23,10 +23,15 @@ enum CellTitleType: Int {
             }
         }
     }
-    
 }
 
 class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    //MARK: Setup Haptic Feedback
+    let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
+    let hapticImpactMedium = UIImpactFeedbackGenerator(style: .medium)
+    let hapticSelection = UISelectionFeedbackGenerator()
+    let hapticNotification = UINotificationFeedbackGenerator()
     
     //MARK: - Preset
     let userDefeults = UserDefaults.standard
@@ -75,9 +80,9 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         guard let cellType: CellTitleType = CellTitleType(rawValue: indexPath.row) else { return }
         self.switcherTheme(type: cellType)
         
-        print(cellType.themeType.theme)
-//        Variables.theme = cellType.themeType.theme
         let selectedTheme = cellType.themeType.theme
+        print(selectedTheme)
+        
         if selectedTheme == OrangeBlackTheme() {
             userDefeults.set("OrangeBlackTheme()", forKey: themeName)
         } else if selectedTheme == NaviWhiteTheme() {
@@ -86,9 +91,14 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             userDefeults.set("RedBlackTheme()", forKey: themeName)
         }
         
-        let addAlert = UIAlertController(title: NSLocalizedString("Theme Changed", comment: ""), message: NSLocalizedString("Enjoy your new Theme.", comment: ""), preferredStyle: .alert)
-        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
-        self.present(addAlert, animated: true, completion: nil)
+        hapticImpactMedium.impactOccurred()
+        
+        dismiss(animated: true, completion: nil)
+        
+//        let addAlert = UIAlertController(title: NSLocalizedString("Theme Changed", comment: ""), message: NSLocalizedString("Enjoy your new Theme.", comment: ""), preferredStyle: .alert)
+//        addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
+//        self.present(addAlert, animated: true, completion: nil)
+        
     }
     
     //MARK: - Outlets

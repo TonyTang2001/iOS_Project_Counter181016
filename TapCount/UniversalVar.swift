@@ -12,4 +12,3 @@ struct Variables {
 //    static var theme : ThemeProtocol = OrangeBlackTheme()
     static var themeType : ThemeType = .orangeBlackTheme
 }
-
