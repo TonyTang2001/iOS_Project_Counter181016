@@ -39,6 +39,7 @@
 		EA8ED2922195E3F90004A8F4 /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ED2912195E3F90004A8F4 /* IAP.swift */; };
 		EAB6D2CA21A1B39C00E8F384 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB6D2C921A1B39C00E8F384 /* SettingsCell.swift */; };
 		EAD247F1217B3BBC008DD72D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */; };
+		EAE0263221ADAEE80050CC44 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0263121ADAEE80050CC44 /* CustomOperator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		EA8ED2912195E3F90004A8F4 /* IAP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
 		EAB6D2C921A1B39C00E8F384 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EAE0263121ADAEE80050CC44 /* CustomOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperator.swift; sourceTree = "<group>"; };
 		EEBF9ED38318EA1A08EA5894 /* Pods-TapCount.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TapCount.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TapCount/Pods-TapCount.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				EA8ED2912195E3F90004A8F4 /* IAP.swift */,
 				EA3107F521706C8B003823AE /* AppDelegate.swift */,
 				EA3D4350217B885500753BEA /* UniversalVar.swift */,
+				EAE0263121ADAEE80050CC44 /* CustomOperator.swift */,
 				EA4DAC24218499A8007E1632 /* Color.swift */,
 				EA42942E218F2A2E00061DD5 /* Theme */,
 				EA2F708A2173985D00F06966 /* VC */,
@@ -338,6 +341,7 @@
 				EA3107F821706C8B003823AE /* ViewController.swift in Sources */,
 				EA429429218F248700061DD5 /* NaviWhiteTheme.swift in Sources */,
 				EA3D4351217B885500753BEA /* UniversalVar.swift in Sources */,
+				EAE0263221ADAEE80050CC44 /* CustomOperator.swift in Sources */,
 				EA429432218F2CB000061DD5 /* ThemeManagerProtocol.swift in Sources */,
 				EA4DAC25218499A8007E1632 /* Color.swift in Sources */,
 				EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */,

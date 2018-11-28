@@ -28,6 +28,14 @@ enum CellTitleType: Int {
 
 class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    //MARK: - Preset
+    let userDefeults = UserDefaults.standard
+    let soundEffect = "soundEffect"
+    let keepScreenOn = "keepScreenOn"
+    //    let useVolBtn = "useVolBtn"
+    let shakeToClear = "shakeToClear"
+    let themeName = "themeName"
+    
     func changeTheme() {
         NotificationCenter.default.addObserver(self, selector: #selector(handelNotification(notification:)), name: ThemeNotifacationName, object: nil)
         ThemeManager.themeUpdate()
@@ -68,20 +76,20 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         self.switcherTheme(type: cellType)
         
         print(cellType.themeType.theme)
-        Variables.theme = cellType.themeType.theme
-        print(Variables.theme)
+//        Variables.theme = cellType.themeType.theme
+        let selectedTheme = cellType.themeType.theme
+        if selectedTheme == OrangeBlackTheme() {
+            userDefeults.set("OrangeBlackTheme()", forKey: themeName)
+        } else if selectedTheme == NaviWhiteTheme() {
+            userDefeults.set("NaviWhiteTheme()", forKey: themeName)
+        } else if selectedTheme == RedBlackTheme() {
+            userDefeults.set("RedBlackTheme()", forKey: themeName)
+        }
         
         let addAlert = UIAlertController(title: NSLocalizedString("Theme Changed", comment: ""), message: NSLocalizedString("Enjoy your new Theme.", comment: ""), preferredStyle: .alert)
         addAlert.addAction(UIKit.UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .cancel, handler: nil))
         self.present(addAlert, animated: true, completion: nil)
     }
-    
-    //MARK: - Preset
-    let userDefeults = UserDefaults.standard
-    let soundEffect = "soundEffect"
-    let keepScreenOn = "keepScreenOn"
-//    let useVolBtn = "useVolBtn"
-    let shakeToClear = "shakeToClear"
     
     //MARK: - Outlets
     @IBOutlet weak var soundEffectSwt: SuperSettingsSwt!

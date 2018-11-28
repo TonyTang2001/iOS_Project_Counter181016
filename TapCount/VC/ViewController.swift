@@ -59,13 +59,9 @@ class ViewController: SuperViewController {
     
     //MARK: - ViewDidLoad
     override func viewDidLoad() {
+        firstLaunch()
         super.viewDidLoad()
         self.becomeFirstResponder()
-        
-        print(Variables.theme)
-        
-        self.CountBtn = CountBtn!
-        firstLaunch()
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
         refreshNumberLBDisplay()
@@ -75,6 +71,7 @@ class ViewController: SuperViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setupTheme()
         refreshNumberLBDisplay()
         setupUserSettings()
     }
@@ -90,43 +87,30 @@ class ViewController: SuperViewController {
             userDefaults.set(true, forKey: soundEffect)
             userDefaults.set(true, forKey: keepScreenOn)
             userDefaults.set(true, forKey: shakeToClear)
-            userDefaults.set(NaviWhiteTheme(), forKey: themeName)
+            userDefaults.set("OrangeBlackTheme()", forKey: themeName)
+            setupTheme()
         }
+        
     }
-//    func listenVolumeButton(){
-//        let audioSession = AVAudioSession.sharedInstance()
-//        do {
-//            try audioSession.setActive(true, options: [])
-//            audioSession.addObserver(self, forKeyPath: "outputVolume",
-//                                     options: NSKeyValueObservingOptions.new, context: nil)
-//            audioLevel = audioSession.outputVolume
-//        } catch {
-//            print("Error")
-//        }
-//    }
-//
-//    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-//        if keyPath == "outputVolume"{
-//            let audioSession = AVAudioSession.sharedInstance()
-//            if audioSession.outputVolume > audioLevel {
-////                CountBtnTapped()
-//                audioLevel = audioSession.outputVolume
-//            }
-//            if audioSession.outputVolume < audioLevel {
-//                print("GoodBye")
-//                audioLevel = audioSession.outputVolume
-//            }
-//            if audioSession.outputVolume > 0.999 {
-//                (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.9375, animated: false)
-//                audioLevel = 0.9375
-//            }
-//
-//            if audioSession.outputVolume < 0.001 {
-//                (MPVolumeView().subviews.filter{NSStringFromClass($0.classForCoder) == "MPVolumeSlider"}.first as? UISlider)?.setValue(0.0625, animated: false)
-//                audioLevel = 0.0625
-//            }
-//        }
-//    }
+    
+    func setupTheme() {
+        if userDefaults.string(forKey: themeName) == "OrangeBlackTheme()" {
+//            Variables.theme = OrangeBlackTheme()
+            Variables.themeType = .orangeBlackTheme
+            print("1")
+        } else if userDefaults.string(forKey: themeName) == "NaviWhiteTheme()" {
+//            Variables.theme = NaviWhiteTheme()
+            Variables.themeType = .naviWhiteTheme
+            print("2")
+        } else if userDefaults.string(forKey: themeName) == "RedBlackTheme()" {
+//            Variables.theme = RedBlackTheme()
+            Variables.themeType = .redBlackTheme
+            print("3")
+        }
+//        ThemeManager.themeUpdate()
+//        NotificationCenter.default.post(name: ThemeNotifacationName, object: Variables.theme)
+        ThemeManager.switcherTheme(type: Variables.themeType)
+    }
     
     func setupUserSettings() {
         if userDefaults.bool(forKey: soundEffect) {
