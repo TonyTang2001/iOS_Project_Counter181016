@@ -12,6 +12,13 @@ import StoreKit
 
 class HistoryViewController: SuperViewController, UITableViewDelegate, UITableViewDataSource {
     
+    let userDefaults = UserDefaults.standard
+    let soundEffect = "soundEffect"
+    let keepScreenOn = "keepScreenOn"
+    //    let useVolBtn = "useVolBtn"
+    let shakeToClear = "shakeToClear"
+    let themeName = "themeName"
+    
     var countRecord = 0
     let mainVC = ViewController()
     //MARK: Setup CoreData
@@ -52,13 +59,25 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
         let recordTimeStr = dateFormatterForTime.string(from: count.countDate!)
         let dateToday = dateFormatterForDate.string(from: Date())
         
+        var timeLabelContent = ""
+        let countNumLabelContent = String(count.countNum)
         if  recordDateStr == dateToday {
-            cell.TimeLb.text = NSLocalizedString("Today ", comment: "") + recordTimeStr
+            timeLabelContent = NSLocalizedString("Today ", comment: "") + recordTimeStr
         } else {
-            cell.TimeLb.text = recordDateStr + recordTimeStr
+            timeLabelContent = recordDateStr + recordTimeStr
         }
         
-        cell.CountNumLb.text = String(count.countNum)
+        //MARK: - Personalification for XcodeTheme
+        if userDefaults.string(forKey: themeName) == "XcodeTheme()" {
+            cell.TimeLb.text = "/*" + timeLabelContent + "*/"
+            cell.CountNumLb.text = countNumLabelContent
+        } else if userDefaults.string(forKey: themeName) == "MicroSft()" {
+            cell.TimeLb.text = "***" + timeLabelContent + " STOP: 0x000" + String(indexPath.row) + "FFFFFFC00812,0xFFF08EB5B48"
+            cell.CountNumLb.text = countNumLabelContent
+        } else {
+            cell.TimeLb.text = timeLabelContent
+            cell.CountNumLb.text = countNumLabelContent
+        }
         
         //Setup Selecteed Color
         let backgroundView = UIView()

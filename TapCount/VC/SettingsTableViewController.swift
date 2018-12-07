@@ -10,7 +10,7 @@ import UIKit
 import StoreKit
 
 enum CellTitleType: Int {
-    case OrangeBlack, NaviWhite, RedBlack
+    case OrangeBlack, RedBlack, NaviWhite, YellowWhite, CoralWhite, BlueWhite, XcodeTheme
     var themeType : ThemeType {
         get {
             switch self {
@@ -20,6 +20,16 @@ enum CellTitleType: Int {
                 return .naviWhiteTheme
             case .RedBlack:
                 return .redBlackTheme
+            case .YellowWhite:
+                return .yellowWhiteTheme
+            case .CoralWhite:
+                return .coralWhiteTheme
+            case .BlueWhite:
+                return .blueWhiteTheme
+            case .XcodeTheme:
+                return .xcodeTheme
+//            case .PkmTheme:
+//                return .pkmTheme
             }
         }
     }
@@ -57,8 +67,8 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         NotificationCenter.default.removeObserver(self)
     }
     
-    
-    let array:[String] = ["orangeBlack","naviWhite","redBlack"]
+    //MARK: - Collection View
+    let array:[String] = ["orangeBlack","redBlack","naviWhite","yellowWhite","coralWhite","blueWhite","xcodeTheme"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
@@ -89,7 +99,17 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             userDefeults.set("NaviWhiteTheme()", forKey: themeName)
         } else if selectedTheme == RedBlackTheme() {
             userDefeults.set("RedBlackTheme()", forKey: themeName)
-        }
+        } else if selectedTheme == YellowWhiteTheme() {
+            userDefeults.set("YellowWhiteTheme()", forKey: themeName)
+        } else if selectedTheme == CoralWhiteTheme() {
+            userDefeults.set("CoralWhiteTheme()", forKey: themeName)
+        } else if selectedTheme == BlueWhiteTheme() {
+            userDefeults.set("BlueWhiteTheme()", forKey: themeName)
+        } else if selectedTheme == XcodeTheme() {
+            userDefeults.set("XcodeTheme()", forKey: themeName)
+        } //else if selectedTheme == PkmTheme() {
+//            userDefeults.set("PkmTheme()", forKey: themeName)
+//        }
         
         hapticImpactMedium.impactOccurred()
         
@@ -119,7 +139,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     @IBOutlet weak var colorsCollectionView: UICollectionView!
     @IBOutlet weak var nameAndVersion: UILabel!
     
-    //MARK: - Selection Delegate
+    //MARK: - Cell Selection Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             //Select Colors & Styles
@@ -197,6 +217,23 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         setupSwts()
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
         nameAndVersion.text = NSLocalizedString("Count Now", comment: "") + " ∙ v " + appVersion
+        
+        //Stunning Fade Effects at ends of CollectionView, LOL
+        let gradient = CAGradientLayer()
+        gradient.frame = colorsSelectionCell.bounds
+        //Set CAGradientLayer to horizontal
+        gradient.startPoint = CGPoint(x: 0.0, y: 0)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0)
+        gradient.colors = [
+            UIColor.clear.cgColor,
+            UIColor(white: 1, alpha: 1).cgColor,
+            UIColor(white: 1, alpha: 1).cgColor,
+            UIColor.clear.cgColor
+        ]
+        //Asymmetry for implication of horizontal scrolling.
+        gradient.locations = [0, 0.04, 0.90, 1]
+        colorsSelectionCell.layer.mask = gradient
+        
     }
     
     //MARK: - Functions

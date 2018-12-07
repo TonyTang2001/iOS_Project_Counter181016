@@ -97,18 +97,32 @@ class ViewController: SuperViewController {
         if userDefaults.string(forKey: themeName) == "OrangeBlackTheme()" {
 //            Variables.theme = OrangeBlackTheme()
             Variables.themeType = .orangeBlackTheme
-            print("1")
         } else if userDefaults.string(forKey: themeName) == "NaviWhiteTheme()" {
 //            Variables.theme = NaviWhiteTheme()
             Variables.themeType = .naviWhiteTheme
-            print("2")
         } else if userDefaults.string(forKey: themeName) == "RedBlackTheme()" {
 //            Variables.theme = RedBlackTheme()
             Variables.themeType = .redBlackTheme
-            print("3")
-        }
+        } else if userDefaults.string(forKey: themeName) == "YellowWhiteTheme()" {
+//            Variables.theme = RedBlackTheme()
+            Variables.themeType = .yellowWhiteTheme
+        } else if userDefaults.string(forKey: themeName) == "CoralWhiteTheme()" {
+//            Variables.theme = RedBlackTheme()
+            Variables.themeType = .coralWhiteTheme
+        } else if userDefaults.string(forKey: themeName) == "BlueWhiteTheme()" {
+//            Variables.theme = RedBlackTheme()
+            Variables.themeType = .blueWhiteTheme
+        } else if userDefaults.string(forKey: themeName) == "XcodeTheme()" {
+            //            Variables.theme = RedBlackTheme()
+            Variables.themeType = .xcodeTheme
+        } //else if userDefaults.string(forKey: themeName) == "PkmTheme()" {
+//            //            Variables.theme = RedBlackTheme()
+//            Variables.themeType = .pkmTheme
+//        }
+        
 //        ThemeManager.themeUpdate()
 //        NotificationCenter.default.post(name: ThemeNotifacationName, object: Variables.theme)
+        
         ThemeManager.switcherTheme(type: Variables.themeType)
     }
     

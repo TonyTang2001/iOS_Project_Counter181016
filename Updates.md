@@ -135,11 +135,15 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 谢谢！
 
 # 3.0.0 Update #
-- More Styles & Themes & Colors *
 - Changed & Added Haptic Feedbacks
 
-# 3.0.3 Update #
+# 3.1 Update #
 - Theme Change Available to users
+- Changed & Added Haptic Feedbacks
+
+# 3.1 Update News #
+∙ Different themes and color styles are now available to everyone!
+∙ NEW Haptic feedbacks are added, several current ones are modified.
 
 # Todos #
 - 3D touch Quick Action

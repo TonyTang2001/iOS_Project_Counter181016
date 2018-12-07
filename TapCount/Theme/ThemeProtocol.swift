@@ -21,6 +21,12 @@ enum ThemeType {
     case orangeBlackTheme
     case naviWhiteTheme
     case redBlackTheme
+    case yellowWhiteTheme
+    case coralWhiteTheme
+    case blueWhiteTheme
+    case xcodeTheme
+//    case microSft
+//    case pkmTheme
     
     var theme: ThemeProtocol {
         get {
@@ -31,6 +37,18 @@ enum ThemeType {
                 return NaviWhiteTheme()
             case .redBlackTheme:
                 return RedBlackTheme()
+            case .yellowWhiteTheme:
+                return YellowWhiteTheme()
+            case .coralWhiteTheme:
+                return CoralWhiteTheme()
+            case .blueWhiteTheme:
+                return BlueWhiteTheme()
+            case .xcodeTheme:
+                return XcodeTheme()
+//            case .microSft:
+//                return MicroSft()
+//            case .pkmTheme:
+//                return PkmTheme()
             }
         }
     }

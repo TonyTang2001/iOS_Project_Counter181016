@@ -81,5 +81,12 @@ extension UIColor {
         static let blueLogo_Micro: UIColor   = .init(hex: 0x089ee8)
         static let yellowLogo_Micro: UIColor = .init(hex: 0xf6b304)
         
+        //Pokemon Colorpad
+        static let red_Pkm: UIColor   = .init(hex: 0xf90200)
+        static let White_Pkm: UIColor = .init(hex: 0xf8f8f8)
+        
+        static let red_Pikachu: UIColor = .init(hex: 0xef2ce2)
+        static let darYellow_Pikachu: UIColor = .init(hex: 0xda932e)
+        static let brown_Pikachu: UIColor = .init(hex: 0x7e1c07)
     }
 }
