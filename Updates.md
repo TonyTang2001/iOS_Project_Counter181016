@@ -145,6 +145,13 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 ∙ Different themes and color styles are now available to everyone!
 ∙ NEW Haptic feedbacks are added, several current ones are modified.
 
+# 3.2 Update #
+- Themes for iPhone XR
+
+# 3.3 Update #
+- Theme inspired by Xcode
+- Gradient of UICollectionView of Color Selection
+
 # Todos #
 - 3D touch Quick Action
 - Parallax Effect according to Style & Theme

@@ -88,5 +88,8 @@ extension UIColor {
         static let red_Pikachu: UIColor = .init(hex: 0xef2ce2)
         static let darYellow_Pikachu: UIColor = .init(hex: 0xda932e)
         static let brown_Pikachu: UIColor = .init(hex: 0x7e1c07)
+        
+        static let darkGreen: UIColor = .init(hex: 0x026838)
+        static let RRed: UIColor = .init(hex: 0xbf1e2e)
     }
 }
