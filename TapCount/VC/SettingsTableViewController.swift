@@ -126,7 +126,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     @IBOutlet weak var keepScreenOnSwt: SuperSettingsSwt!
     @IBOutlet weak var shakeToClearSwt: SuperSettingsSwt!
     
-    @IBOutlet weak var colorsAndStylesCell: SettingsSelectableCell!
+    @IBOutlet weak var colorsAndStylesCell: SuperSettingsCell!
     @IBOutlet weak var colorsSelectionCell: SettingsSelectableCell!
     @IBOutlet weak var soundEffectCell: SuperSettingsCell!
     @IBOutlet weak var keepScreenOnCell: SuperSettingsCell!

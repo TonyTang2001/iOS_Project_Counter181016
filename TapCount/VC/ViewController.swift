@@ -153,7 +153,10 @@ class ViewController: SuperViewController {
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake && userDefaults.bool(forKey: shakeToClear) {
+            hapticImpactMedium.impactOccurred()
             refreshCount()
+            let time: TimeInterval = 0.1
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) { self.hapticImpactMedium.impactOccurred() }
         }
     }
     
@@ -214,6 +217,14 @@ class ViewController: SuperViewController {
         saveCountRecord()
         Variables.countNum = 0
         NumberLB.text = "0"
+        //Animation for NumberLb
+                UIView.animate(withDuration: 0.1, animations: {
+                    self.NumberLB.transform = self.NumberLB.transform.scaledBy(x: 1.05, y: 1.1)
+                }) { (success) in
+                    UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.0, options: .curveEaseOut, animations: {
+                        self.NumberLB.transform = CGAffineTransform.identity
+                    }, completion: nil)
+                }
     }
     
     func antiCountError() {
