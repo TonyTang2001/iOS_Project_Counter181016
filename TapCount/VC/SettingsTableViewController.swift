@@ -55,6 +55,8 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     let shakeToClear = "shakeToClear"
     let themeName = "themeName"
     
+    var currentTheme: ThemeProtocol!
+    
     func changeTheme() {
         NotificationCenter.default.addObserver(self, selector: #selector(handelNotification(notification:)), name: ThemeNotifacationName, object: nil)
         ThemeManager.themeUpdate()
@@ -65,6 +67,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             return
         }
         self.view.backgroundColor = theme.backgroundColor
+        currentTheme = theme
     }
     
     deinit {
@@ -245,12 +248,10 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     }
     
     func showSafariVC(for url: String) {
-        guard let url = URL(string: url) else {
-            //Invalid URL alert
-            return
-        }
-        
+        guard let url = URL(string: url) else { return }
         let safariVC = SFSafariViewController(url: url)
+        safariVC.preferredControlTintColor = currentTheme.mainColor
+        safariVC.preferredBarTintColor = currentTheme.backgroundColor
         present(safariVC, animated: true)
     }
     
