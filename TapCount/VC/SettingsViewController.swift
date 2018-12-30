@@ -12,6 +12,7 @@ class SettingsViewController: SuperViewController {
 
     @IBOutlet weak var BackBtn: NaviBtn!
     @IBOutlet weak var ContainerVforSettingsStatic: UIView!
+    @IBOutlet weak var CopyrightTonyTang: DevNameLb!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,8 +27,12 @@ class SettingsViewController: SuperViewController {
             UIColor.clear.cgColor
         ]
         //Asymmetry for implication of horizontal scrolling.
-        gradient.locations = [0, 0.05, 0.85, 1]
+        gradient.locations = [0, 0.05, 0.88, 0.96]
         ContainerVforSettingsStatic.layer.mask = gradient
+        
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: Date())
+        CopyrightTonyTang.text = String(year) + " TonyTangⓇ"
     }
     
     @IBAction func BackBtnPressed(_ sender: UIButton) {

@@ -216,7 +216,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         self.changeTheme()
         setupSwts()
         let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
-        nameAndVersion.text = NSLocalizedString("Count Now", comment: "") + " ∙ v " + appVersion
+        nameAndVersion.text = NSLocalizedString("Count Now", comment: "") + " v" + appVersion
         
         //Stunning Fade Effects at ends of CollectionView, LOL
         let gradient = CAGradientLayer()

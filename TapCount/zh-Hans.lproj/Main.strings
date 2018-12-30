@@ -15,7 +15,7 @@
 "9sA-2y-byW.headerTitle" = "实用功能";
 
 /* Class = "UILabel"; text = "Count Now ∙ v X.X.X"; ObjectID = "IT0-BT-2SC"; */
-"IT0-BT-2SC.text" = "计数+ ∙ v X.X.X";
+"IT0-BT-2SC.text" = "计数+ vX.X.X";
 
 /* Class = "UIButton"; normalTitle = "Clear"; ObjectID = "LK2-8n-ySM"; */
 "LK2-8n-ySM.normalTitle" = "归零";
@@ -39,7 +39,7 @@
 "YIl-1Z-UCX.title" = "颜色";
 
 /* Class = "UILabel"; text = "2018 TonyTangⓇ"; ObjectID = "Zbd-Vd-SyO"; */
-"Zbd-Vd-SyO.text" = "2018 TonyTangⓇ";
+"Zbd-Vd-SyO.text" = "2019 TonyTangⓇ";
 
 /* Class = "UILabel"; text = "Contact Developer"; ObjectID = "h8J-Hb-Iye"; */
 "h8J-Hb-Iye.text" = "联系开发者";

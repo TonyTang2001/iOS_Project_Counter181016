@@ -182,7 +182,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountNum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-AB-3zG" customClass="CountNumLb" customModule="TapCount" customModuleProvider="target">
-                                                    <rect key="frame" x="184" y="20" width="121" height="30"/>
+                                                    <rect key="frame" x="239" y="20" width="121" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -309,6 +309,7 @@
                     <connections>
                         <outlet property="BackBtn" destination="VDP-z2-dVJ" id="HcH-tg-CEC"/>
                         <outlet property="ContainerVforSettingsStatic" destination="H3V-Iq-p11" id="H4i-97-Fbk"/>
+                        <outlet property="CopyrightTonyTang" destination="Zbd-Vd-SyO" id="lOF-ma-41G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVT-Er-hDM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -325,7 +326,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="md3-Je-d80">
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="md3-Je-d80">
                             <rect key="frame" x="0.0" y="735.33333333333337" width="375" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
