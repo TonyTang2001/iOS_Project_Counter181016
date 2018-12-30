@@ -8,7 +8,9 @@
 
 import UIKit
 import StoreKit
+import SafariServices
 
+//MARK: - Setup Themes
 enum CellTitleType: Int {
     case OrangeBlack, RedBlack, NaviWhite, YellowWhite, CoralWhite, BlueWhite, XcodeTheme
     var themeType : ThemeType {
@@ -35,6 +37,7 @@ enum CellTitleType: Int {
     }
 }
 
+//MARK: - VC
 class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, UICollectionViewDelegate, UICollectionViewDataSource {
     
     //MARK: Setup Haptic Feedback
@@ -44,6 +47,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     let hapticNotification = UINotificationFeedbackGenerator()
     
     //MARK: - Preset
+    //MARK: Themes
     let userDefeults = UserDefaults.standard
     let soundEffect = "soundEffect"
     let keepScreenOn = "keepScreenOn"
@@ -127,7 +131,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     @IBOutlet weak var shakeToClearSwt: SuperSettingsSwt!
     
     @IBOutlet weak var colorsAndStylesCell: SuperSettingsCell!
-    @IBOutlet weak var colorsSelectionCell: SettingsSelectableCell!
+    @IBOutlet weak var colorsSelectionCell: SuperSettingsCell!
     @IBOutlet weak var soundEffectCell: SuperSettingsCell!
     @IBOutlet weak var keepScreenOnCell: SuperSettingsCell!
     @IBOutlet weak var shakeToClearCell: SuperSettingsCell!
@@ -180,8 +184,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             }
             
             let gitHub = UIAlertAction(title: NSLocalizedString("GitHub", comment: ""), style: .default) { (action) in
-                guard let url = URL(string: "https://github.com/TonyTang2001") else {return}
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                self.showSafariVC(for: "https://github.com/TonyTang2001")
             }
             
             let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
@@ -199,13 +202,10 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             askForRate.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Not now", comment: ""), style: .cancel, handler: nil))
             askForRate.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Rate", comment: ""), style: .default) { (action) in  SKStoreReviewController.requestReview()  })
             self.present(askForRate, animated: true, completion: nil)
-            
         } else if indexPath.section == 2 && indexPath.row == 2 {
-            guard let url = URL(string: NSLocalizedString("https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md", comment: "")) else {return}
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            showSafariVC(for: NSLocalizedString("https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md", comment: ""))
         } else if indexPath.section == 2 && indexPath.row == 3 {
-            guard let url = URL(string: "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Acknowledgement.md") else {return}
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            showSafariVC(for: "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Acknowledgement.md")
         }
         self.tableView.reloadData()
     }
@@ -231,7 +231,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             UIColor.clear.cgColor
         ]
         //Asymmetry for implication of horizontal scrolling.
-        gradient.locations = [0, 0.04, 0.90, 1]
+        gradient.locations = [0, 0.04, 0.93, 1]
         colorsSelectionCell.layer.mask = gradient
         
     }
@@ -242,6 +242,16 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         keepScreenOnSwt.isOn = userDefeults.bool(forKey: keepScreenOn)
 //        useVolBtnSwt.isOn = userDefeults.bool(forKey: useVolBtn)
         shakeToClearSwt.isOn = userDefeults.bool(forKey: shakeToClear)
+    }
+    
+    func showSafariVC(for url: String) {
+        guard let url = URL(string: url) else {
+            //Invalid URL alert
+            return
+        }
+        
+        let safariVC = SFSafariViewController(url: url)
+        present(safariVC, animated: true)
     }
     
     @IBAction func soundEffectSwtPressed(_ sender: UISwitch) {

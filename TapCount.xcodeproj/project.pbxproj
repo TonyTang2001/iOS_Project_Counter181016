@@ -32,9 +32,8 @@
 		EA42943E2190943000061DD5 /* AntiCountBtn_Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA42943C2190943000061DD5 /* AntiCountBtn_Default.wav */; };
 		EA42943F2190943000061DD5 /* CountBtn_Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA42943D2190943000061DD5 /* CountBtn_Default.wav */; };
 		EA4DAC2321849609007E1632 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */; };
-		EA4DAC25218499A8007E1632 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC24218499A8007E1632 /* Color.swift */; };
+		EA4DAC25218499A8007E1632 /* Colorpads.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC24218499A8007E1632 /* Colorpads.swift */; };
 		EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */; };
-		EA8ED2922195E3F90004A8F4 /* IAP.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ED2912195E3F90004A8F4 /* IAP.swift */; };
 		EAB6D2CA21A1B39C00E8F384 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB6D2C921A1B39C00E8F384 /* SettingsCell.swift */; };
 		EAD247F1217B3BBC008DD72D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */; };
 		EAE0263221ADAEE80050CC44 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0263121ADAEE80050CC44 /* CustomOperator.swift */; };
@@ -72,10 +71,9 @@
 		EA42943C2190943000061DD5 /* AntiCountBtn_Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = AntiCountBtn_Default.wav; path = "App Resources/SoundEffects/Taptic/AntiCountBtn_Default.wav"; sourceTree = SOURCE_ROOT; };
 		EA42943D2190943000061DD5 /* CountBtn_Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = CountBtn_Default.wav; path = "App Resources/SoundEffects/Taptic/CountBtn_Default.wav"; sourceTree = SOURCE_ROOT; };
 		EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		EA4DAC24218499A8007E1632 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		EA4DAC24218499A8007E1632 /* Colorpads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorpads.swift; sourceTree = "<group>"; };
 		EA5C5B642177A6A600383501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
-		EA8ED2912195E3F90004A8F4 /* IAP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAP.swift; sourceTree = "<group>"; };
 		EAB6D2C921A1B39C00E8F384 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EAE0263121ADAEE80050CC44 /* CustomOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomOperator.swift; sourceTree = "<group>"; };
@@ -142,11 +140,10 @@
 		EA3107F421706C8B003823AE /* TapCount */ = {
 			isa = PBXGroup;
 			children = (
-				EA8ED2912195E3F90004A8F4 /* IAP.swift */,
 				EA3107F521706C8B003823AE /* AppDelegate.swift */,
 				EA3D4350217B885500753BEA /* UniversalVar.swift */,
 				EAE0263121ADAEE80050CC44 /* CustomOperator.swift */,
-				EA4DAC24218499A8007E1632 /* Color.swift */,
+				EA4DAC24218499A8007E1632 /* Colorpads.swift */,
 				EA42942E218F2A2E00061DD5 /* Theme */,
 				EA2F708A2173985D00F06966 /* VC */,
 				EA3107F921706C8B003823AE /* Main.storyboard */,
@@ -325,7 +322,6 @@
 				EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */,
 				EA429434218F2D6600061DD5 /* SuperViewController.swift in Sources */,
 				EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */,
-				EA8ED2922195E3F90004A8F4 /* IAP.swift in Sources */,
 				EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */,
 				EA429430218F2A4800061DD5 /* ThemeManager.swift in Sources */,
 				EA429436218FE88F00061DD5 /* ThemeGlobal.swift in Sources */,
@@ -335,7 +331,7 @@
 				EA3D4351217B885500753BEA /* UniversalVar.swift in Sources */,
 				EAE0263221ADAEE80050CC44 /* CustomOperator.swift in Sources */,
 				EA429432218F2CB000061DD5 /* ThemeManagerProtocol.swift in Sources */,
-				EA4DAC25218499A8007E1632 /* Color.swift in Sources */,
+				EA4DAC25218499A8007E1632 /* Colorpads.swift in Sources */,
 				EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */,
 				EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */,
 				EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */,

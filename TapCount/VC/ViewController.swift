@@ -29,9 +29,10 @@ class ViewController: SuperViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     //MARK: Setup Haptic Feedback
-    let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
+    let hapticImpactLight  = UIImpactFeedbackGenerator(style: .light)
     let hapticImpactMedium = UIImpactFeedbackGenerator(style: .medium)
-    let hapticSelection = UISelectionFeedbackGenerator()
+    let hapticImpactHeavy  = UIImpactFeedbackGenerator(style: .heavy)
+    let hapticSelection    = UISelectionFeedbackGenerator()
     let hapticNotification = UINotificationFeedbackGenerator()
     
     @IBOutlet weak var HistoryBtn: NaviBtn!
@@ -153,10 +154,12 @@ class ViewController: SuperViewController {
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake && userDefaults.bool(forKey: shakeToClear) {
-            hapticImpactMedium.impactOccurred()
+            hapticImpactHeavy.impactOccurred()
             refreshCount()
             let time: TimeInterval = 0.1
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) { self.hapticImpactMedium.impactOccurred() }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
+                self.hapticImpactMedium.impactOccurred()
+            }
         }
     }
     
