@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Spring
+//import Spring
 
 //MARK: - NumberLb
 class CountDisplay: SpringLabel, ThemeManagerProtocol {

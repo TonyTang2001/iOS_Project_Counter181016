@@ -6,6 +6,6 @@ target 'TapCount' do
   use_frameworks!
 
   # Pods for TapCount
-pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+#pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 end
