@@ -154,10 +154,7 @@ If you have any suggestion or thought you'd like to share, please contact me by 
 
 # Todos #
 - 3D touch Quick Action
-- Parallax Effect according to Style & Theme
 - Auto-Save when terminated
-- Launch Screen
 - Submit Preview Videos
-- Localized ScreenShots
 - Apple Watch Support
 ~~- Use Volume Button to Count~~

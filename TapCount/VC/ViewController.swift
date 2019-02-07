@@ -7,10 +7,7 @@
 //
 
 import UIKit
-//import Spring
-//import AudioToolbox
 import AVFoundation
-//import MediaPlayer
 
 class ViewController: SuperViewController {
     
@@ -63,11 +60,11 @@ class ViewController: SuperViewController {
         firstLaunch()
         super.viewDidLoad()
         self.becomeFirstResponder()
+        
+//        setAudioMode()
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
         refreshNumberLBDisplay()
-//        listenVolumeButton()
-//        ClearBtn.setTitleColor(UIColor.InterfaceColor.orange.withAlphaComponent(0.2),for: .highlighted)
         setupUserSettings()
     }
     
@@ -87,7 +84,7 @@ class ViewController: SuperViewController {
             userDefaults.set(true, forKey: "launchedBefore")
             userDefaults.set(true, forKey: soundEffect)
             userDefaults.set(true, forKey: keepScreenOn)
-            userDefaults.set(true, forKey: shakeToClear)
+            userDefaults.set(false, forKey: shakeToClear)
             userDefaults.set("OrangeBlackTheme()", forKey: themeName)
             setupTheme()
         }
@@ -116,13 +113,7 @@ class ViewController: SuperViewController {
         } else if userDefaults.string(forKey: themeName) == "XcodeTheme()" {
             //            Variables.theme = RedBlackTheme()
             Variables.themeType = .xcodeTheme
-        } //else if userDefaults.string(forKey: themeName) == "PkmTheme()" {
-//            //            Variables.theme = RedBlackTheme()
-//            Variables.themeType = .pkmTheme
-//        }
-        
-//        ThemeManager.themeUpdate()
-//        NotificationCenter.default.post(name: ThemeNotifacationName, object: Variables.theme)
+        }
         
         ThemeManager.switcherTheme(type: Variables.themeType)
     }
@@ -138,10 +129,6 @@ class ViewController: SuperViewController {
             UIApplication.shared.isIdleTimerDisabled = true
         }
         
-//        if userDefeults.bool(forKey: useVolBtn) { }
-        
-        //Already Sat in motionEnded
-//        if userDefeults.bool(forKey: shakeToClear) { }
     }
     
     //For Shake Motion
@@ -162,6 +149,13 @@ class ViewController: SuperViewController {
             }
         }
     }
+    
+//    func setAudioMode() {
+//        // Do not stop background music playing
+//        let audioSession = AVAudioSession.sharedInstance()
+//        try? audioSession.setCategory(.playAndRecord, mode: .default, options: [])
+//        try? audioSession.setActive(true)
+//    }
     
     func setMultiMode(Multi: Int) {
         Variables.multiMode = Multi
@@ -190,15 +184,6 @@ class ViewController: SuperViewController {
     func countUp() {
         Variables.countNum = Variables.countNum + Variables.multiMode
         refreshNumberLBDisplay()
-        
-        //Animation for NumberLb
-        //        UIView.animate(withDuration: 0.1, animations: {
-        //            self.NumberLB.transform = self.NumberLB.transform.scaledBy(x: 1.01, y: 1.05)
-        //        }) { (success) in
-        //            UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.8, options: .curveEaseOut, animations: {
-        //                self.NumberLB.transform = CGAffineTransform.identity
-        //            }, completion: nil)
-        //        }
     }
     
     func countDown() {
@@ -244,12 +229,14 @@ class ViewController: SuperViewController {
             let url = URL(fileURLWithPath: path)
             do {
                 player = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
                 player.play()
             } catch { print ("SoundError:\(error)") }
         }
         hapticImpactMedium.impactOccurred()
         countUp()
     }
+    
     @IBAction func CountBtnTapped(_ sender: CountBtn) {
 //        countUp()
     }
@@ -261,6 +248,7 @@ class ViewController: SuperViewController {
             let url = URL(fileURLWithPath: path)
             do {
                 player = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
                 player.play()
             } catch { print ("SoundError:\(error)") }
         }
