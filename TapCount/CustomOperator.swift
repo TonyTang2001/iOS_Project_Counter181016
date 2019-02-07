@@ -6,8 +6,6 @@
 //  Copyright © 2018 TonyTang. All rights reserved.
 //
 
-import Foundation
-
 func == (lhs: ThemeProtocol, rhs: ThemeProtocol) -> Bool {
     var returnValue = false
     if (lhs.mainColor == rhs.mainColor) && (lhs.backgroundColor == rhs.backgroundColor) && (lhs.countDisplayColor == rhs.countDisplayColor) && (lhs.subLabelColor == rhs.subLabelColor) && (lhs.cellSelectionColor == rhs.cellSelectionColor) && (lhs.statusBarStyle == rhs.statusBarStyle)

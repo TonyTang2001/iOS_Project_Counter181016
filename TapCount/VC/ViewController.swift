@@ -8,17 +8,17 @@
 
 import UIKit
 import AVFoundation
+import AudioToolbox
 
 class ViewController: SuperViewController {
     
     //MARK: - Preset
-    var player = AVAudioPlayer()
+    var soundURL: NSURL?
+    var soundID: SystemSoundID = 0
     var soundEnabled: Bool = true
-//    private var audioLevel: Float = 0.0
     let userDefaults = UserDefaults.standard
     let soundEffect = "soundEffect"
     let keepScreenOn = "keepScreenOn"
-//    let useVolBtn = "useVolBtn"
     let shakeToClear = "shakeToClear"
     let themeName = "themeName"
     
@@ -223,16 +223,14 @@ class ViewController: SuperViewController {
     
     //MARK: - IBActions
     @IBAction func CountBtnTouchDown(_ sender: CountBtn) {
-        //SoundEffect
-        if userDefaults.bool(forKey: soundEffect) {
-            let path = Bundle.main.path(forResource: "CountBtn_Default", ofType: "wav")!
-            let url = URL(fileURLWithPath: path)
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-                player.prepareToPlay()
-                player.play()
-            } catch { print ("SoundError:\(error)") }
+        // Sound Effect
+        let filePath = Bundle.main.path(forResource: "CountBtn_Default", ofType: "wav")!
+        soundURL = NSURL(fileURLWithPath: filePath)
+        if let url = soundURL {
+            AudioServicesCreateSystemSoundID(url, &soundID)
+            AudioServicesPlaySystemSound(soundID)
         }
+        
         hapticImpactMedium.impactOccurred()
         countUp()
     }
@@ -242,19 +240,18 @@ class ViewController: SuperViewController {
     }
     
     @IBAction func AntiCountBtnTouchDown(_ sender: AntiCountBtn) {
-        //SoundEffect
-        if userDefaults.bool(forKey: soundEffect) {
-            let path = Bundle.main.path(forResource: "AntiCountBtn_Default", ofType: "wav")!
-            let url = URL(fileURLWithPath: path)
-            do {
-                player = try AVAudioPlayer(contentsOf: url)
-                player.prepareToPlay()
-                player.play()
-            } catch { print ("SoundError:\(error)") }
+        // Sound Effect
+        let filePath = Bundle.main.path(forResource: "AntiCountBtn_Default", ofType: "wav")!
+        soundURL = NSURL(fileURLWithPath: filePath)
+        if let url = soundURL {
+            AudioServicesCreateSystemSoundID(url, &soundID)
+            AudioServicesPlaySystemSound(soundID)
         }
+        
         hapticImpactLight.impactOccurred()
         countDown()
     }
+    
     @IBAction func AntiCountBtnTapped(_ sender: AntiCountBtn) {
 //        countDown()
     }
