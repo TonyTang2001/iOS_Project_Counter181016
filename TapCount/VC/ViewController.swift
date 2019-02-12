@@ -21,6 +21,7 @@ class ViewController: SuperViewController {
     let keepScreenOn = "keepScreenOn"
     let shakeToClear = "shakeToClear"
     let themeName = "themeName"
+    let initialNumber = "initialNumber"
     
     //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -61,7 +62,7 @@ class ViewController: SuperViewController {
         super.viewDidLoad()
         self.becomeFirstResponder()
         
-//        setAudioMode()
+        Variables.countNum = userDefaults.integer(forKey: initialNumber)
         setMultiMode(Multi: 1)
         setupMultiModeBtn()
         refreshNumberLBDisplay()
@@ -85,6 +86,7 @@ class ViewController: SuperViewController {
             userDefaults.set(true, forKey: soundEffect)
             userDefaults.set(true, forKey: keepScreenOn)
             userDefaults.set(false, forKey: shakeToClear)
+            userDefaults.set(0, forKey: initialNumber)
             userDefaults.set("OrangeBlackTheme()", forKey: themeName)
             setupTheme()
         }
@@ -183,6 +185,7 @@ class ViewController: SuperViewController {
     
     func countUp() {
         Variables.countNum = Variables.countNum + Variables.multiMode
+        userDefaults.set(Variables.countNum, forKey: initialNumber)
         refreshNumberLBDisplay()
     }
     
@@ -197,6 +200,7 @@ class ViewController: SuperViewController {
             antiCountError()
         }
         
+        userDefaults.set(Variables.countNum, forKey: initialNumber)
         refreshNumberLBDisplay()
     }
     
@@ -204,6 +208,7 @@ class ViewController: SuperViewController {
         hapticImpactLight.impactOccurred()
         saveCountRecord()
         Variables.countNum = 0
+        userDefaults.set(Variables.countNum, forKey: initialNumber)
         NumberLB.text = "0"
         //Animation for NumberLb
                 UIView.animate(withDuration: 0.1, animations: {
