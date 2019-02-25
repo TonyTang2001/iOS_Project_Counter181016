@@ -12,7 +12,7 @@ import SafariServices
 
 //MARK: - Setup Themes
 enum CellTitleType: Int {
-    case OrangeBlack, RedBlack, NaviWhite, YellowWhite, CoralWhite, BlueWhite, XcodeTheme
+    case OrangeBlack, RedBlack, NaviWhite, YellowWhite, CoralWhite, BlueWhite, XcodeTheme, DarkModeTheme
     var themeType : ThemeType {
         get {
             switch self {
@@ -30,6 +30,8 @@ enum CellTitleType: Int {
                 return .blueWhiteTheme
             case .XcodeTheme:
                 return .xcodeTheme
+            case .DarkModeTheme:
+                return .darkModeTheme
 //            case .PkmTheme:
 //                return .pkmTheme
             }
@@ -75,7 +77,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     }
     
     //MARK: - Collection View
-    let array:[String] = ["orangeBlack","redBlack","naviWhite","yellowWhite","coralWhite","blueWhite","xcodeTheme"]
+    let array:[String] = ["orangeBlack","redBlack","naviWhite","yellowWhite","coralWhite","blueWhite","xcodeTheme","darkModeTheme"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
@@ -114,9 +116,9 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             userDefeults.set("BlueWhiteTheme()", forKey: themeName)
         } else if selectedTheme == XcodeTheme() {
             userDefeults.set("XcodeTheme()", forKey: themeName)
-        } //else if selectedTheme == PkmTheme() {
-//            userDefeults.set("PkmTheme()", forKey: themeName)
-//        }
+        } else if selectedTheme == DarkModeTheme() {
+            userDefeults.set("DarkModeTheme()", forKey: themeName)
+        }
         
         hapticImpactMedium.impactOccurred()
         

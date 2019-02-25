@@ -8,7 +8,6 @@
 
 import UIKit
 class OrangeBlackTheme: ThemeProtocol {
-    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.orange
@@ -24,6 +23,12 @@ class OrangeBlackTheme: ThemeProtocol {
     var countDisplayColor: UIColor {
         get {
             return UIColor.InterfaceColor.white
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
         }
     }
     
@@ -48,7 +53,6 @@ class OrangeBlackTheme: ThemeProtocol {
 }
 
 class NaviWhiteTheme: ThemeProtocol {
-
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.naviBlue
@@ -64,6 +68,12 @@ class NaviWhiteTheme: ThemeProtocol {
     var countDisplayColor: UIColor {
         get {
             return UIColor.InterfaceColor.black
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
         }
     }
     
@@ -88,7 +98,6 @@ class NaviWhiteTheme: ThemeProtocol {
 }
 
 class RedBlackTheme: ThemeProtocol {
-    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.redXR
@@ -104,6 +113,12 @@ class RedBlackTheme: ThemeProtocol {
     var countDisplayColor: UIColor {
         get {
             return UIColor.InterfaceColor.white
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
         }
     }
     
@@ -128,7 +143,6 @@ class RedBlackTheme: ThemeProtocol {
 }
 
 class YellowWhiteTheme: ThemeProtocol {
-    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.yellowXR
@@ -144,6 +158,12 @@ class YellowWhiteTheme: ThemeProtocol {
     var countDisplayColor: UIColor {
         get {
             return UIColor.InterfaceColor.black
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
         }
     }
     
@@ -168,7 +188,6 @@ class YellowWhiteTheme: ThemeProtocol {
 }
 
 class CoralWhiteTheme: ThemeProtocol {
-    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.coralXR
@@ -184,6 +203,12 @@ class CoralWhiteTheme: ThemeProtocol {
     var countDisplayColor: UIColor {
         get {
             return UIColor.InterfaceColor.black
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
         }
     }
     
@@ -208,7 +233,6 @@ class CoralWhiteTheme: ThemeProtocol {
 }
 
 class BlueWhiteTheme: ThemeProtocol {
-    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.blueXR
@@ -224,6 +248,12 @@ class BlueWhiteTheme: ThemeProtocol {
     var countDisplayColor: UIColor {
         get {
             return UIColor.InterfaceColor.black
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
         }
     }
     
@@ -248,7 +278,6 @@ class BlueWhiteTheme: ThemeProtocol {
 }
 
 class XcodeTheme: ThemeProtocol {
-    
     var mainColor: UIColor {
         get {
             return UIColor.InterfaceColor.oliGreenXcode
@@ -267,6 +296,12 @@ class XcodeTheme: ThemeProtocol {
         }
     }
     
+    var countBtnColor: UIColor {
+        get {
+            return backgroundColor
+        }
+    }
+    
     var subLabelColor: UIColor {
         get {
             return UIColor.InterfaceColor.orangeXcode
@@ -276,6 +311,51 @@ class XcodeTheme: ThemeProtocol {
     var cellSelectionColor: UIColor {
         get {
             return UIColor.InterfaceColor.purpleXcode
+        }
+    }
+    
+    var statusBarStyle: String {
+        get {
+            return "White"
+        }
+    }
+    
+}
+
+class DarkModeTheme: ThemeProtocol {
+    var mainColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.lightBlack
+        }
+    }
+    
+    var backgroundColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.black
+        }
+    }
+    
+    var countDisplayColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.lightGray
+        }
+    }
+    
+    var countBtnColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.lightGray
+        }
+    }
+    
+    var subLabelColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.silverXS
+        }
+    }
+    
+    var cellSelectionColor: UIColor {
+        get {
+            return UIColor.InterfaceColor.darkBlack
         }
     }
     

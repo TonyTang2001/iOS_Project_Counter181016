@@ -76,7 +76,7 @@ class SuperBtn: UIButton, ThemeManagerProtocol {
 
 class CountBtn: SuperBtn {
     override func themeTextColor(theme:ThemeProtocol) -> UIColor {
-        return theme.backgroundColor
+        return theme.countBtnColor
     }
     
     override func themebgColor(theme: ThemeProtocol) -> UIColor {

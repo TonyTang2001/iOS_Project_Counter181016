@@ -115,6 +115,9 @@ class ViewController: SuperViewController {
         } else if userDefaults.string(forKey: themeName) == "XcodeTheme()" {
             //            Variables.theme = RedBlackTheme()
             Variables.themeType = .xcodeTheme
+        } else if userDefaults.string(forKey: themeName) == "DarkModeTheme()" {
+            //            Variables.theme = RedBlackTheme()
+            Variables.themeType = .darkModeTheme
         }
         
         ThemeManager.switcherTheme(type: Variables.themeType)

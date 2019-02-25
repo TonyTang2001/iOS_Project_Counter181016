@@ -326,7 +326,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" id="md3-Je-d80">
+                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="md3-Je-d80">
                             <rect key="frame" x="0.0" y="735.33333333333337" width="375" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -618,39 +618,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ghF-lI-HMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1941.5999999999999" y="528.32512315270935"/>
-        </scene>
-        <!--Color-->
-        <scene sceneID="kv2-T8-n17">
-            <objects>
-                <viewController storyboardIdentifier="ColorSelectionViewController" title="Color" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YIl-1Z-UCX" customClass="ColorSelectionViewController" customModule="TapCount" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mah-f2-dK4">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comming Soon..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOe-sY-dmS">
-                                <rect key="frame" x="61" y="137" width="158" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="n8a-Nx-8bH" firstAttribute="bottom" secondItem="mOe-sY-dmS" secondAttribute="bottom" constant="103" id="IIJ-If-7QM"/>
-                            <constraint firstItem="n8a-Nx-8bH" firstAttribute="trailing" secondItem="mOe-sY-dmS" secondAttribute="trailing" constant="61" id="RcX-LF-2yi"/>
-                            <constraint firstItem="mOe-sY-dmS" firstAttribute="top" secondItem="n8a-Nx-8bH" secondAttribute="top" constant="93" id="ewT-y2-5GY"/>
-                            <constraint firstItem="mOe-sY-dmS" firstAttribute="leading" secondItem="n8a-Nx-8bH" secondAttribute="leading" constant="61" id="mi2-jo-bnv"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="n8a-Nx-8bH"/>
-                    </view>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="280" height="300"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tj8-TR-kyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1941" y="-175"/>
         </scene>
     </scenes>
     <resources>

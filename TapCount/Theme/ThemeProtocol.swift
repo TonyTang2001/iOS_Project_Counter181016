@@ -15,6 +15,7 @@ protocol ThemeProtocol {
     var subLabelColor: UIColor { get }
     var cellSelectionColor: UIColor { get }
     var statusBarStyle: String { get }
+    var countBtnColor: UIColor { get }
 }
 
 enum ThemeType {
@@ -25,6 +26,7 @@ enum ThemeType {
     case coralWhiteTheme
     case blueWhiteTheme
     case xcodeTheme
+    case darkModeTheme
 //    case microSft
 //    case pkmTheme
     
@@ -45,6 +47,8 @@ enum ThemeType {
                 return BlueWhiteTheme()
             case .xcodeTheme:
                 return XcodeTheme()
+            case .darkModeTheme:
+                return DarkModeTheme()
 //            case .microSft:
 //                return MicroSft()
 //            case .pkmTheme:

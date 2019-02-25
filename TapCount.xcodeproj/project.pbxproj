@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1921895444002D9765 /* PopUpEffect.swift */; };
 		EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */; };
 		EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F70882173985400F06966 /* HistoryViewController.swift */; };
 		EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708B2173993200F06966 /* History.xcdatamodeld */; };
@@ -41,7 +40,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA1ECD1921895444002D9765 /* PopUpEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpEffect.swift; sourceTree = "<group>"; };
 		EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionViewController.swift; sourceTree = "<group>"; };
 		EA2F70882173985400F06966 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EA2F708C2173993200F06966 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 			isa = PBXGroup;
 			children = (
 				EA84ED5921D92B9C008D97EC /* Spring */,
-				EA1ECD1921895444002D9765 /* PopUpEffect.swift */,
 				EA3D4352217BA3A400753BEA /* VKExpandableButton.swift */,
 			);
 			path = Opensource;
@@ -348,7 +345,6 @@
 				EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */,
 				EA429434218F2D6600061DD5 /* SuperViewController.swift in Sources */,
 				EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */,
-				EA1ECD1A21895444002D9765 /* PopUpEffect.swift in Sources */,
 				EA429430218F2A4800061DD5 /* ThemeManager.swift in Sources */,
 				EA84ED8D21D92B9D008D97EC /* SpringLabel.swift in Sources */,
 				EA429436218FE88F00061DD5 /* ThemeGlobal.swift in Sources */,
