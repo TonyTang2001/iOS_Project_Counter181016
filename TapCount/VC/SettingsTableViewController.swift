@@ -77,7 +77,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     }
     
     //MARK: - Collection View
-    let array:[String] = ["orangeBlack","redBlack","naviWhite","yellowWhite","coralWhite","blueWhite","xcodeTheme","darkModeTheme"]
+    let array:[String] = ["orangeBlack","redBlack","naviWhite","yellowWhite","coralWhite","blueWhite","xcodeTheme","darkMode"]
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
@@ -140,6 +140,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     @IBOutlet weak var soundEffectCell: SuperSettingsCell!
     @IBOutlet weak var keepScreenOnCell: SuperSettingsCell!
     @IBOutlet weak var shakeToClearCell: SuperSettingsCell!
+    @IBOutlet weak var supportDeveloperCell: SettingsSelectableCell!
     @IBOutlet weak var contactDevCell: SettingsSelectableCell!
     @IBOutlet weak var rateCell: SettingsSelectableCell!
     @IBOutlet weak var privacyPolicyCell: SettingsSelectableCell!
@@ -151,12 +152,13 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
     //MARK: - Cell Selection Delegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
-            //Select Colors & Styles
-//            let popup = ColorSelectionViewController.create()
-//            let sbPopup = SBCardPopupViewController(contentViewController: popup)
-//            sbPopup.show(onViewController: self)
-            
+            // nothing here
         } else if indexPath.section == 2 && indexPath.row == 0 {
+            // in-app purchase - Show Support
+            IAPService.shared.getProducts()
+            IAPService.shared.purchase(product: .aLittleBitOfSupportConsumable)
+            
+        } else if indexPath.section == 2 && indexPath.row == 1 {
             //Contact
             let contactAlert = UIAlertController(title: NSLocalizedString("Contact Developer", comment: ""), message: NSLocalizedString("You may contact TonyTang by the following ways.", comment: ""), preferredStyle: .alert)
             
@@ -201,15 +203,15 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             contactAlert.addAction(cancel)
             
             present(contactAlert, animated: true, completion: nil)
-        } else if indexPath.section == 2 && indexPath.row == 1 {
+        } else if indexPath.section == 2 && indexPath.row == 2 {
             //Rate
             let askForRate = UIAlertController(title: NSLocalizedString("Like 'Count Now'?", comment: ""), message: NSLocalizedString("You may rate 'Count Now' here. \n We are eager for your encouragement and feedbacks!", comment: ""), preferredStyle: .alert)
             askForRate.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Not now", comment: ""), style: .cancel, handler: nil))
             askForRate.addAction(UIKit.UIAlertAction(title: NSLocalizedString("Rate", comment: ""), style: .default) { (action) in  SKStoreReviewController.requestReview()  })
             self.present(askForRate, animated: true, completion: nil)
-        } else if indexPath.section == 2 && indexPath.row == 2 {
-            showSafariVC(for: NSLocalizedString("https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md", comment: ""))
         } else if indexPath.section == 2 && indexPath.row == 3 {
+            showSafariVC(for: NSLocalizedString("https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md", comment: ""))
+        } else if indexPath.section == 2 && indexPath.row == 4 {
             showSafariVC(for: "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Acknowledgement.md")
         }
         self.tableView.reloadData()

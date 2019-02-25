@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */; };
+		EA271CAE22243B620004487D /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA271CAD22243B620004487D /* IAPService.swift */; };
+		EA271CB0222447B80004487D /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA271CAF222447B80004487D /* IAPProduct.swift */; };
 		EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F70882173985400F06966 /* HistoryViewController.swift */; };
 		EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708B2173993200F06966 /* History.xcdatamodeld */; };
 		EA2F708F21739CFF00F06966 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		EA1ECD1B2189550D002D9765 /* ColorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionViewController.swift; sourceTree = "<group>"; };
+		EA271CAD22243B620004487D /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
+		EA271CAF222447B80004487D /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
 		EA2F70882173985400F06966 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		EA2F708C2173993200F06966 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		EA2F708E21739CFF00F06966 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 				EA3D4350217B885500753BEA /* UniversalVar.swift */,
 				EAE0263121ADAEE80050CC44 /* CustomOperator.swift */,
 				EA4DAC24218499A8007E1632 /* Colorpads.swift */,
+				EA271CAF222447B80004487D /* IAPProduct.swift */,
+				EA271CAD22243B620004487D /* IAPService.swift */,
 				EA42942E218F2A2E00061DD5 /* Theme */,
 				EA2F708A2173985D00F06966 /* VC */,
 				EA3107F921706C8B003823AE /* Main.storyboard */,
@@ -343,6 +349,7 @@
 			files = (
 				EAB6D2CA21A1B39C00E8F384 /* SettingsCell.swift in Sources */,
 				EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */,
+				EA271CB0222447B80004487D /* IAPProduct.swift in Sources */,
 				EA429434218F2D6600061DD5 /* SuperViewController.swift in Sources */,
 				EA2F70892173985400F06966 /* HistoryViewController.swift in Sources */,
 				EA429430218F2A4800061DD5 /* ThemeManager.swift in Sources */,
@@ -355,6 +362,7 @@
 				EAE0263221ADAEE80050CC44 /* CustomOperator.swift in Sources */,
 				EA429432218F2CB000061DD5 /* ThemeManagerProtocol.swift in Sources */,
 				EA84ED7D21D92B9D008D97EC /* Spring.swift in Sources */,
+				EA271CAE22243B620004487D /* IAPService.swift in Sources */,
 				EA4DAC25218499A8007E1632 /* Colorpads.swift in Sources */,
 				EA1ECD1C2189550D002D9765 /* ColorSelectionViewController.swift in Sources */,
 				EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */,

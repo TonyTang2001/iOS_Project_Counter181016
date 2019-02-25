@@ -35,11 +35,11 @@
 /* Class = "UITableViewSection"; headerTitle = "Preference"; ObjectID = "Wl6-Df-Ps1"; */
 "Wl6-Df-Ps1.headerTitle" = "Preference";
 
-/* Class = "UIViewController"; title = "Color"; ObjectID = "YIl-1Z-UCX"; */
-"YIl-1Z-UCX.title" = "Color";
-
 /* Class = "UILabel"; text = "2018 TonyTangⓇ"; ObjectID = "Zbd-Vd-SyO"; */
 "Zbd-Vd-SyO.text" = "2019 TonyTangⓇ";
+
+/* Class = "UILabel"; text = "Support Developer - $0.99"; ObjectID = "dUA-Rr-4pr"; */
+"dUA-Rr-4pr.text" = "Support Developer - $0.99";
 
 /* Class = "UILabel"; text = "Contact Developer"; ObjectID = "h8J-Hb-Iye"; */
 "h8J-Hb-Iye.text" = "Contact Developer";
@@ -55,9 +55,6 @@
 
 /* Class = "UILabel"; text = "Shake to clear"; ObjectID = "m9H-CU-pgX"; */
 "m9H-CU-pgX.text" = "Shake to clear";
-
-/* Class = "UILabel"; text = "Comming Soon..."; ObjectID = "mOe-sY-dmS"; */
-"mOe-sY-dmS.text" = "Comming Soon...";
 
 /* Class = "UIButton"; normalTitle = "History"; ObjectID = "nOI-P7-ZVy"; */
 "nOI-P7-ZVy.normalTitle" = "History";
