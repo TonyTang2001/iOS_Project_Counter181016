@@ -32,14 +32,9 @@ class IAPService: NSObject {
         
     }
     
-//    func restorePurchases() {
-//        paymentQueue.restoreCompletedTransactions()
-//    }
-    
 }
 
 extension IAPService: SKProductsRequestDelegate {
-    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         self.products = response.products
         for product in response.products {
@@ -50,13 +45,11 @@ extension IAPService: SKProductsRequestDelegate {
 }
 
 extension IAPService: SKPaymentTransactionObserver {
-    
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         for transaction in transactions {
             print(transaction.transactionState.status(), transaction.payment.productIdentifier)
             switch transaction.transactionState {
-            case .purchasing:
-                break
+            case .purchasing: break
             default: queue.finishTransaction(transaction)
             }
         }
@@ -65,7 +58,6 @@ extension IAPService: SKPaymentTransactionObserver {
 }
 
 extension  SKPaymentTransactionState {
-    
     func status() -> String {
         switch self {
         case .deferred:
@@ -78,6 +70,8 @@ extension  SKPaymentTransactionState {
             return "purchasing"
         case .restored:
             return "restored"
+        @unknown default:
+            return ""
         }
     }
     

@@ -17,13 +17,14 @@
 "Colors & Styles" = "配色及主题";
 "Currently Unavailable \n Will be released in next version" = "当前不可用 \n 将会在下个更新版本中放出";
 "Contact Developer" = "联系开发者";
-"You may contact TonyTang by the following ways." = "你可以通过以下方式联系 TonyTang ";
+"You may contact TonyTang in the following ways." = "你可以通过以下方式联系 TonyTang ";
 "WeChat" = "微信";
 "WeChat ID Copied" = "微信号已复制";
 "Paste in WeChat to search." = "前往微信 ⇨ 添加（新的）朋友\n ⇨ 粘贴搜索";
 "Go to WeChat" = "前往微信";
 "Weibo" = "微博";
 "Facebook" = "Facebook";
+"Twitter" = "推特";
 "Email" = "邮箱";
 "GitHub" = "GitHub";
 "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md" = "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy_zh_cn.md";

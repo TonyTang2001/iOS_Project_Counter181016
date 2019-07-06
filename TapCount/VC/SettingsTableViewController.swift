@@ -160,28 +160,28 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             
         } else if indexPath.section == 2 && indexPath.row == 1 {
             //Contact
-            let contactAlert = UIAlertController(title: NSLocalizedString("Contact Developer", comment: ""), message: NSLocalizedString("You may contact TonyTang by the following ways.", comment: ""), preferredStyle: .alert)
+            let contactAlert = UIAlertController(title: NSLocalizedString("Contact Developer", comment: ""), message: NSLocalizedString("You may contact TonyTang in the following ways.", comment: ""), preferredStyle: .alert)
             
-            let weChat = UIAlertAction(title: NSLocalizedString("WeChat", comment: ""), style: .default) { (action) in
-                UIPasteboard.general.string = "Tony-398102832"
-                let wechatAlert = UIAlertController(title: NSLocalizedString("WeChat ID Copied", comment: ""), message: NSLocalizedString("Paste in WeChat to search.", comment: ""), preferredStyle: .alert)
-                let go = UIAlertAction(title: NSLocalizedString("Go to WeChat", comment: ""), style: .default, handler: { (action) in
-                    guard let url = URL(string: "wechat://") else {return}
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                })
-                let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
-                wechatAlert.addAction(go)
-                wechatAlert.addAction(cancel)
-                self.present(wechatAlert, animated: true, completion: nil)
-            }
+//            let weChat = UIAlertAction(title: NSLocalizedString("WeChat", comment: ""), style: .default) { (action) in
+//                UIPasteboard.general.string = "Tony-398102832"
+//                let wechatAlert = UIAlertController(title: NSLocalizedString("WeChat ID Copied", comment: ""), message: NSLocalizedString("Paste in WeChat to search.", comment: ""), preferredStyle: .alert)
+//                let go = UIAlertAction(title: NSLocalizedString("Go to WeChat", comment: ""), style: .default, handler: { (action) in
+//                    guard let url = URL(string: "wechat://") else {return}
+//                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//                })
+//                let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
+//                wechatAlert.addAction(go)
+//                wechatAlert.addAction(cancel)
+//                self.present(wechatAlert, animated: true, completion: nil)
+//            }
             
             let weibo = UIAlertAction(title: NSLocalizedString("Weibo", comment: ""), style: .default) { (action) in
-                guard let url = URL(string: "sinaweibo://userinfo?uid=2608542673") else {return}
+                guard let url = URL(string: "sinaweibo://userinfo?uid=7189322134") else {return}
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
-            let facebook = UIAlertAction(title: NSLocalizedString("Facebook", comment: ""), style: .default) { (action) in
-                guard let url = URL(string: "fb://profiles/100012964713869") else {return}
+            let twitter = UIAlertAction(title: NSLocalizedString("Twitter", comment: ""), style: .default) { (action) in
+                guard let url = URL(string: "https://twitter.com/Tony39810") else {return}
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
             
@@ -195,9 +195,9 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
             }
             
             let cancel = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel)
-            contactAlert.addAction(weChat)
+//            contactAlert.addAction(weChat)
             contactAlert.addAction(weibo)
-            contactAlert.addAction(facebook)
+            contactAlert.addAction(twitter)
             contactAlert.addAction(email)
             contactAlert.addAction(gitHub)
             contactAlert.addAction(cancel)
