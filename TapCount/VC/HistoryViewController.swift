@@ -23,7 +23,7 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
     let mainVC = ViewController()
     //MARK: Setup CoreData
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var counts : [CountHistory] = []
+    var counts: [CountHistory] = []
     
     //MARK: Setup Haptic Feedback
     let hapticImpactLight = UIImpactFeedbackGenerator(style: .light)
@@ -108,6 +108,19 @@ class HistoryViewController: SuperViewController, UITableViewDelegate, UITableVi
         }
         delete.backgroundColor = UIColor.InterfaceColor.red
         return [delete]
+    }
+    
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "")) { (contextualAction, view, bool) in
+            self.context.delete(self.counts[indexPath.row])
+            (UIApplication.shared.delegate as! AppDelegate).saveContext()
+            self.counts.remove(at: indexPath.row)
+            self.HistoryTableView.deleteRows(at: [indexPath], with: .bottom)
+        }
+        
+        let swipeToDelete = UISwipeActionsConfiguration(actions: [deleteAction])
+        return swipeToDelete
     }
     
     //MARK: - ViewDidLoad
