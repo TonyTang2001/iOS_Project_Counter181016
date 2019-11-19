@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,12 +10,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapCount" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CounterUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-P7-ZVy" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-P7-ZVy" customClass="NaviBtn" customModule="CounterUITests" customModuleProvider="target">
                                 <rect key="frame" x="16" y="44" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="PK3-0p-VIy"/>
@@ -34,8 +31,8 @@
                                     </segue>
                                 </connections>
                             </button>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-Qx-Ucf" customClass="CountBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="462" width="375" height="350"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-Qx-Ucf" customClass="CountBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="546" width="414" height="350"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="350" id="8CB-UU-vHo"/>
@@ -50,13 +47,13 @@
                                     <action selector="CountBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="DWq-pR-t9U"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LK2-8n-ySM" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="239" y="44" width="120" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LK2-8n-ySM" customClass="NaviBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="278" y="44" width="120" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="mFc-Bg-NjP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
-                                <state key="normal" title="Clear">
+                                <state key="normal" title="Clear_Btn">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -64,8 +61,8 @@
                                     <action selector="ClearBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="9WE-ge-h1i"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-8h-hO4" customClass="AntiCountBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="372" width="200" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqm-8h-hO4" customClass="AntiCountBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="456" width="239" height="90"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="0cs-w7-B7u"/>
@@ -80,8 +77,8 @@
                                     <action selector="AntiCountBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="Ari-WF-ZRO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberLb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-sk-wSD" customClass="CountDisplay" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="30" y="179" width="315" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberLb" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wa-sk-wSD" customClass="CountDisplay" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="30" y="179" width="354" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="oCT-Vi-uBn"/>
                                 </constraints>
@@ -92,15 +89,15 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="shake"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ky-ox-JKT" userLabel="MultiMode Btn" customClass="MultiModeBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="150" y="44" width="75" height="36"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ky-ox-JKT" userLabel="MultiMode Btn" customClass="MultiModeBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="169.66666666666666" y="44" width="75" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="VbK-l1-sDi"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy9-lh-QnJ" userLabel="Settings" customClass="SettingsBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="272.66666666666669" y="392" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xy9-lh-QnJ" userLabel="Settings" customClass="SettingsBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="292" y="476" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="xy9-lh-QnJ" secondAttribute="height" multiplier="1:1" id="DIk-S9-wtf"/>
                                     <constraint firstAttribute="width" constant="50" id="Pb2-1H-48Q"/>
@@ -158,31 +155,31 @@
         <!--History View Controller-->
         <scene sceneID="7AD-Pc-jUw">
             <objects>
-                <viewController id="Hvb-YM-0mK" customClass="HistoryViewController" customModule="TapCount" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hvb-YM-0mK" customClass="HistoryViewController" customModule="CounterUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GZA-6q-fbU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YWS-UD-Gh8">
-                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellForHistory" rowHeight="70" id="4KC-J5-Wad" customClass="HistoryTableViewCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellForHistory" rowHeight="70" id="4KC-J5-Wad" customClass="HistoryTableViewCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4KC-J5-Wad" id="j6H-gc-MeL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="88:88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77j-4M-YQJ" customClass="TimeLb" customModule="TapCount" customModuleProvider="target">
-                                                    <rect key="frame" x="15" y="23" width="55" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="88:88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77j-4M-YQJ" customClass="TimeLb" customModule="CounterUITests" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="23" width="55" height="24"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountNum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-AB-3zG" customClass="CountNumLb" customModule="TapCount" customModuleProvider="target">
-                                                    <rect key="frame" x="239" y="20" width="121" height="30"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CountNum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kdb-AB-3zG" customClass="CountNumLb" customModule="CounterUITests" customModuleProvider="target">
+                                                    <rect key="frame" x="273" y="20" width="121" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -209,8 +206,8 @@
                                     <outlet property="delegate" destination="Hvb-YM-0mK" id="Xd3-2D-SSg"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEX-K7-ubw" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="16" y="44" width="45" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEX-K7-ubw" customClass="NaviBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="16" y="0.0" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -219,8 +216,8 @@
                                     <action selector="BackBtnPressed:" destination="Hvb-YM-0mK" eventType="touchUpInside" id="IkZ-cj-bMs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBW-3f-sIt" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="284" y="44" width="75" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBW-3f-sIt" customClass="NaviBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="323" y="0.0" width="75" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Clear All">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -259,13 +256,13 @@
         <!--Settings View Controller-->
         <scene sceneID="dgA-dn-dNM">
             <objects>
-                <viewController id="IzW-D4-ALQ" customClass="SettingsViewController" customModule="TapCount" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IzW-D4-ALQ" customClass="SettingsViewController" customModule="CounterUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ly-9Q-pCg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDP-z2-dVJ" customClass="NaviBtn" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="16" y="44" width="45" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDP-z2-dVJ" customClass="NaviBtn" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="20" y="0.0" width="45" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <state key="normal" title="Back">
                                     <color key="titleColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -276,13 +273,13 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3V-Iq-p11">
-                                <rect key="frame" x="0.0" y="80" width="375" height="732"/>
+                                <rect key="frame" x="0.0" y="36" width="414" height="806"/>
                                 <connections>
                                     <segue destination="MFi-jx-o58" kind="embed" id="4cX-ae-txJ"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 TonyTangⓇ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Vd-SyO" customClass="DevNameLb" customModule="TapCount" customModuleProvider="target">
-                                <rect key="frame" x="122.66666666666669" y="776" width="130" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019 TonyTangⓇ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbd-Vd-SyO" customClass="DevNameLb" customModule="CounterUITests" customModuleProvider="target">
+                                <rect key="frame" x="142" y="806" width="130" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="ohi-VZ-dfA"/>
                                 </constraints>
@@ -295,11 +292,9 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="H3V-Iq-p11" secondAttribute="bottom" id="8q8-Qe-2zw"/>
                             <constraint firstItem="Zbd-Vd-SyO" firstAttribute="bottom" secondItem="2Ly-9Q-pCg" secondAttribute="bottom" constant="-18" id="9S3-Zt-Kez"/>
-                            <constraint firstItem="H3V-Iq-p11" firstAttribute="trailing" secondItem="nm2-Qc-xRX" secondAttribute="trailing" id="Fp2-VS-0uf"/>
                             <constraint firstItem="VDP-z2-dVJ" firstAttribute="leading" secondItem="2Ly-9Q-pCg" secondAttribute="leadingMargin" id="MoY-6B-UFa"/>
                             <constraint firstItem="Zbd-Vd-SyO" firstAttribute="centerX" secondItem="2Ly-9Q-pCg" secondAttribute="centerX" id="NO6-2U-hcN"/>
                             <constraint firstItem="VDP-z2-dVJ" firstAttribute="top" secondItem="nm2-Qc-xRX" secondAttribute="top" id="Po8-5Q-OXP"/>
-                            <constraint firstItem="H3V-Iq-p11" firstAttribute="leading" secondItem="nm2-Qc-xRX" secondAttribute="leading" id="afp-oq-eme"/>
                             <constraint firstItem="H3V-Iq-p11" firstAttribute="top" secondItem="VDP-z2-dVJ" secondAttribute="bottom" id="f2p-P1-ch3"/>
                             <constraint firstAttribute="trailing" secondItem="H3V-Iq-p11" secondAttribute="trailing" id="sJZ-no-ELY"/>
                             <constraint firstItem="H3V-Iq-p11" firstAttribute="leading" secondItem="2Ly-9Q-pCg" secondAttribute="leading" id="zt6-4G-6Vw"/>
@@ -319,15 +314,15 @@
         <!--Settings Table View Controller-->
         <scene sceneID="v3c-qf-TUu">
             <objects>
-                <tableViewController id="MFi-jx-o58" customClass="SettingsTableViewController" customModule="TapCount" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="MFi-jx-o58" customClass="SettingsTableViewController" customModule="CounterUITests" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qah-lI-XdI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="732"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableFooterView" contentMode="scaleToFill" misplaced="YES" id="md3-Je-d80">
-                            <rect key="frame" x="0.0" y="795.33333333333337" width="375" height="120"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="md3-Je-d80">
+                            <rect key="frame" x="0.0" y="785.33333206176758" width="375" height="120"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="About_Icon" translatesAutoresizingMaskIntoConstraints="NO" id="re6-sV-x84">
@@ -337,7 +332,7 @@
                                         <constraint firstAttribute="width" constant="35" id="M4d-Nx-7ph"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Now v X.X.X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT0-BT-2SC" customClass="VersionDisplayLb" customModule="TapCount" customModuleProvider="target">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count Now v X.X.X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IT0-BT-2SC" customClass="VersionDisplayLb" customModule="CounterUITests" customModuleProvider="target">
                                     <rect key="frame" x="114.66666666666669" y="0.0" width="146" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -355,15 +350,15 @@
                         <sections>
                             <tableViewSection headerTitle="Preference" id="Wl6-Df-Ps1">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7rO-uc-isM" style="IBUITableViewCellStyleDefault" id="HAk-L0-ERf" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.333333333333343" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="7rO-uc-isM" style="IBUITableViewCellStyleDefault" id="HAk-L0-ERf" customClass="SuperSettingsCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HAk-L0-ERf" id="UMD-eH-bK0">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Colors &amp; Styles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7rO-uc-isM">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -374,17 +369,19 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="70" id="0xc-wg-2pU" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="115.33333333333334" width="375" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" rowHeight="60" id="0xc-wg-2pU" customClass="SuperSettingsCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="115.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0xc-wg-2pU" id="l0V-7i-w8I">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zig-FI-6Cr">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zig-FI-6Cr">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="lds-tr-J3c"/>
+                                                    </constraints>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dVK-9w-9Hq">
                                                         <size key="itemSize" width="50" height="50"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -392,7 +389,7 @@
                                                         <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gKi-sL-YAk" customClass="ColorSelectionCollectionViewCell" customModule="TapCount" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gKi-sL-YAk" customClass="ColorSelectionCollectionViewCell" customModule="CounterUITests" customModuleProvider="target">
                                                             <rect key="frame" x="16" y="5" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -425,24 +422,29 @@
                                                 </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="Zig-FI-6Cr" firstAttribute="centerX" secondItem="l0V-7i-w8I" secondAttribute="centerX" id="BTE-Cg-BGY"/>
+                                                <constraint firstItem="Zig-FI-6Cr" firstAttribute="centerY" secondItem="l0V-7i-w8I" secondAttribute="centerY" id="Xx4-7x-WSy"/>
+                                                <constraint firstItem="Zig-FI-6Cr" firstAttribute="width" secondItem="l0V-7i-w8I" secondAttribute="width" id="p3I-g5-8dh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="xgh-pw-RZ5" style="IBUITableViewCellStyleDefault" id="qD3-Ao-L9b" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="185.33333333333334" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="xgh-pw-RZ5" style="IBUITableViewCellStyleDefault" id="qD3-Ao-L9b" customClass="SuperSettingsCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="175.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qD3-Ao-L9b" id="uUh-TE-5Mw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sound Effects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgh-pw-RZ5">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSp-6L-nLX" customClass="SuperSettingsSwt" customModule="TapCount" customModuleProvider="target">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uSp-6L-nLX" customClass="SuperSettingsSwt" customModule="CounterUITests" customModuleProvider="target">
                                                     <rect key="frame" x="314" y="15" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -459,21 +461,21 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Functions" id="9sA-2y-byW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="QK1-da-jxT" style="IBUITableViewCellStyleDefault" id="vGO-yW-dwV" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="301.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="QK1-da-jxT" style="IBUITableViewCellStyleDefault" id="vGO-yW-dwV" customClass="SuperSettingsCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="291.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vGO-yW-dwV" id="026-gb-Uxe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Keep screen on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QK1-da-jxT">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="idD-wt-Y7L" customClass="SuperSettingsSwt" customModule="TapCount" customModuleProvider="target">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="idD-wt-Y7L" customClass="SuperSettingsSwt" customModule="CounterUITests" customModuleProvider="target">
                                                     <rect key="frame" x="314" y="15" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -485,21 +487,21 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="m9H-CU-pgX" style="IBUITableViewCellStyleDefault" id="d6E-95-zTB" customClass="SuperSettingsCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="361.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="m9H-CU-pgX" style="IBUITableViewCellStyleDefault" id="d6E-95-zTB" customClass="SuperSettingsCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="351.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d6E-95-zTB" id="KSU-83-18B">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Shake to clear" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m9H-CU-pgX">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxS-KS-xKR" customClass="SuperSettingsSwt" customModule="TapCount" customModuleProvider="target">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxS-KS-xKR" customClass="SuperSettingsSwt" customModule="CounterUITests" customModuleProvider="target">
                                                     <rect key="frame" x="314" y="15" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -515,15 +517,15 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="About" id="j72-0I-QSN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dUA-Rr-4pr" style="IBUITableViewCellStyleDefault" id="5cp-7I-JRs" userLabel="Support Developer Cell" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="477.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="dUA-Rr-4pr" style="IBUITableViewCellStyleDefault" id="5cp-7I-JRs" userLabel="Support Developer Cell" customClass="SettingsSelectableCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="467.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cp-7I-JRs" id="NiB-TB-Wgg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Support Developer - $0.99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dUA-Rr-4pr" userLabel="Support Developer">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -533,15 +535,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h8J-Hb-Iye" style="IBUITableViewCellStyleDefault" id="ZwO-Lp-XGR" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="537.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h8J-Hb-Iye" style="IBUITableViewCellStyleDefault" id="ZwO-Lp-XGR" customClass="SettingsSelectableCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="527.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZwO-Lp-XGR" id="LSf-YF-f0c">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Contact Developer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h8J-Hb-Iye">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -551,15 +553,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jW3-8H-xvH" style="IBUITableViewCellStyleDefault" id="cJ2-La-bmo" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="597.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="jW3-8H-xvH" style="IBUITableViewCellStyleDefault" id="cJ2-La-bmo" customClass="SettingsSelectableCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="587.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cJ2-La-bmo" id="5uV-GR-FnV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Rate &quot;Count Now&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jW3-8H-xvH">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -569,15 +571,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2Lj-61-YRK" style="IBUITableViewCellStyleDefault" id="9PV-yt-8Dy" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="657.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="2Lj-61-YRK" style="IBUITableViewCellStyleDefault" id="9PV-yt-8Dy" customClass="SettingsSelectableCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="647.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9PV-yt-8Dy" id="ZpM-0i-tm3">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Lj-61-YRK">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -587,15 +589,15 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uvN-jy-H4n" style="IBUITableViewCellStyleDefault" id="ZG6-jt-zKT" customClass="SettingsSelectableCell" customModule="TapCount" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="717.33333333333337" width="375" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="uvN-jy-H4n" style="IBUITableViewCellStyleDefault" id="ZG6-jt-zKT" customClass="SettingsSelectableCell" customModule="CounterUITests" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="707.33333206176758" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZG6-jt-zKT" id="Zd5-oY-U4Z">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Acknowledgement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uvN-jy-H4n" userLabel="Acknowledgement">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.666666666666664"/>
+                                                    <rect key="frame" x="20" y="0.0" width="335" height="60"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -640,7 +642,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="About_Icon" width="120" height="120"/>
-        <image name="Settings" width="75" height="75"/>
+        <image name="About_Icon" width="40" height="40"/>
+        <image name="Settings" width="33.333332061767578" height="33.333332061767578"/>
     </resources>
 </document>

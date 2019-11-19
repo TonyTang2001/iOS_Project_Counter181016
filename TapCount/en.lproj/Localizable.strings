@@ -1,0 +1,37 @@
+/* 
+  Localization.strings
+  TapCount
+
+  Created by 唐子轩 on 2018/10/17.
+  Copyright © 2018 TonyTang. All rights reserved.
+*/
+"Delete All Record" = "清空记录";
+"All history record will be Deleted. \n This is irreversible, are you sure to Delete?" = "将要删除所有历史记录。\n 此操作不可逆，确认删除？";
+"Delete" = "删除";
+"Yes" = "是";
+"Cancel" = "取消";
+"Thank you!" = "谢谢!";
+"Thank you for your patient Review." = "多谢你的耐心评价！";
+"Today " = "今天 ";
+"Count Now" = "计数+";
+"Colors & Styles" = "配色及主题";
+"Currently Unavailable \n Will be released in next version" = "当前不可用 \n 将会在下个更新版本中放出";
+"Contact Developer" = "联系开发者";
+"You may contact TonyTang in the following ways." = "你可以通过以下方式联系 TonyTang ";
+"WeChat" = "微信";
+"WeChat ID Copied" = "微信号已复制";
+"Paste in WeChat to search." = "前往微信 ⇨ 添加（新的）朋友\n ⇨ 粘贴搜索";
+"Go to WeChat" = "前往微信";
+"Weibo" = "微博";
+"Facebook" = "Facebook";
+"Twitter" = "推特";
+"Email" = "邮箱";
+"GitHub" = "GitHub";
+"https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy.md" = "https://github.com/TonyTang2001/iOS_Project_Counter181016/blob/master/Privacy%20Policy_zh_cn.md";
+"Like 'Count Now'?" = "喜欢 计数+ 吗？";
+"You may rate 'Count Now' here. \n We are eager for your encouragement and feedbacks!" = "你可以对 计数+ 进行评分，\n 我们期待你的鼓励和反馈！";
+"Not now" = "以后再说";
+"Rate" = "现在评分";
+"Theme Changed" = "主题配色已更改";
+"Enjoy your new Theme." = "敬请享用你的新主题配色！";
+"OK" = "好的";

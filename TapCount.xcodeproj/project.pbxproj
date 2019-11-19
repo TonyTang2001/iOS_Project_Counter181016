@@ -32,6 +32,12 @@
 		EA42943F2190943000061DD5 /* CountBtn_Default.wav in Resources */ = {isa = PBXBuildFile; fileRef = EA42943D2190943000061DD5 /* CountBtn_Default.wav */; };
 		EA4DAC2321849609007E1632 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */; };
 		EA4DAC25218499A8007E1632 /* Colorpads.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4DAC24218499A8007E1632 /* Colorpads.swift */; };
+		EA50FE5C2384A75A002403BA /* DebugOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50FE5B2384A75A002403BA /* DebugOptions.swift */; };
+		EA566C4223821BBF00813756 /* CounterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA566C4123821BBF00813756 /* CounterUITests.swift */; };
+		EA566C4A23821D8D00813756 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA566C4923821D8D00813756 /* SnapshotHelper.swift */; };
+		EA5946272383B731005DA6DC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3888EB21778ED8004E3EA5 /* Localizable.strings */; };
+		EA59462C2383C2D8005DA6DC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA3888E321776CEC004E3EA5 /* InfoPlist.strings */; };
+		EA59462D2383C2DC005DA6DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA3107F921706C8B003823AE /* Main.storyboard */; };
 		EA7AF2BC218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */; };
 		EA84ED7D21D92B9D008D97EC /* Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84ED5F21D92B9C008D97EC /* Spring.swift */; };
 		EA84ED8D21D92B9D008D97EC /* SpringLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA84ED6F21D92B9D008D97EC /* SpringLabel.swift */; };
@@ -39,6 +45,16 @@
 		EAD247F1217B3BBC008DD72D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD247F0217B3BBC008DD72D /* SettingsViewController.swift */; };
 		EAE0263221ADAEE80050CC44 /* CustomOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE0263121ADAEE80050CC44 /* CustomOperator.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA566C4423821BBF00813756 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA3107EA21706C8B003823AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA3107F121706C8B003823AE;
+			remoteInfo = TapCount;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EA271CAD22243B620004487D /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
@@ -71,6 +87,11 @@
 		EA42943D2190943000061DD5 /* CountBtn_Default.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = CountBtn_Default.wav; path = "App Resources/SoundEffects/Taptic/CountBtn_Default.wav"; sourceTree = SOURCE_ROOT; };
 		EA4DAC2221849609007E1632 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EA4DAC24218499A8007E1632 /* Colorpads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colorpads.swift; sourceTree = "<group>"; };
+		EA50FE5B2384A75A002403BA /* DebugOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugOptions.swift; sourceTree = "<group>"; };
+		EA566C3F23821BBF00813756 /* CounterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA566C4123821BBF00813756 /* CounterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterUITests.swift; sourceTree = "<group>"; };
+		EA566C4323821BBF00813756 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA566C4923821D8D00813756 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		EA5C5B642177A6A600383501 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA7AF2BB218A03C900D62CAB /* ColorSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA84EC9F21D9285E008D97EC /* DesignableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableImageView.swift; sourceTree = "<group>"; };
@@ -120,6 +141,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA566C3C23821BBF00813756 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -143,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3107F421706C8B003823AE /* TapCount */,
+				EA566C4023821BBF00813756 /* CounterUITests */,
 				EA3107F321706C8B003823AE /* Products */,
 				EB50CCBC1B296405CEF846F2 /* Frameworks */,
 			);
@@ -152,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				EA3107F221706C8B003823AE /* TapCount.app */,
+				EA566C3F23821BBF00813756 /* CounterUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,6 +194,7 @@
 				EA3D4350217B885500753BEA /* UniversalVar.swift */,
 				EAE0263121ADAEE80050CC44 /* CustomOperator.swift */,
 				EA4DAC24218499A8007E1632 /* Colorpads.swift */,
+				EA50FE5B2384A75A002403BA /* DebugOptions.swift */,
 				EA271CAF222447B80004487D /* IAPProduct.swift */,
 				EA271CAD22243B620004487D /* IAPService.swift */,
 				EA42942E218F2A2E00061DD5 /* Theme */,
@@ -208,6 +239,16 @@
 				EA42943D2190943000061DD5 /* CountBtn_Default.wav */,
 			);
 			path = SoundEffects;
+			sourceTree = "<group>";
+		};
+		EA566C4023821BBF00813756 /* CounterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA566C4923821D8D00813756 /* SnapshotHelper.swift */,
+				EA566C4123821BBF00813756 /* CounterUITests.swift */,
+				EA566C4323821BBF00813756 /* Info.plist */,
+			);
+			path = CounterUITests;
 			sourceTree = "<group>";
 		};
 		EA84EC9E21D9285E008D97EC /* Spring */ = {
@@ -286,13 +327,32 @@
 			productReference = EA3107F221706C8B003823AE /* TapCount.app */;
 			productType = "com.apple.product-type.application";
 		};
+		EA566C3E23821BBF00813756 /* CounterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA566C4623821BBF00813756 /* Build configuration list for PBXNativeTarget "CounterUITests" */;
+			buildPhases = (
+				EA566C3B23821BBF00813756 /* Sources */,
+				EA566C3C23821BBF00813756 /* Frameworks */,
+				EA566C3D23821BBF00813756 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA566C4523821BBF00813756 /* PBXTargetDependency */,
+			);
+			name = CounterUITests;
+			productName = CounterUITests;
+			productReference = EA566C3F23821BBF00813756 /* CounterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		EA3107EA21706C8B003823AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = TonyTang;
 				TargetAttributes = {
@@ -304,6 +364,10 @@
 								enabled = 1;
 							};
 						};
+					};
+					EA566C3E23821BBF00813756 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = EA3107F121706C8B003823AE;
 					};
 				};
 			};
@@ -322,6 +386,7 @@
 			projectRoot = "";
 			targets = (
 				EA3107F121706C8B003823AE /* TapCount */,
+				EA566C3E23821BBF00813756 /* CounterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -338,6 +403,16 @@
 				EA42943E2190943000061DD5 /* AntiCountBtn_Default.wav in Resources */,
 				EA3107FD21706C8E003823AE /* Assets.xcassets in Resources */,
 				EA3107FB21706C8B003823AE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA566C3D23821BBF00813756 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA59462D2383C2DC005DA6DC /* Main.storyboard in Resources */,
+				EA5946272383B731005DA6DC /* Localizable.strings in Resources */,
+				EA59462C2383C2D8005DA6DC /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +439,7 @@
 				EA429432218F2CB000061DD5 /* ThemeManagerProtocol.swift in Sources */,
 				EA84ED7D21D92B9D008D97EC /* Spring.swift in Sources */,
 				EA271CAE22243B620004487D /* IAPService.swift in Sources */,
+				EA50FE5C2384A75A002403BA /* DebugOptions.swift in Sources */,
 				EA4DAC25218499A8007E1632 /* Colorpads.swift in Sources */,
 				EA2F708D2173993200F06966 /* History.xcdatamodeld in Sources */,
 				EA3D4353217BA3A400753BEA /* VKExpandableButton.swift in Sources */,
@@ -374,7 +450,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EA566C3B23821BBF00813756 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA566C4223821BBF00813756 /* CounterUITests.swift in Sources */,
+				EA566C4A23821D8D00813756 /* SnapshotHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA566C4523821BBF00813756 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA3107F121706C8B003823AE /* TapCount */;
+			targetProxy = EA566C4423821BBF00813756 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		EA3107F921706C8B003823AE /* Main.storyboard */ = {
@@ -545,9 +638,8 @@
 				CODE_SIGN_ENTITLEMENTS = TapCount/TapCount.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.9.1;
+				CURRENT_PROJECT_VERSION = 3.9.2;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 3K4PT9RJ98;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -560,15 +652,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.9.1;
+				MARKETING_VERSION = 3.9.2;
 				OTHER_CFLAGS = "-fno-exceptions";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tonytangzixuan.TapCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e armv7s x86_64";
+				VALID_ARCHS = "arm64 arm64e armv7s";
 			};
 			name = Debug;
 		};
@@ -579,9 +671,8 @@
 				CODE_SIGN_ENTITLEMENTS = TapCount/TapCount.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.9.1;
+				CURRENT_PROJECT_VERSION = 3.9.2;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = 3K4PT9RJ98;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -595,15 +686,55 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.9.1;
+				MARKETING_VERSION = 3.9.2;
 				OTHER_CFLAGS = "-fno-exceptions";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tonytangzixuan.TapCounter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "arm64 arm64e armv7s x86_64";
+				VALID_ARCHS = "arm64 arm64e armv7s";
+			};
+			name = Release;
+		};
+		EA566C4723821BBF00813756 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3K4PT9RJ98;
+				INFOPLIST_FILE = CounterUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itonytang.CounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TapCount;
+			};
+			name = Debug;
+		};
+		EA566C4823821BBF00813756 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3K4PT9RJ98;
+				INFOPLIST_FILE = CounterUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.itonytang.CounterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TapCount;
 			};
 			name = Release;
 		};
@@ -624,6 +755,15 @@
 			buildConfigurations = (
 				EA31080521706C8E003823AE /* Debug */,
 				EA31080621706C8E003823AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA566C4623821BBF00813756 /* Build configuration list for PBXNativeTarget "CounterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA566C4723821BBF00813756 /* Debug */,
+				EA566C4823821BBF00813756 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

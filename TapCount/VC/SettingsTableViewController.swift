@@ -227,7 +227,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         
         //Stunning Fade Effects at ends of CollectionView, LOL
         let gradient = CAGradientLayer()
-        gradient.frame = colorsSelectionCell.bounds
+        gradient.frame = colorsSelectionCell.contentView.frame
         //Set CAGradientLayer to horizontal
         gradient.startPoint = CGPoint(x: 0.0, y: 0)
         gradient.endPoint = CGPoint(x: 1.0, y: 0)
@@ -239,7 +239,7 @@ class SettingsTableViewController: UITableViewController, ThemeManagerProtocol, 
         ]
         //Asymmetry for implication of horizontal scrolling.
         gradient.locations = [0, 0.04, 0.93, 1]
-        colorsSelectionCell.layer.mask = gradient
+//        colorsSelectionCell.contentView.layer.mask = gradient
         
     }
     
