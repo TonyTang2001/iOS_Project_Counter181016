@@ -48,7 +48,6 @@ class CounterUITests: XCTestCase {
         
         snapshot("02CountedScreen")
         
-        print("\n\nLocalization for Clear: \(localized("Clear"))")
         let clearButton = app.buttons[localized("Clear")]
         clearButton.tap()
         
