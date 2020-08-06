@@ -177,7 +177,7 @@ class ViewController: SuperViewController {
         if Variables.countNum != 0 && Variables.countNum != Variables.fromRecord {
             let countSave = CountHistory(context: context)
             countSave.countDate = Date()
-            countSave.countNum = Int32(Variables.countNum)
+            countSave.countNum = Int64(Variables.countNum)
             countSave.countType = "normal"
             countSave.note = ""
             (UIApplication.shared.delegate as! AppDelegate).saveContext()
