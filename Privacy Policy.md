@@ -13,7 +13,5 @@ our potential servers technically impossibe*
 ## Contact Us ##
 **If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me.**
 
-- Email: tonytangdev17@hotmail.com
-- Personal Website: **Currently Unavailable**
-
-* I'm a high-school student Software Developer in China. If you have any suggestions or questions to my app, feel free to contact me. I will respond ASAP.
+- Email: tonytangdev@outlook.com
+- Personal Website: tonytangzixuan.com
